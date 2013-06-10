@@ -1,0 +1,5 @@
+.m-bottom-menu .nav > li > a,
+.nav > li > a:focus,
+.nav > li > a:hover {
+    border-color: #b995c5;
+}

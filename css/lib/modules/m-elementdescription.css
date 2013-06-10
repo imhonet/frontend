@@ -1,0 +1,90 @@
+/*  .m-elementdescription    */
+
+.m-elementdescription {
+	padding: 35px 0 60px;
+}
+
+	.m-elementdescription:after {
+		display: block;
+		content: '';
+		height: 0;
+		clear: both;
+	}
+
+	.m-elementdescription-h1 {
+		margin: 0 0 25px 0;
+		color: #01a58d;
+		font-size: 3.3em;
+		font-weight: normal;
+		line-height: 1;
+	}
+
+	.m-elementdescription-wrap {
+		margin: 0 370px 0 0;
+	}
+
+		.m-elementdescription-description {
+			margin: 0 0 0 215px;
+		}
+
+			.m-elementdescription-description > p {
+				padding: 0 0 25px 0;
+				font-size: 1.21em;
+				line-height: 1.5;
+			}
+
+			.m-elementdescription-graytxt {
+				color: #8c8c8c;
+				font-size: 1.07em;
+			}
+
+		.m-elementdescription-image {
+			float: left;
+			margin: 0 30px 0 0;
+		}
+
+	.m-elementdescription-advice {
+		position: relative;
+		float: right;
+		width: 300px;
+		border: 1px solid #01a58d;
+	}
+
+		.m-elementdescription-advice:after {
+			display: block;
+			content: '';
+			position: absolute;
+			z-index: 10;
+			left: -19px;
+			top: 50%;
+			height: 35px;
+			width: 35px;
+			margin: -10px 0 0 0;
+			background: #fff;
+			border-left: 1px solid #01a58d;
+			border-top: 1px solid #01a58d;
+			-moz-transform: rotate(-45deg); /* Äëÿ Firefox */
+			-ms-transform: rotate(-45deg); /* Äëÿ IE */
+			-webkit-transform: rotate(-45deg); /* Äëÿ Safari, Chrome, iOS */
+			-o-transform: rotate(-45deg); /* Äëÿ Opera */
+			transform: rotate(-45deg);
+		}
+
+.m-elementdescription-advice-wrap {
+			position: relative;
+			padding: 25px 30px 30px 30px;
+			background: #fff;
+		}
+
+			.m-elementdescription-advice-txt {
+				color: #01a58d;
+				font-size: 2.28em;
+				line-height: 1;
+			}
+
+.m-elementdescription .btn {
+	width: 100%;
+	margin: 30px 0 0 0;
+}
+
+/*   // for .m-elementdescription    */

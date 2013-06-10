@@ -1,0 +1,67 @@
+/*
+	
+	פמם: b995c5
+	רנטפע: b27cc4
+
+*/
+
+.navbar.navbar-metro .nav li.active a,
+.navbar.navbar-metro .nav li.active a:hover{
+	border-bottom: 5px solid #b995c5;
+}
+
+/* m-inlineimagelist */
+
+.m-inlineimagelist-h1 {
+	color: #b27cc4;
+}
+
+.m-inlineimagelist-gallery-image > img:hover,
+.m-inlineimagelist-gallery-image > img:focus {
+	border-color: #b995c5;
+}
+
+/* comments */
+
+.m-comments-title,
+.m-comments-button-add-comment.active,
+.m-comments-button-add-comment:hover {
+	color: #b27cc4;
+}
+
+.m-comments-rating {
+	background: #b995c5;
+	border-top-color: #946EA0;
+}
+
+/* m-elementdescription */
+
+.m-elementdescription-h1,
+.m-elementdescription-advice-txt {
+	color: #b27cc4;
+}
+
+.m-elementdescription-advice,
+.m-elementdescription-advice:after {
+	border-color: #b995c5;
+}
+
+/* buttons */
+
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active {
+	color: #fff;
+	background-color: #b995c5;
+	border-color: #b995c5;
+}
+
+.btn-round.btn-theme:hover,
+.btn-round.btn-theme:focus,
+.btn-round.btn-theme:active,
+.btn-round.btn-theme.active {
+	color: #b27cc4;
+	background: transparent;
+	border-color: #b995c5;
+}

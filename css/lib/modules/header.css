@@ -1,0 +1,28 @@
+#header {
+    background: #324058;
+}
+
+.m-top-banner {
+    height: 200px;
+    background-image: url("../../../img/imhonet-top-banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-top-logo {
+    float: left;
+    border-left-color: transparent !important;
+    width: 210px;
+    height: 70px;
+    background-image: url("../../../img/default/imhonet-top-logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.m-header-btn {
+    padding: 15px 22px;
+}
+
+.m-header-btn .btn {
+    margin: 0px;
+}

@@ -1,0 +1,73 @@
+/* Inline image list module */
+.m-inlineimagelist {
+	padding: 35px 0 70px;
+	text-align: center;
+}
+
+	.m-inlineimagelist-h1 {
+		margin: 0 0 35px 0;
+		color: #01a58d;
+		font-size: 3.3em;
+		font-weight: normal;
+	}
+
+	.m-inlineimagelist-gallery {
+		overflow: hidden;
+		height: 370px;
+		vertical-align: top;
+		margin: 30px 0 50px 0;
+		padding: 0;
+	}
+
+		.m-inlineimagelist-gallery-item {
+			display: inline-block;
+			*display: inline;
+			*zoom:1;
+			width: 185px;
+			height: 370px;
+			vertical-align: top;
+			margin: 0 0 0 25px;
+			padding: 0;
+		}
+
+		.m-inlineimagelist-gallery-item:first-child {
+			margin: 0;
+		}
+
+			.m-inlineimagelist-gallery-item > a,
+			.m-inlineimagelist-gallery-item > a:hover {
+				color: #333;
+				text-decoration: none;
+			}
+
+			.m-inlineimagelist-gallery-image {
+				height: 305px;
+				margin: 0 0 5px -5px;
+				line-height: 305px;
+				vertical-align: bottom;
+			}
+
+				.m-inlineimagelist-gallery-image > img {
+					display: inline-block;
+					*display: inline;
+					*zoom:1;
+					overflow: hidden;
+					max-height: 295px;
+					vertical-align: bottom;
+					border: 2px solid transparent;
+				}
+
+				.m-inlineimagelist-gallery-image > img:hover,
+				.m-inlineimagelist-gallery-image > img:focus {
+					border-color: #01a58d;
+				}
+
+			.m-inlineimagelist-gallery-txt {
+				font-size: 1.85em;
+				line-height: 1.2;
+			}
+
+	.m-inlineimagelist .btn {
+		display: block;
+		margin: 0 auto;
+	}

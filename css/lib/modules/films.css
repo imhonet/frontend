@@ -1,0 +1,164 @@
+#wrapper {
+    background-color: #e4e4e4;
+}
+
+.m-header {
+    background: url("../../../img/header.jpg");
+    width: 100%;
+    height: 260px;
+    margin: auto;
+}
+
+.m-footer {
+    width: auto;
+    height: 100px;
+}
+
+.m-title h1 {
+    color: #00ba8d;
+    font-weight: 100;
+    font-family: FuturaNewBook;
+    margin: 0px 0px 20px 0px;
+}
+
+.m-films {
+    position: relative;
+}
+
+.m-films-promo-card {
+    background-color: #fff;
+    width: 300px;
+    overflow: hidden;
+}
+.m-films-promo-card-img {
+    margin: 0 0 14px 0;
+    overflow: hidden;
+}
+.m-films-promo-card-img img {
+    width: 100%;
+}
+.m-films-promo-card-label {
+    height: 20px;
+}
+.m-films-promo-card-label span {
+    margin: 0 0 0 6px;
+    font-weight: bold;
+    vertical-align: top;
+    padding: 0px;
+    text-transform: uppercase;
+    color: #00ba8d;
+}
+.m-films-promo-card-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.m-films-promo-card-title span {
+    display: inline-block;
+    color: #151515;
+    line-height: 1.35em;
+    font-weight: 100;
+}
+.m-films-promo-card-counters {
+    margin: 0 15px 10px 15px;
+}
+.m-films-promo-card-counter {
+    margin: 0 14px 0 0;
+    color: #999999;
+}
+.m-films-promo-card-banner240 {
+    height: 400px !important;
+    padding: 50px 0;
+    text-align: center;
+}
+.m-films-promo-card-facebook {
+    background: #4a5f96;
+    height:  190px !important;
+    padding: 25px 0;
+}
+.m-films-promo-card-facebook-title {
+    padding: 0 15px 20px 15px;
+    border-bottom: 1px solid #8895b6;
+}
+.m-films-promo-card-facebook-title span {
+    color: #fff;
+}
+.m-films-promo-card-facebook-desc {
+    height: 100px;
+    padding: 12px 15px 0 15px;
+}
+.m-films-promo-card-facebook-desc p {
+    color: #fff;
+}
+.m-films-promo-card-facebook-link {
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin: 0 15px;
+    text-align: center;
+
+}
+.m-films-promo-card-facebook-link a {
+    color: #4a5f96;
+}
+.m-films-opinion {
+    height: 210px !important;
+    padding: 15px 0;
+}
+.m-films-opinion .m-films-promo-card-title {
+    height: 110px !important;
+}
+.m-films-promo-card-profile {
+    padding: 15px 15px 0 15px;
+    overflow: hidden;
+    border-top: 1px solid #d9d9d9;
+}
+.m-films-promo-card-profile-left {
+    float: left;
+}
+.m-films-promo-card-profile-right {
+    float: left;
+}
+.m-films-promo-card-profile-name {
+    margin: 0 0 15px 15px;
+}
+.m-films-video .m-films-promo-card-img {
+    height: 240px !important;
+    margin-bottom: -80px;
+}
+.m-films-video .m-films-promo-card-label span,
+.m-films-video .m-films-promo-card-title span
+{
+    color: #fff;
+}
+.m-films-promo-card.large {
+    height: 500px;
+}
+.m-films-promo-card.large .m-films-promo-card-img {
+    height: 325px;
+}
+.m-films-promo-card.large .m-films-promo-card-label {
+    margin: 0 15px 10px 15px;
+}
+.m-films-promo-card.large .m-films-promo-card-title {
+    height: 80px;
+    margin: 0 17px 19px 17px;
+}
+.m-films-promo-card.small {
+    height: 240px;
+}
+.m-films-promo-card.small .m-films-promo-card-img {
+    height: 130px;
+}
+.m-films-promo-card.small .m-films-promo-card-label {
+    margin: 0 15px 3px 15px;
+}
+.m-films-promo-card.small .m-films-promo-card-title {
+    height: 37px;
+    margin: 0 17px 6px 17px;
+}
+
+
+#middle {
+
+    margin-top: 40px;
+}

@@ -1,0 +1,22 @@
+.m-top-search {
+    float: left;
+    padding: 20px 24px;
+}
+.m-top-search form {
+    margin: 0;
+    position: relative;
+}
+.m-top-search-input {
+    width: 325px;
+    padding: 4px 30px 4px 13px !important;
+    margin: 0 !important;
+}/*
+.in .m-top-search-input {
+    width: 125px;
+}*/
+.m-top-search-button {
+    padding: 7px 5px;
+    position: absolute;
+    top: 0px;
+    right: 3px;
+}

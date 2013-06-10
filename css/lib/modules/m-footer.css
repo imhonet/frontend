@@ -1,0 +1,37 @@
+/* footer */
+
+
+.m-footer-richtext,
+.m-footer-links{
+	margin: 50px 0;
+	color : #fff;
+}
+
+
+.m-footer-richtext{
+	width: 36%;
+	padding-right: 2%;
+	float: left;
+	border-right: 1px solid #525460;
+}
+
+.m-footer-links{
+	width: 60%;
+	position: relative;
+	float: right;
+}
+
+.m-footer-links > ul{
+	list-style : none;
+	float : left;
+	width: 25%;
+	margin: 0;
+}
+
+.m-footer-links > ul li a{
+	color : #ccceda;
+	font-size : 1.25em;
+	line-height : 1.8em;
+	text-decoration : underline;
+}
+

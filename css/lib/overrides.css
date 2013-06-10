@@ -1,0 +1,24 @@
+p {
+    margin-bottom: 24px;
+}
+
+ul.nav {
+    list-style: none;
+    margin: 0 !important;
+}
+.nav > li:focus,
+.nav > li:hover
+{
+    background-color: inherit;
+}
+.nav > li > a {
+    display: inline;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+    border-bottom: 1px solid;
+    background-color: inherit;
+}
+
+.navbar-inner {
+    padding: 0 !important;
+}

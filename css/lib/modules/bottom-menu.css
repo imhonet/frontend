@@ -1,0 +1,18 @@
+.m-bottom-menu ul {
+    float: left;
+    overflow: hidden;
+    width: 15%;
+    margin: 0 5% !important;
+}
+.m-bottom-menu ul li {
+    margin: 0 0 20px 0;
+}
+.m-bottom-menu ul li a {
+    color: #fff;
+    border-bottom: 1px solid;
+}
+.m-bottom-menu ul li a:hover,
+.m-bottom-menu ul li a:focus
+{
+    border-bottom: 0;
+}

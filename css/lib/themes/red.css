@@ -1,0 +1,67 @@
+/*
+	
+	רנטפע ט פמם: e54b5e
+	
+*/
+
+.navbar.navbar-metro .nav li.active a,
+.navbar.navbar-metro .nav li.active a:hover{
+	border-bottom: 5px solid #e54b5e;
+}
+
+/* m-inlineimagelist */
+
+.m-inlineimagelist-h1 {
+	color: #e54b5e;
+}
+
+.m-inlineimagelist-gallery-image > img:hover,
+.m-inlineimagelist-gallery-image > img:focus {
+	border-color: #e54b5e;
+}
+
+/* comments */
+
+.m-comments-title,
+.m-comments-button-add-comment.active,
+.m-comments-button-add-comment:hover {
+	color: #e54b5e;
+}
+
+.m-comments-rating {
+	background: #e54b5e;
+	border-top-color: #C43A4A;
+}
+
+
+/* m-elementdescription */
+
+.m-elementdescription-h1,
+.m-elementdescription-advice-txt {
+	color: #e54b5e;
+}
+
+.m-elementdescription-advice,
+.m-elementdescription-advice:after {
+	border-color: #e54b5e;
+}
+
+/* buttons */
+
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active {
+	color: #fff;
+	background-color: #e54b5e;
+	border-color: #e54b5e;
+}
+
+.btn-round.btn-theme:hover,
+.btn-round.btn-theme:focus,
+.btn-round.btn-theme:active,
+.btn-round.btn-theme.active {
+	color: #e54b5e;
+	background: transparent;
+	border-color: #e54b5e;
+}

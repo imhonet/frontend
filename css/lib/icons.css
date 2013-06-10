@@ -1,0 +1,42 @@
+i {
+    display: inline-block;
+}
+
+.i-tube {
+    background: url("../../img/icons/i-tube.png");
+    width: 20px;
+    height: 20px;
+}
+.i-ring {
+    background: url("../../img/icons/i-ring.jpg");
+    width: 20px;
+    height: 20px;
+}
+.i-star {
+    margin: 3px 0 0 0;
+    vertical-align: top;
+    background: url("../../img/icons/i-star.jpg");
+    width: 12px;
+    height: 12px;
+}
+.i-man {
+    margin: 3px 0 0 0;
+    vertical-align: top;
+    background: url("../../img/icons/i-man.jpg");
+    width: 12px;
+    height: 12px;
+}
+.i-cloud {
+    margin: 3px 0 0 0;
+    vertical-align: top;
+    background: url("../../img/icons/i-cloud.jpg");
+    width: 12px;
+    height: 12px;
+}
+.i-like {
+    margin: 3px 0 0 0;
+    vertical-align: top;
+    background: url("../../img/icons/i-like.jpg") no-repeat;
+    width: 12px;
+    height: 12px;
+}

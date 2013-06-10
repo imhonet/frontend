@@ -1,0 +1,55 @@
+.navbar {
+    margin: 0;
+}
+
+    .navbar-inner {
+        min-height: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: inherit;
+        background-image: none;
+        border-radius: 0px;
+        box-shadow: none;
+        border: 0px;
+    }
+
+    .navbar .nav > li > a {
+        color: #FFF;
+        text-shadow: none;
+        font-weight: 200;
+        font-size: 1.1em;
+        line-height: 2.6em;
+    }
+
+    .navbar .nav > li > a:focus,
+    .navbar .nav > li > a:hover {
+
+        color: #afbed8;
+    }
+
+    .btn-group-navbar {
+        margin: 0px !important;
+        min-height: 30px;
+        padding: 15px;
+        border: 1px solid transparent;
+        border-left-color: #283348;
+    }
+
+input.search-query {
+
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: 300;
+}
+
+*, *:active, *:focus {
+    box-shadow: none !important;
+}
+
+input:focus {
+    border-color: inherit !important;
+}
+
+input.input-medium {
+    width: 100px;
+}

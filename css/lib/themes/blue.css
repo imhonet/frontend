@@ -1,0 +1,70 @@
+/*
+רנטפע: 6dafce
+פמם: 7cb5d0
+*/
+
+
+/* m-mainnavigation*/
+
+.navbar.navbar-metro .nav li.active a,
+.navbar.navbar-metro .nav li.active a:hover{
+	border-bottom: 5px solid #7cb5d0;
+}
+
+
+/* m-inlineimagelist */
+
+.m-inlineimagelist-h1 {
+	color: #6dafce;
+}
+
+.m-inlineimagelist-gallery-image > img:hover,
+.m-inlineimagelist-gallery-image > img:focus {
+	border-color: #7cb5d0;
+}
+
+/* comments */
+
+.m-comments-title,
+.m-comments-button-add-comment.active,
+.m-comments-button-add-comment:hover {
+	color: #6dafce;
+}
+
+.m-comments-rating {
+	background: #6dafce;
+	border-top-color: #4587A5;
+}
+
+
+/* m-elementdescription */
+
+.m-elementdescription-h1,
+.m-elementdescription-advice-txt {
+	color: #6dafce;
+}
+
+.m-elementdescription-advice,
+.m-elementdescription-advice:after {
+	border-color: #7cb5d0;
+}
+
+/* buttons */
+
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active {
+	color: #fff;
+	background-color: #7cb5d0;
+	border-color: #7cb5d0;
+}
+
+.btn-round.btn-theme:hover,
+.btn-round.btn-theme:focus,
+.btn-round.btn-theme:active,
+.btn-round.btn-theme.active {
+	color: #7cb5d0;
+	background: transparent;
+	border-color: #7cb5d0;
+}

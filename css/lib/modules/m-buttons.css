@@ -1,0 +1,233 @@
+/* buttons */
+.btn {
+	padding: 0 1em 0.1em;
+	line-height: 1.75;
+	color: #333;
+	font-family: "FuturaNewLight";
+	font-size: 1.28em;
+	text-shadow: none;
+	box-shadow: none;
+	background: transparent;
+	border: 1px solid #bfbfbf;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+	background-color: #fff;
+}
+
+.btn.btn-theme.disabled,
+.btn.btn-theme[disabled],
+.btn.btn-theme.disabled:hover,
+.btn.btn-theme[disabled]:hover,
+.btn.btn-theme.disabled:focus,
+.btn.btn-theme[disabled]:focus {
+	color: #8c8c8c;
+	border-color: #bfbfbf;
+	background: transparent;
+}
+
+.btn-inverse {
+	color: #fff;
+	background: transparent;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active {
+	background-color: #555;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-inverse.disabled,
+.btn-inverse[disabled],
+.btn-inverse.disabled:hover,
+.btn-inverse[disabled]:hover,
+.btn-inverse.disabled:focus,
+.btn-inverse[disabled]:focus {
+	color: #eee;
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* btn size */
+
+.btn-large {
+	font-size: 1.85em;
+}
+
+.btn-small {
+	font-size: 1.1em;
+}
+
+.btn.btn-round {
+	color: #333;
+	font-size: 1em;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+.btn-round.btn-inverse {
+	color: #fff;
+}
+
+/* btn 	kind */
+
+.btn-facebook,
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook:active,
+.btn-facebook.active {
+	color: #3c6198;
+	background: #fff;
+	border-color: #3c6198;
+}
+
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active {
+	color: #fff;
+	background-color: #01a58d;
+	border-color: #01a58d;
+	box-shadow : 0 0 0;
+	outline: none;
+}
+
+.btn-round.btn-theme:hover,
+.btn-round.btn-theme:focus,
+.btn-round.btn-theme:active,
+.btn-round.btn-theme.active {
+	color: #01a58d;
+	background: transparent;
+	border-color: #01a58d;
+	box-shadow : 0 0 0;
+	outline: none;
+}
+
+
+
+
+
+/* btn 	colour themes */
+
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active,
+.btn-green.active {
+	color: #fff;
+	background-color: #01a58d;
+	border-color: #01a58d;
+}
+
+.btn-round.btn-green:hover,
+.btn-round.btn-green:focus,
+.btn-round.btn-green:active,
+.btn-round.btn-green.active {
+	color: #01a58d;
+	background: transparent;
+	border-color: #01a58d;
+}
+
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue:active,
+.btn-blue.active {
+	color: #fff;
+	background-color: #7cb5d0;
+	border-color: #7cb5d0;
+}
+
+.btn-round.btn-blue:hover,
+.btn-round.btn-blue:focus,
+.btn-round.btn-blue:active,
+.btn-round.btn-blue.active {
+	color: #7cb5d0;
+	background: transparent;
+	border-color: #7cb5d0;
+}
+
+.btn-red:hover,
+.btn-red:focus,
+.btn-red:active,
+.btn-red.active {
+	color: #fff;
+	background-color: #e54b5e;
+	border-color: #e54b5e;
+}
+
+.btn-round.btn-red:hover,
+.btn-round.btn-red:focus,
+.btn-round.btn-red:active,
+.btn-round.btn-red.active {
+	color: #e54b5e;
+	background: transparent;
+	border-color: #e54b5e;
+}
+
+.btn-orange:hover,
+.btn-orange:focus,
+.btn-orange:active,
+.btn-orange.active {
+	color: #fff;
+	background-color: #f78560;
+	border-color: #f78560;
+}
+
+.btn-round.btn-orange:hover,
+.btn-round.btn-orange:focus,
+.btn-round.btn-orange:active,
+.btn-round.btn-orange.active {
+	color: #f6764c;
+	background: transparent;
+	border-color: #f78560;
+}
+
+.btn-purple:hover,
+.btn-purple:focus,
+.btn-purple:active,
+.btn-purple.active {
+	color: #fff;
+	background-color: #b995c5;
+	border-color: #b995c5;
+}
+
+.btn-round.btn-purple:hover,
+.btn-round.btn-purple:focus,
+.btn-round.btn-purple:active,
+.btn-round.btn-purple.active {
+	color: #b27cc4;
+	background: transparent;
+	border-color: #b995c5;
+}
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active,
+.btn-white.active {
+	color: #333;
+	background-color: #fff;
+}
+
+.btn-round.btn-white:hover,
+.btn-round.btn-white:focus,
+.btn-round.btn-white:active,
+.btn-round.btn-white.active {
+	color: #333;
+	background-color: #fff;
+	border-color: #bfbfbf;
+}
+
+.btn-round.btn-inverse.btn-white:hover,
+.btn-round.btn-inverse.btn-white:focus,
+.btn-round.btn-inverse.btn-white:active,
+.btn-round.btn-inverse.btn-white.active {
+	color: #fff;
+	background-color: transparent;
+}
+

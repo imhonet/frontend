@@ -1,0 +1,18 @@
+.m-top-menu {
+    float: left;
+    margin-bottom: 0;
+    overflow: hidden;
+    border-right: 1px solid #3c465f;
+}
+.m-top-menu .m-top-menu-item {
+    float: left !important;;
+    border-left: 1px solid #3c465f;
+    padding: 11px 22px;
+}
+.m-top-menu-item a {
+    color: #fff !important;
+    padding: 0 !important;
+}
+.m-top-menu-item a:hover {
+    color: #000;
+}

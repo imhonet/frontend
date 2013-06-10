@@ -1,0 +1,211 @@
+/* module */
+.m-comments {
+    overflow: auto;
+}
+
+    .m-comments-item {
+        margin: 0 0 30px 0;
+    }
+
+    .m-comments-title {
+        margin: .5em 0 1em;
+        font-weight: normal;
+    }
+
+    .m-comments-user-avatar {
+        float: left;
+    }
+
+    .m-comments-user-avatar img {
+        vertical-align: top;
+    }
+
+    .m-comments-item-body {
+        position: relative;
+        margin: 0 0 0 101px;
+        background: #fff;
+        padding: 18px 40px 30px 39px;
+    }
+
+    .m-comments-body-arrow {
+        position: absolute;
+        top: 20px;
+        right: 100%;
+        border: 14px solid transparent;
+        border-right-color: #fff;
+    }
+
+    .m-comments-rating {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        width: 54px;
+        height: 45px;
+        padding: 15px 0 0;
+        border-top: 5px solid #999;
+        background: #ddd;
+        text-align: center;
+        font-size: 22px;
+        line-height: 1.3em;
+        color: #fff;
+    }
+
+    .m-comments-rating-arrow {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid #fff;
+        border-left: 27px solid transparent;
+        border-right: 27px solid transparent;
+    }
+
+    .m-comments-user-name {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 15px 0 0;
+        padding: 0 0 3px 0;
+        border-bottom: 1px solid #d5d5d5;
+        font-size: 1.6em;
+        line-height: 1.4em;
+        color: #333;
+    }
+
+    .m-comments-date {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: .8em;
+        line-height: 1.3em;
+        text-transform: uppercase;
+        color: #8c8c8c;
+    }
+
+    .m-comments-content {
+        margin: 20px 90px 0 0;
+		font-size: 1.45em;
+		line-height: 1.5em;
+		text-shadow : 0 0 0 #fff;
+		font-weight : normal;
+    }
+
+    .m-comments-buttons-area {
+        margin: 15px 0 0;
+    }
+
+    .m-comments-button-add-comment {
+        border-bottom: 1px solid #d5d5d5;
+        font-size: .8em;
+        color: #8c8c8c;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    .m-comments-button-add-comment.active {
+        border-color: transparent;
+    }
+
+    .m-comments-button-add-comment:hover {
+        border-color: transparent;
+    }
+
+    .m-comments-buttons-likers {
+        float: right;
+    }
+
+    .m-comments-buttons-likers button {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* subitems */
+    .m-comments-item .m-comments-item {
+        margin: 30px -40px -30px -39px;
+        padding: 19px 40px 0 39px;
+        border-top: 1px solid #d5d5d5;
+        background: #f6f6f6;
+        font-size: .9em;
+    }
+
+    .m-comments-item .m-comments-item .m-comments-item-body {
+        margin: 0 0 0 55px;
+        padding-top: 0;
+        background: none;
+    }
+
+    .m-comments-item .m-comments-item .m-comments-body-arrow {
+        display: none;
+    }
+
+    .m-comments-form-add-comment {
+        position: relative;
+        margin: 30px -40px -30px -39px;
+        padding: 30px 40px 30px 39px;
+        border-top: 1px solid #d5d5d5;
+        background: #f6f6f6;
+    }
+
+    .m-comments-form-add-comment form {
+        margin: 0 0 0 60px;
+    }
+
+  
+
+    .m-comments-add-textarea textarea{
+        padding: 10px;
+        border: 1px solid #d5d5d5;
+        background: #fff;
+        margin: 0 0 15px;
+		
+		width: 100%;
+        height: 60px;
+      
+        resize: none;
+        color: #8c8c8c;
+        font-family: inherit;
+    }
+	
+	
+	.m-comments-form-add-comment:before,
+	.m-comments-form-add-comment:after{
+		content : ' ';
+		width: 0px;
+		height: 0px;
+		position: absolute;
+	}
+	
+	.m-comments-form-add-comment:before{
+		top: -24px;
+		left: 90px;
+		border-width: 12px;
+		border-style: solid;
+		border-color:  transparent  transparent #999 transparent;
+	}
+	
+	.m-comments-form-add-comment:after{
+		top: -22px;
+		left: 91px;
+		border-width: 11px;
+		border-style: solid;
+		border-color:  transparent  transparent #f6f6f6 transparent;
+	}
+	
+	
+	
+    .m-comments-add-form-buttons {
+        text-align: right;
+    }
+
+   
+    .m-comments-title {
+        color: #01a58d;
+    }
+
+    .m-comments-button-add-comment.active,
+    .m-comments-button-add-comment:hover {
+        color: #01a58d;
+    }
+
+    .m-comments-rating {
+        background: #01a58d;
+        border-top-color: #018471;
+    }
