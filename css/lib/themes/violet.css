@@ -1,5 +1,105 @@
+
+/*
+
+	����� � ���: b995c5
+
+*/
+
+
 .m-bottom-menu .nav > li > a,
 .nav > li > a:focus,
 .nav > li > a:hover {
     border-color: #b995c5;
+}
+
+.navbar.navbar-metro .nav li.active a,
+.navbar.navbar-metro .nav li.active a:hover{
+	border-bottom: 5px solid #b995c5;
+}
+
+/* m-inlineimagelist */
+
+.m-inlineimagelist-h1 {
+	color: #b995c5;
+}
+
+.m-inlineimagelist-gallery-image > img:hover,
+.m-inlineimagelist-gallery-image > img:focus {
+	border-color: #b995c5;
+}
+
+/* comments */
+
+.m-comments-title,
+.m-comments-button-add-comment.active,
+.m-comments-button-add-comment:hover {
+	color: #b995c5;
+}
+
+.m-comments-rating {
+	background: #b995c5;
+	border-top-color: #C43A4A;
+}
+
+
+/* m-elementdescription */
+
+.m-elementdescription-h1,
+.m-elementdescription-advice-txt {
+	color: #b995c5;
+}
+
+.m-elementdescription-advice,
+.m-elementdescription-advice:after {
+	border-color: #b995c5;
+}
+
+/* buttons */
+
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active {
+	color: #fff;
+	background-color: #b995c5;
+	border-color: #b995c5;
+}
+
+.btn-round.btn-theme:hover,
+.btn-round.btn-theme:focus,
+.btn-round.btn-theme:active,
+.btn-round.btn-theme.active {
+	color: #b995c5;
+	background: transparent;
+	border-color: #b995c5;
+}
+
+
+
+/*  m-pagination  */
+
+.m-result > .active,
+.m-result > a:active,
+.m-result > a:hover,
+.m-pagination > .active,
+.m-pagination > a:active,
+.m-pagination > a:hover {
+	color: #b995c5;
+}
+
+
+/*  .m-inlineitemslist  */
+
+.m-inlineitemslist-h1 {
+	color: #b995c5;
+}
+
+.m-inlineitemslist-rating {
+	background: #b995c5;
+}
+
+/*.m-subnavigation*/
+
+.m-subnavigation-hide-title {
+	color: #b995c5;
 }

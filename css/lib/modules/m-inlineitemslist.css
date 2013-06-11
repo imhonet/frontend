@@ -1,0 +1,101 @@
+.m-inlineitemslist {
+	padding: 20px 0 0 0;
+}
+
+	.m-inlineitemslist-h1 {
+		margin: 20px 0 20px 0;
+		color: #01a58d;
+		font-size: 3.3em;
+		font-weight: normal;
+		font-family: "FuturaNewLight";
+	}
+
+	.m-inlineitemslist-item {
+		margin: 20px 0;
+		background: #fff;
+	}
+
+	.m-inlineitemslist-item:after {
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
+	}
+
+		.m-inlineitemslist-rating {
+			float: left;
+			width: 125px;
+			height: 190px;
+			padding: 80px 0 0 0;
+			line-height: 1;
+			color: #fff;
+			text-align: center;
+			vertical-align: middle;
+			background: #01a58d;
+		}
+
+			.m-inlineitemslist-rating_txt {
+				font-size: 2.14em;
+				font-family: "FuturaNewLight";
+			}
+
+			.m-inlineitemslist-rating-number {
+				color: #fff;
+				font-size: 5em;
+			}
+
+		.m-inlineitemslist-image {
+			display: inline-block;
+			width: 185px;
+			height: 270px;
+			text-align: center;
+			vertical-align: top;
+		}
+
+		.m-inlineitemslist-button {
+			float: right;
+			margin: 45px 15px 0 15px;
+		}
+
+			.m-inlineitemslist-button > .btn {
+				display: block;
+				width: 170px;
+				text-align: left;
+				font-size: 1.28em;
+				margin: 0 0 15px 0;
+				padding: 0.4em 1em 0.5em 1em;
+			}
+
+		.m-inlineitemslist-describe {
+			display: inline-block;
+			margin: 15px 15px 0 15px;
+		}
+
+			.m-inlineitemslist-describe-h2 {
+				margin: 0 0 15px 0;
+				font-size: 1.85em;
+				color: #151515;
+			}
+
+			.m-inlineitemslist-describe-gray {
+				margin: 0 0 50px 0;
+				color: #8c8c8c;
+				font-family: "FuturaNewLight";
+			}
+
+			.m-inlineitemslist-describe-score {
+				margin: 0 0 54px 0;
+				color: #151515;
+				font-family: "FuturaNewLight";
+				font-size: 1.14em;
+			}
+
+			.m-inlineitemslist-describe-counters {
+				font-family: "NeoRgCyr";
+				font-size: 0.85em;
+			}
+
+				.m-inlineitemslist-describe-counter {
+					color: #8C8C8C;
+					margin: 0 14px 0 0;
+				}

@@ -1,7 +1,7 @@
 /*
 	
-	ôîí: b995c5
-	øğèôò: b27cc4
+	ï¿½ï¿½ï¿½: b995c5
+	ï¿½ï¿½ï¿½ï¿½ï¿½: b27cc4
 
 */
 
@@ -64,4 +64,32 @@
 	color: #b27cc4;
 	background: transparent;
 	border-color: #b995c5;
+}
+
+/*  m-pagination  */
+
+.m-result > .active,
+.m-result > a:active,
+.m-result > a:hover,
+.m-pagination > .active,
+.m-pagination > a:active,
+.m-pagination > a:hover {
+	color: #b27cc4;
+}
+
+
+/*  .m-inlineitemslist  */
+
+.m-inlineitemslist-h1 {
+	color:  #b27cc4;
+}
+
+.m-inlineitemslist-rating {
+	background: #b995c5;
+}
+
+/*.m-subnavigation*/
+
+.m-subnavigation-hide-title {
+	color: #b27cc4;
 }

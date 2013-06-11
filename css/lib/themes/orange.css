@@ -1,6 +1,6 @@
 /*
-	øğèôò: f6764c
-	ôîí: f78560
+	ï¿½ï¿½ï¿½ï¿½ï¿½: f6764c
+	ï¿½ï¿½ï¿½: f78560
 */
 
 .navbar.navbar-metro .nav li.active a,
@@ -62,4 +62,32 @@
 	color: #f6764c;
 	background: transparent;
 	border-color: #f78560;
+}
+
+
+/*  m-pagination  */
+
+.m-result > .active,
+.m-result > a:active,
+.m-result > a:hover,
+.m-pagination > .active,
+.m-pagination > a:active,
+.m-pagination > a:hover {
+	color: #f78560;
+}
+
+/*  .m-inlineitemslist  */
+
+.m-inlineitemslist-h1 {
+	color:  #f6764c;
+}
+
+.m-inlineitemslist-rating {
+	background: #f78560;
+}
+
+/*.m-subnavigation*/
+
+.m-subnavigation-hide-title {
+	color: #f6764c;
 }

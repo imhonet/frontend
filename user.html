@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>build</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script data-main="js/main" src="js/lib/require.js"></script>
+
+    <!-- Stylesheets -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <script>
+        require(['app', 'modules/m-wookmark'], function (App) {
+            App.start();
+        });
+    </script>
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+    <div id="top-advertising" class="l-section"></div>
+
+
+    <div id="top-navigation" class="l-section">
+        <div class="l-grid">
+            <div class="l-row">
+                <div class="l-full">
+
+                    <div class="m-mainnavigation">
+                        <div class="navbar navbar-metro navbar-user">
+                            <div class="navbar-inner">
+                                <div class="container">
+                                    <a href="#" class="brand">
+                                        <img src="img/logo.png" alt="imhonet">
+                                    </a>
+                                    <ul class="nav">
+                                        <li class="active"><a href="#">Фильмы</a></li>
+                                        <li><a href="#">Сериалы</a></li>
+                                        <li><a href="#">Книги</a></li>
+                                        <li><a href="#">Игры</a></li>
+                                        <li><a href="#">Музыка</a></li>
+                                    </ul>
+
+                                    <form action="topsearch" class="navbar-search">
+                                        <input type="text" placeholder="Поиск по сайту">
+                                    </form>
+
+                                    <div class="m-username">
+                                        <a  href="#" class="m-username-message">
+                                            <div class="m-username-message-count">3</div>
+                                        </a>
+                                        <div class="m-username-photo"><img src="img/photogall/user.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="subnavigation" class="l-section" >
+        <div class="l-grid">
+            <div class="l-row">
+                <div class="l-full">
+                    <div class="m-subnavigation">
+                        <div class="m-subnavigation-item"><a href="#">Профиль</a></div>
+                        <div class="m-subnavigation-item"><a href="#">Фотоальбом</a></div>
+                        <div class="m-subnavigation-item"><a href="#">Добавленное в каталог</a></div>
+                        <div class="m-subnavigation-item"><a href="#">Избранное</a></div>
+                        <div class="m-subnavigation-item"><a href="#">Подписки</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="l-section m-user-information " style="background: url('img/photogall/bg_user.jpg') no-repeat 50% 0 #343f38;">
+        <div class="l-grid">
+            <div class="l-row">
+                <div class="l-half">
+
+                    <div class="m-user-information-profile">
+                        <div class="m-user-information-photo"><img src="img/photogall/user.jpg" alt=""></div>
+                        <div class="m-user-information-txt">
+                            <div class="m-user-information-name">Анна
+                                Смольная</div>
+                            <div class="m-user-information-feature">Bellissimo GirlFriend</div>
+                            <button class="btn btn-inverse btn-theme">Редактировать профиль</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="l-half">
+                    <div class="m-user-information-wrap">
+                    <div class="m-user-information-action">
+                        <div class="m-user-information-action-ico"><img src="img/photogall/bage1.png" alt=""></div>Отметил
+                        кинотеатр
+                    </div>
+                    <div class="m-user-information-action">
+                        <div class="m-user-information-action-ico"><img src="img/photogall/bage3.png" alt=""></div>отличный
+                        комментарий
+                    </div>
+                    <div class="m-user-information-action">
+                        <div class="m-user-information-action-ico"><img src="img/photogall/bage2.png" alt=""></div>Добавил
+                        10 друзей
+                    </div>
+                </div></div>
+
+
+            </div>
+            <div class="l-row">
+                <div class="l-third">
+                    <div class="m-user-information-title">О себе</div>
+                    <div class="m-user-information-self">
+                        <div class="m-user-information-self_title">23 года, Москва, на сайте  c 20 января 2010</div>
+                        <p>Образование: <span class="opacity_txt">130 лицей, г. Москва</span></p>
+                        <p><span class="opacity_txt">Увлекаюсь конным спортом, танцами, люблю плавать, ходить в кино, работаю в модном журнале в Москве</span></p>
+
+                        <div class="icon-facebook"></div>
+                        <div class="icon-vk"></div>
+                    
+                    </div>
+                    <div class="m-user-information-bottom-link"><a href="#">Вся информация</a></div>
+
+                </div>
+                <div class="l-third">
+                    <div class="m-user-information-title">Подписана</div>
+                    <div class="m-user-information-bottom-link"><a href="#">Все 242 подписки</a></div>
+
+
+                </div>
+                <div class="l-third">
+                    <div class="m-user-information-title">Подписчики</div>
+                    <div class="m-user-information-bottom-link"><a href="#">Все 242 подписчики</a></div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="l-section m-userawards" >
+        <div class="l-grid">
+            <div class="l-row">
+                <div class="l-full">
+                        <div class="m-userawards-title">Награды</div>
+                        <ul class="m-userawards-list">
+                            <li class="m-userawards-item">
+                                <div class="m-userawards-item-ico"><img src="img/photogall/bage1.png" width="90" height="90" alt=""></div>
+                                Шоппинг
+
+                            </li>
+                            <li class="m-userawards-item">
+                                <div class="m-userawards-item-ico"><img src="img/photogall/bage1.png" width="90" height="90" alt=""></div>
+                                отличный<br>
+                                комментарий
+
+                            </li>
+                            <li class="m-userawards-item">
+                                <div class="m-userawards-item-ico"><img src="img/photogall/bage1.png" width="90" height="90" alt=""></div>
+                                скачал 10<br>
+                                фильмов
+
+                            </li>
+                            <li class="m-userawards-item">
+                                <div class="m-userawards-item-ico"><img src="img/photogall/bage1.png" width="90" height="90" alt=""></div>
+                                Отметил<br>
+                                кинотеатр
+
+                            </li>
+                            <li class="m-userawards-item">
+                                <div class="m-userawards-item-ico"><img src="img/photogall/bage1.png" width="90" height="90" alt=""></div>
+                                Добавил<br>
+                                10 друзей
+                            </li>
+
+                            <li class="m-userawards-item">
+                                <div class="m-userawards-item-ico"><img src="img/photogall/bage1.png" width="90" height="90" alt=""></div>
+                                скачал 10<br>
+                                фильмов
+
+                            </li>
+                            <li class="m-userawards-item">
+                                <div class="m-userawards-item-ico"><img src="img/photogall/bage1.png" width="90" height="90" alt=""></div>
+                                Отметил<br>
+                                кинотеатр
+
+                            </li>
+
+                        </ul>
+                    <button class="btn btn-large btn-theme">Все награды</button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+
+</html>

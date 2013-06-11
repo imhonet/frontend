@@ -60,15 +60,25 @@
 		margin: 0;
 		width: 200px;
 	}
+
+	.navbar.navbar-user .navbar-search input{
+		width: 120px;
+	}
 	
 	@media (min-width: 1280px){
 		.navbar.navbar-metro .navbar-search input{
 			width: 520px;
+		}
+		.navbar.navbar-user .navbar-search input{
+			width: 440px;
 		}
 	}
 	
 	@media (min-width: 1600px){
 		.navbar.navbar-metro .navbar-search input{
 			width: 840px;
+		}
+		.navbar.navbar-user .navbar-search input{
+			width: 760px;
 		}
 	}

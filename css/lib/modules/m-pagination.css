@@ -1,0 +1,33 @@
+.m-pagination,
+.m-result {
+	margin: 20px 0 10px 0;
+	font-family: "NeoRgCyr";
+	font-size: 0.85em;
+	color: #8c8c8c;
+	line-height: 1;
+}
+
+.m-result {
+	margin: 10px 0 20px 15px;
+}
+
+	.m-pagination > a,
+	.m-result > a {
+		margin: 0 10px 0 0;
+		color: #8c8c8c;
+		text-decoration: none;
+	}
+
+	.m-result > span {
+		margin: 0 10px 0 0;
+	}
+
+	.m-result > .active,
+	.m-result > a:active,
+	.m-result > a:hover,
+	.m-pagination > .active,
+	.m-pagination > a:active,
+	.m-pagination > a:hover {
+		color: #01a58d;
+		text-decoration: underline;
+	}

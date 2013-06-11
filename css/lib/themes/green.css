@@ -1,5 +1,5 @@
 /*
-	ôîí è øğèôò: 01a58d
+	ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½: 01a58d
 */
 
 .navbar.navbar-metro .nav li.active a,
@@ -62,4 +62,31 @@
 	color: #01a58d;
 	background: transparent;
 	border-color: #01a58d;
+}
+
+/*  m-pagination  */
+
+.m-result > .active,
+.m-result > a:active,
+.m-result > a:hover,
+.m-pagination > .active,
+.m-pagination > a:active,
+.m-pagination > a:hover {
+	color: #01a58d;
+}
+
+/*  .m-inlineitemslist  */
+
+.m-inlineitemslist-h1 {
+	color: #01a58d;
+}
+
+.m-inlineitemslist-rating {
+	background: #01a58d;
+}
+
+/*.m-subnavigation*/
+
+.m-subnavigation-hide-title {
+	color: #01a58d;
 }

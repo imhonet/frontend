@@ -454,4 +454,6 @@
 .icon-fullscreen {
   background-position: -456px -144px;
 }
+.icon-facebook{background: url("../../../img/icons/i-facebook.png") no-repeat 0 0;display: inline-block; margin: 0 10px 0 0;width: 31px;height: 31px;}
+.icon-vk{background: url("../../../img/icons/i-vk.png") no-repeat 0 0; display: inline-block;margin: 0 10px 0 0;width: 31px;height: 31px;}
 

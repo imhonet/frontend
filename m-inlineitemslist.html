@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>build</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script data-main="js/main" src="js/lib/require.js"></script>
+
+    <!-- Stylesheets -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <script>
+        require(['app', 'modules/m-wookmark'], function (App) {
+            App.start();
+        });
+    </script>
+
+    <script data-main="js/main" src="js/modules/m-subnavigation.js"></script>
+
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+<div id="top-advertising" class="l-section"></div>
+
+
+<div id="top-navigation" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+
+                <div class="m-mainnavigation">
+                    <div class="navbar navbar-metro">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <a href="#" class="brand">
+                                    <img src="img/logo.png" alt="imhonet">
+                                </a>
+                                <ul class="nav">
+                                    <li class="active"><a href="#">Фильмы</a></li>
+                                    <li><a href="#">Сериалы</a></li>
+                                    <li><a href="#">Книги</a></li>
+                                    <li><a href="#">Игры</a></li>
+                                    <li><a href="#">Музыка</a></li>
+                                </ul>
+
+                                <form action="topsearch" class="navbar-search">
+                                    <input type="text" placeholder="Поиск по сайту">
+                                </form>
+                                <ul class="nav pull-right">
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Вход</a>
+                                        <ul class="dropdown-menu" style="padding-top:0">
+                                            <li>
+                                                <div class="well"
+                                                     style="margin-bottom:0;border-radius : 5px 5px 0 0; background-color: transparent; box-shadow : 0 0 0; border:0;">
+                                                    <form style="margin-bottom:0;">
+                                                        <div>
+                                                            <label class="control-label"
+                                                                   for="inputLogin">Логин</label>
+
+                                                            <div class="controls">
+                                                                <input type="text" id="inputLogin"
+                                                                       placeholder="Имя пользователя">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <label class="control-label"
+                                                                   for="inputPassword">Пароль</label>
+
+                                                            <div class="controls">
+                                                                <input type="password" id="inputPassword"
+                                                                       placeholder="* * * * * *">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="controls">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox"> Запомнить меня
+                                                                </label>
+                                                                <button type="submit" class="btn">Вход</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subnavigation" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+                <div class="m-subnavigation">
+                    <div class="m-subnavigation-item m-subnavigation-item-close"><a href="#">Свернуть фильтр</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Фильмы на Имхонет</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Рекомендуемое</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Новинки кино</a></div>
+                    <div class="m-subnavigation-item m-subnavigation-item-best active"><a href="#">Лучшее</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Подборки</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="m-subnavigation-hide m-subnavigation-hide-best" style="display:block;height: auto;">
+    <div class="l-section">
+        <div class="l-grid">
+            <div class="l-row">
+                <div class="l-quater">
+
+                    <div class="m-subnavigation-hide-title">Фильтры</div>
+                    <ul class="m-subnavigation-hide-ul">
+                        <li class="m-subnavigation-hide-item"><a href="#">Сейчас в кино</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Смотреть онлайн</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Что можно скачать</a></li>
+                    </ul>
+
+                    <div class="m-subnavigation-hide-title">Дата выхода</div>
+                    <ul class="m-subnavigation-hide-ul">
+                        <li class="m-subnavigation-hide-item"><a href="#">2014</a>&nbsp;&nbsp;<a href="#">2013</a>&nbsp;&nbsp;<a
+                                href="#">2012</a>&nbsp;&nbsp;<a href="#">2011</a>&nbsp;&nbsp;<a href="#">2010</a></li>
+                    </ul>
+                </div>
+                <div class="l-half">
+
+                    <div class="m-subnavigation-hide-title">Жанры</div>
+                    <ul class="m-subnavigation-hide-ul m-subnavigation-hide-ul-third">
+                        <li class="m-subnavigation-hide-item"><a href="#">Аниме</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Артхаус</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Биография</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Боевики</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Военные фильмы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Детективы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Документальные</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Драмы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Исторические фильмы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Комедии</a></li>
+                    </ul>
+                    <ul class="m-subnavigation-hide-ul m-subnavigation-hide-ul-third">
+                        <li class="m-subnavigation-hide-item"><a href="#">Короткометражные</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Криминал</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Мелодрамы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Мистика</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Музыкальные программы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Мультфильмы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Мюзиклы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Научные</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Образовательные программы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Приключения</a></li>
+                    </ul>
+                    <ul class="m-subnavigation-hide-ul m-subnavigation-hide-ul-third">
+                        <li class="m-subnavigation-hide-item"><a href="#">Прочее</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Спорт</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Триллеры</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Ужасы</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Фантастика</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Фильмы для детей</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Эротика</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Юмор</a></li>
+                    </ul>
+                </div>
+                <div class="l-quater">
+
+                    <div class="m-subnavigation-hide-title">Страны</div>
+                    <ul class="m-subnavigation-hide-ul m-subnavigation-hide-ul-half">
+                        <li class="m-subnavigation-hide-item"><a href="#">США</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Россия</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">СССР</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Франция</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Великобритания</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Япония</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Германия</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Италия</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Канада</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Индия</a></li>
+                    </ul>
+                    <ul class="m-subnavigation-hide-ul m-subnavigation-hide-ul-half">
+                        <li class="m-subnavigation-hide-item"><a href="#">Испания</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Китай/Гонконг</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Южная Корея</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Австралия</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Польша</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Украина</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Швеция</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Дания</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Нидерланды</a></li>
+                        <li class="m-subnavigation-hide-item"><a href="#">Бельгия</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="l-section" id="middle">
+
+<div class="l-grid">
+
+<div class="l-row">
+
+<div class="l-threequaters">
+
+<div class="m-inlineitemslist">
+<h1 class="m-inlineitemslist-h1">Рейтинг фильмов</h1>
+
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">1</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">2</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">3</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">4</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">5</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">6</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">7</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">8</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">9</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+<div class="m-inlineitemslist-item">
+    <div class="m-inlineitemslist-button">
+        <button type="button" class="btn  btn-large btn-theme">Смотреть</button>
+        <button type="button" class="btn  btn-large btn-theme">Скачать</button>
+        <button type="button" class="btn  btn-large btn-theme">Хочу посмотреть</button>
+    </div>
+    <div class="m-inlineitemslist-rating">
+        <span class="m-inlineitemslist-rating-number">10</span><br>
+        <span class="m-inlineitemslist-rating_txt">место</span>
+    </div>
+
+    <div class="m-inlineitemslist-image"><img src="img/films/185x270.jpg" alt=""></div>
+    <div class="m-inlineitemslist-describe">
+        <div class="m-inlineitemslist-describe-h2">Эпик</div>
+        <div class="m-inlineitemslist-describe-gray">США, 2013 <br>Трилер, камедия</div>
+        <div class="m-inlineitemslist-describe-score">Моя оценка<br>
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+            <img src="img/icons/i-star.jpg" alt="" width="18" height="18">
+        </div>
+        <div class="m-inlineitemslist-describe-counters">
+            <span class="m-inlineitemslist-describe-counter">4.5</span>
+            <span class="m-inlineitemslist-describe-counter">234</span>
+            <span class="m-inlineitemslist-describe-counter">65</span>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+<div class="m-pagination">
+    <a href="#"><&nbsp;&nbsp;Предыдущая</a>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">Следующая&nbsp;&nbsp;>></a>
+</div>
+<div class="m-result"><span>Результатов на страницу:</span>
+    <a href="#" class="active">10</a>
+    <a href="#">20</a>
+    <a href="#">30</a>
+</div>
+</div>
+
+<div class="l-quater">
+    <div style="margin-top: 100px;"><img src="img/films/banner240x400.jpg"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</body>
+
+</html>

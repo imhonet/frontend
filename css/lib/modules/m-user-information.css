@@ -1,0 +1,158 @@
+.m-user-information {
+	padding-top: 30px;
+	padding-bottom: 35px;
+	background: #212B3D;
+}
+
+	.m-user-information-profile {
+		position: relative;
+
+	}
+
+	.m-user-information-profile:after {
+		display: block;
+		content: '';
+		height: 0;
+		clear: both;
+	}
+
+		.m-user-information-photo {
+			float: left;
+			border: 6px solid #fff;
+
+		}
+
+			.m-user-information-photo > img {
+				max-height: 205px;
+				max-width: 205px;
+
+			}
+
+		.m-user-information-txt {
+			margin-left: 235px;
+			padding: 0 0 55px;
+			color: #fff;
+			line-height: 1;
+
+		}
+
+			.m-user-information-name {
+				font-size: 4.28em;
+				line-height: 0.8;
+
+			}
+
+			.m-user-information-feature {
+				padding: 10px 0 0 0;
+				font-size: 1.85em;
+				font-family: "FuturaNewLight";
+
+			}
+
+		.m-user-information-profile .btn {
+			position: absolute;
+			bottom: 0;
+			padding: 0.4em 1em 0.5em;
+
+		}
+
+	.m-user-information-wrap {
+		text-align: right;
+	}
+
+		.m-user-information-action {
+			display: inline-block;
+			overflow: hidden;
+			position: relative;
+			width: 140px;
+			padding: 0 5px;
+			color: #fff;
+			font-size: 1.14em;
+			font-family: "FuturaNewLight";
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.m-user-information-action:first-child {
+			border-left: none;
+		}
+		.m-user-information-action:after {
+			display: block;
+			content: '';
+			width: 1px;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(../../../img/default/repeat-border.png) repeat-y 0 0;
+		}
+
+		.m-user-information-action:first-child:after {
+			background: none;
+		}
+
+			.m-user-information-action-ico {
+				display: block;
+				margin: 0 auto 15px auto;
+			}
+
+	.m-user-information-title {
+		margin: 65px 10px 25px 0;
+		color: #fff;
+		font-family: "FuturaNewLight";
+		font-size: 3.3em;
+		line-height: 1;
+	}
+
+	.m-user-information-self {
+		padding: 20px;
+		color: #fff;
+		margin: 0 10px 0 0;
+		font-family: "Segoeui";
+		background: rgba(0, 0, 0, .4);
+		border: 1px solid #7b7379;
+	}
+
+		.m-user-information-self_title {
+			text-transform: uppercase;
+			margin: 0 0 15px 0;
+		}
+
+		.m-user-information-self p {
+			font-size: 1.07em;
+		}
+
+		.m-user-information-self .opacity_txt {
+			opacity: 0.7;
+		}
+
+		.m-user-information-self .icon-facebook,
+		.m-user-information-self .icon-vk {
+			margin-top: 10px;
+		}
+
+	.m-user-information-bottom-link {
+		margin: 20px 10px 0 0;
+		text-align: right;
+		color: #fff;
+		font-family: "FuturaNewLight";
+		font-size: 1.28em;
+		line-height: 1;
+	}
+
+		.m-user-information-bottom-link > a {
+			color: #fff;
+			text-decoration: none;
+			border-bottom: 1px solid rgba(255, 255, 255, .4);
+		}
+
+@media (min-width: 1280px) {
+	.m-user-information-action {
+		padding: 0 30px;
+
+	}
+
+	.m-user-information-txt {
+		margin-left: 245px;
+	}
+}

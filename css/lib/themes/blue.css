@@ -1,6 +1,6 @@
 /*
-øğèôò: 6dafce
-ôîí: 7cb5d0
+ï¿½ï¿½ï¿½ï¿½ï¿½: 6dafce
+ï¿½ï¿½ï¿½: 7cb5d0
 */
 
 
@@ -67,4 +67,31 @@
 	color: #7cb5d0;
 	background: transparent;
 	border-color: #7cb5d0;
+}
+
+/*  m-pagination  */
+
+.m-result > .active,
+.m-result > a:active,
+.m-result > a:hover,
+.m-pagination > .active,
+.m-pagination > a:active,
+.m-pagination > a:hover {
+	color: #7cb5d0;
+}
+
+/*  .m-inlineitemslist  */
+
+.m-inlineitemslist-h1 {
+	color: #7cb5d0;
+}
+
+.m-inlineitemslist-rating {
+	background: #7cb5d0;
+}
+
+/*.m-subnavigation*/
+
+.m-subnavigation-hide-title {
+	color: #7cb5d0;
 }
