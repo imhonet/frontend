@@ -24,7 +24,7 @@
 
 		.m-inlineitemslist-rating {
 			float: left;
-			width: 125px;
+			width: 90px;
 			height: 190px;
 			padding: 80px 0 0 0;
 			line-height: 1;
@@ -59,7 +59,7 @@
 
 			.m-inlineitemslist-button > .btn {
 				display: block;
-				width: 170px;
+				width: 157px;
 				text-align: left;
 				font-size: 1.28em;
 				margin: 0 0 15px 0;
@@ -68,7 +68,7 @@
 
 		.m-inlineitemslist-describe {
 			display: inline-block;
-			margin: 15px 15px 0 15px;
+			margin: 15px 0 0 10px;
 		}
 
 			.m-inlineitemslist-describe-h2 {
@@ -99,3 +99,17 @@
 					color: #8C8C8C;
 					margin: 0 14px 0 0;
 				}
+
+
+@media (min-width: 1280px) {
+	.m-inlineitemslist-button > .btn {
+		width: 170px;
+	}
+	.m-inlineitemslist-rating {
+		float: left;
+		width: 125px;
+	}
+	.m-inlineitemslist-describe {
+		margin: 15px 15px 0;
+	}
+}

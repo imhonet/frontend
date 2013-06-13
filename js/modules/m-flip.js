@@ -10,15 +10,17 @@ define(
 
             $(function(){
 
-                $('.m-signature-item').click(function(){
-                    $(this).toggleClass('active');
-                    $(this).flip({
-                        direction:"rl",
-                        color:"#f38366"
-                    });
+                $('.m-signature-item').mouseover(
+                    function(){
+                        $(this).flip({
+                            direction : "rl",
+                            color : "#f38366",
+                            speed : "200"
+                        });
+                        $(this).toggleClass('active');
 
-
-                });
+                    }
+                );
 
             });
 

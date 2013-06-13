@@ -2,6 +2,12 @@
 	padding-top: 30px;
 	padding-bottom: 35px;
 	background: #212B3D;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
 }
 
 	.m-user-information-profile {
@@ -158,6 +164,8 @@
 		float: left;
 		padding: 0;
 		margin: 0;
+		width: 100px;
+		height: 100px;
 		list-style: none;
 		background: #f38366;
 	}
