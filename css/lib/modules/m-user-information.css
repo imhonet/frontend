@@ -187,14 +187,25 @@
 			padding: 30px 0 0 0;
 		}
 
-		.m-signature-item.active > img {
+
+
+		.m-signature-item.back > img {
 			display: none;
 		}
 
-		.m-signature-item.active > .m-signature-txt {
+		.m-signature-item.back > .m-signature-txt {
 			display: block;
 		}
 
+		.m-signature-item.hoverfront > img {
+			display: block;
+		}
+
+		.m-signature-item.hoverfront > .m-signature-txt {
+			display: none;
+		}
+/*
+*/
 @media (min-width: 1280px) {
 	.m-user-information-action {
 		padding: 0 30px;

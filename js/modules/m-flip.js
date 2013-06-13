@@ -10,17 +10,37 @@ define(
 
             $(function(){
 
-                $('.m-signature-item').mouseover(
-                    function(){
-                        $(this).flip({
-                            direction : "rl",
-                            color : "#f38366",
-                            speed : "200"
+                var isHover = false;
+                $(".m-signature-item").mouseenter(function () {
+                    if (isHover == false) {
+                        isHover = true;
+                        var elem = $(this);
+                        elem.flip({
+                            direction: 'rl',
+                            color: '#f38366',
+                            speed: 200,
+                            onBefore: function () {
+                                elem.removeClass('hoverfront');
+                                elem.addClass('back');
+                            }
                         });
-                        $(this).toggleClass('active');
-
                     }
-                );
+                }).mouseleave(function () {
+                        var elem = $(this);
+
+                            elem.flip({
+                                direction: 'lr',
+                                color: '#f38366',
+                                speed: 200,
+                                onBefore: function () {
+                                    elem.removeClass('back');
+                                    elem.addClass('hoverfront');
+                                }
+                            });
+                            isHover = false;
+
+                    });
+
 
             });
 
