@@ -105,12 +105,13 @@
 	}
 
 	.m-user-information-self {
-		padding: 20px;
+		padding: 20px 20px 0 20px;
 		color: #fff;
 		margin: 0 10px 0 0;
 		font-family: "Segoeui";
 		background: rgba(0, 0, 0, .4);
 		border: 1px solid #7b7379;
+		min-height: 178px;
 	}
 
 		.m-user-information-self_title {
@@ -128,7 +129,7 @@
 
 		.m-user-information-self .icon-facebook,
 		.m-user-information-self .icon-vk {
-			margin-top: 10px;
+			margin-top: 0;
 		}
 
 	.m-user-information-bottom-link {
@@ -144,6 +145,46 @@
 			color: #fff;
 			text-decoration: none;
 			border-bottom: 1px solid rgba(255, 255, 255, .4);
+		}
+
+.m-signature {
+	overflow: hidden;
+	height: 200px;
+	padding: 0;
+	margin: 0;
+}
+
+	.m-signature-item {
+		float: left;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		background: #f38366;
+	}
+
+		.m-signature-item > img {
+			max-height: 100px;
+			max-width: 100px;
+		}
+
+		.m-signature-txt {
+			display: none;
+			width: 100px;
+			height: 70px;
+			color: #fff;
+			vertical-align: middle;
+			text-align: center;
+			font-family: "FuturaNewLight";
+			font-size: 1.71em;
+			padding: 30px 0 0 0;
+		}
+
+		.m-signature-item.active > img {
+			display: none;
+		}
+
+		.m-signature-item.active > .m-signature-txt {
+			display: block;
 		}
 
 @media (min-width: 1280px) {

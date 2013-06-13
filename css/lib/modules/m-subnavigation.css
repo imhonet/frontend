@@ -36,8 +36,10 @@
 	}
 
 		.m-subnavigation-item > a {
+			 display: block;
 			 color: #fff;
 			 line-height: 45px;
+			 background: transparent;
 		 }
 
 
@@ -51,7 +53,6 @@
 		}
 
 .m-subnavigation-hide {
-	height: 0;
 	display: none;
 	overflow: hidden;
 	background: #212b3d;

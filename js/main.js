@@ -5,6 +5,7 @@ require.config({
 		"raty"          : "lib/jquery/jquery.raty",
 		"wookmark"      : "lib/jquery/jquery.wookmark",
 		"photogallery"  : "lib/jquery/jquery.photogallery",
+		"flip"          : "lib/jquery/jquery.flip",
 		"underscore"    : "lib/underscore",
 		"backbone"      : "lib/backbone",
 		"marionette"    : "lib/backbone.marionette",

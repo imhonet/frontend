@@ -1,38 +1,62 @@
-.m-userawards{background: #e4e4e4;
+.m-userawards {
+	background: #e4e4e4;
 
-}.m-userawards-title{
-	margin: 40px 0 30px;
-	font-family: "FuturaNewLight";
-	font-size: 3.28em;
-	 line-height: 1;
+}
 
- }
-.m-userawards-list{overflow: hidden;
-	margin: 0;
-	max-height: 180px;
-}
-.m-userawards-item{
-	float: left;position: relative;width: 14%;min-width:130px;max-width:180px;margin: 0 0 20px 0;text-align: center; vertical-align: top;
-	text-transform: uppercase;
-	list-style: none;font-family:"FuturaNewLight";font-size: 1.14em;
-}
-.m-userawards-item:after {
-	display: block;
-	content: '';
-	width: 1px;
-	height: 1000px;
-	position: absolute;
-	left: 0;
-	top: 0;
-	background: url(../../../img/default/repeat-border-gray.png) repeat-y 0 0;
-}
-.m-userawards-item:first-child:after{background: none;
-}
-.m-userawards-item-ico {
-	display: block;
-	margin: 0 auto 10px auto;
-}
-.m-userawards .btn {display: block;margin: 60px auto;
+	.m-userawards-title {
+		margin: 40px 0 30px;
+		font-family: "FuturaNewLight";
+		font-size: 3.28em;
+		line-height: 1;
 
-	padding: 0 2.5em 0.1em 2.5em;
-}
+	}
+
+	.m-userawards-list {
+		overflow: hidden;
+		margin: 0;
+		max-height: 180px;
+	}
+
+		.m-userawards-item {
+			float: left;
+			position: relative;
+			width: 14%;
+			min-width: 130px;
+			max-width: 180px;
+			margin: 0 0 20px 0;
+			text-align: center;
+			vertical-align: top;
+			text-transform: uppercase;
+			list-style: none;
+			font-family: "FuturaNewLight";
+			font-size: 1.14em;
+		}
+
+		.m-userawards-item:after {
+			display: block;
+			content: '';
+			width: 1px;
+			height: 1000px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(../../../img/default/repeat-border-gray.png) repeat-y 0 0;
+		}
+
+		.m-userawards-item:first-child:after {
+			background: none;
+		}
+
+			.m-userawards-item-ico {
+				display: block;
+				margin: 0 auto 10px auto;
+			}
+
+			.m-userawards-item-ico > img {width: 90px;height: 90px;
+			}
+
+	.m-userawards .btn {
+		display: block;
+		margin: 60px auto;
+		padding: 0 2.5em 0.1em 2.5em;
+	}
