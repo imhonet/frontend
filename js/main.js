@@ -9,7 +9,8 @@ require.config({
 		"underscore"    : "lib/underscore",
 		"backbone"      : "lib/backbone",
 		"marionette"    : "lib/backbone.marionette",
-		"text"          : "lib/require-text"
+		"text"          : "lib/require-text",
+		"modernizr"     : "lib/modernizr.2.6.2.min"
 	},
 	
 	shim:{
