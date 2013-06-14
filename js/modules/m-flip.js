@@ -31,10 +31,10 @@ define(
                     // CSS 3D is not supported, use the scroll up effect instead
                     $('.m-signature-item').hover(
                         function () {
-                            $(this).find('.m-signature-txt').stop().animate({bottom:0}, 100, 'easeOutCubic');
+                            $(this).find('.m-signature-txt').stop().animate({bottom:0}, 500, 'easeOutCubic');
                         },
                         function () {
-                            $(this).find('.m-signature-txt').stop().animate({bottom: ($(this).height() * -1) }, 100, 'easeOutCubic');
+                            $(this).find('.m-signature-txt').stop().animate({bottom: ($(this).height() * -1) }, 500, 'easeOutCubic');
                         }
                     );
                 }
