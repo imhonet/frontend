@@ -14,6 +14,7 @@
 	.m-elementdescription-h1 {
 		margin: 0 0 25px 0;
 		color: #01a58d;
+		font-family: "FuturaNewLight";
 		font-size: 3.3em;
 		font-weight: normal;
 		line-height: 1;
@@ -63,10 +64,10 @@
 			background: #fff;
 			border-left: 1px solid #01a58d;
 			border-top: 1px solid #01a58d;
-			-moz-transform: rotate(-45deg); /* Äëÿ Firefox */
-			-ms-transform: rotate(-45deg); /* Äëÿ IE */
-			-webkit-transform: rotate(-45deg); /* Äëÿ Safari, Chrome, iOS */
-			-o-transform: rotate(-45deg); /* Äëÿ Opera */
+			-moz-transform: rotate(-45deg); /* ï¿½ï¿½ï¿½ Firefox */
+			-ms-transform: rotate(-45deg); /* ï¿½ï¿½ï¿½ IE */
+			-webkit-transform: rotate(-45deg); /* ï¿½ï¿½ï¿½ Safari, Chrome, iOS */
+			-o-transform: rotate(-45deg); /* ï¿½ï¿½ï¿½ Opera */
 			transform: rotate(-45deg);
 		}
 
