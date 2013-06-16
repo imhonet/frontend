@@ -10,6 +10,10 @@
     .m-comments-title {
         margin: .5em 0 1em;
         font-weight: normal;
+		font-family: "FuturaNewLight";
+		font-size: 3.3em;
+		font-weight: normal;
+		text-align: left;
     }
 
     .m-comments-user-avatar {

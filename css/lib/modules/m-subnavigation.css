@@ -52,6 +52,23 @@
 			text-decoration: none;
 		}
 
+		.m-subnavigation-item-count {
+			position: relative;
+			display: inline-block;
+			top: -8px;
+			margin: 0 0 0 5px;
+			width: 18px;
+			height: 18px;
+			text-align: center;
+			line-height: 18px;
+			color: #fff;
+			font-size: 0.8em;
+			background: #7cb5d2;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+		}
+
 .m-subnavigation-hide {
 	display: none;
 	overflow: hidden;

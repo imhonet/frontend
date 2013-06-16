@@ -95,9 +95,17 @@
 .m-subnavigation-hide-title {
 	color: #7cb5d0;
 }
-
+.m-subnavigation-item-count{
+	background: #7cb5d0;
+}
 /* .m-blockitemslist */
 
 .m-blockitemslist-h1{
+	color: #7cb5d0;
+}
+
+/* .m-elementprimary */
+
+.m-elementprimary-add > a{
 	color: #7cb5d0;
 }

@@ -95,8 +95,17 @@
 	color: #e54b5e;
 }
 
+.m-subnavigation-item-count{
+	background:  #e54b5e;
+}
 /* .m-blockitemslist */
 
 .m-blockitemslist-h1{
+	color: #e54b5e;
+}
+
+/* .m-elementprimary */
+
+.m-elementprimary-add > a{
 	color: #e54b5e;
 }

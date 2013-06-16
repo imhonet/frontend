@@ -92,8 +92,17 @@
 	color: #f6764c;
 }
 
+.m-subnavigation-item-count{
+	background: #f78560;
+}
 /* .m-blockitemslist */
 
 .m-blockitemslist-h1{
+	color: #f6764c;
+}
+
+/* .m-elementprimary */
+
+.m-elementprimary-add > a{
 	color: #f6764c;
 }
