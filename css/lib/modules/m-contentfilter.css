@@ -1,0 +1,130 @@
+#filter {
+	background-color: #232D3F;
+}
+
+.m-contentfilter {
+	padding: 35px 0 30px 0;
+}
+
+.m-contentfilter:after {
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+	.m-contentfilter-wrap {
+		overflow: hidden;
+	}
+
+		.m-contentfilter-column {
+			float: left;
+			width: 286px;
+			position: relative;
+			font-family: "NeoRgCyr";
+
+		}
+
+		.m-contentfilter-column:after {
+			display: block;
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 1px;
+			height: 1000px;
+			border-right: 1px solid #40495a;
+		}
+
+		.m-contentfilter-column.left {
+			padding: 0 20px 0 0;
+
+		}
+
+		.m-contentfilter-column.center {
+			padding: 0 20px;
+
+		}
+
+		.m-contentfilter-column.right {
+			padding: 0 0 0 20px;
+
+		}
+
+		.m-contentfilter-column.right:after {
+			display: none;
+
+		}
+
+			.m-contentfilter-title {
+				margin: 30px 0 15px 0;
+				color: #00ba8d;
+				font-size: 1.07em;
+				text-transform: uppercase;
+				font-weight: normal;
+				line-height: 1;
+			}
+
+			.m-contentfilter-title:first-child {
+				margin: 0 0 15px 0;
+			}
+
+			.m-contentfilter-ul {
+				margin: 0;
+				padding: 0;
+			}
+
+				.m-contentfilter-item {
+					margin: 0;
+					padding: 0;
+					list-style: none;
+					font-size: 0.85em;
+				}
+
+					.m-contentfilter-item > a {
+						color: #fff;
+						text-decoration: underline;
+					}
+
+					.m-contentfilter-item > a:hover {
+						text-decoration: none;
+					}
+
+@media (min-width: 1280px) {
+	.m-contentfilter-column {
+		width: 300px
+	}
+
+	.m-contentfilter-column.center {
+		width: 578px;
+	}
+
+	.m-contentfilter-column.center .m-contentfilter-ul {
+		display: inline-block;
+		width: 39%;
+		margin-right: 10%;
+	}
+}
+
+@media (min-width: 1600px) {
+	.m-contentfilter-column {
+		width: 380px;
+	}
+
+	.m-contentfilter-column.center {
+		width: 728px;
+	}
+
+	.m-contentfilter-column .m-contentfilter-ul {
+		display: inline-block;
+		width: 39%;
+		margin-right: 10%;
+	}
+
+	.m-contentfilter-column.center .m-contentfilter-ul {
+		display: inline-block;
+		width: 29%;
+		margin-right: 3%;
+	}
+}
+

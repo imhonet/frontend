@@ -1,35 +1,18 @@
-define(
-    [
-        "app",
-        "jquery"
-    ],
+﻿define(
+	[
+		"app",
+		"jquery"
+	], 
+		
+	function(App, $){
+		
+		App.module('subnavigation', function(subnavigation){
 
-    function(App, $){
-        App.module('subnavigation', function(){
+			$('.m-subnavigation').delegate('.m-subnavigation-toggler', 'click', function(){
+				$('.m-subnavigation').toggleClass('expanded');
+				App.vent.trigger('filter:toggleSlide');
+			})
 
-            $(function(){
-
-                $('.m-subnavigation-item').click(function(){
-
-                    $('.m-subnavigation-hide').hide();
-                    $('.m-subnavigation-item').removeClass("active");
-                    var linkSubnavigation = $('.m-subnavigation-item');
-                    for (var i=0; i<linkSubnavigation.size(); i++){
-                        var classLink = 'm-subnavigation-item-' + (i+1);
-                        var classHide = 'm-subnavigation-hide-' + (i+1);
-
-
-                        if ($(this).hasClass(classLink)){
-                            $(this).toggleClass("active");
-                            $("."+ classHide).show();
-                        };
-
-                    };
-                });
-            });
-
-        });
-    }
+		});
+	}
 );
-
-
