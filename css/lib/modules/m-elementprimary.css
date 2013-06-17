@@ -1,41 +1,133 @@
-.m-elementprimary{position: relative;
+.m-elementprimary {
+	position: relative;
 	background: #030202;
-/*	background-position: 50% 0;
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;*/
 }
-.m-elementprimary-bg{position: absolute;top: 0;width:100%;height:100%;overflow:hidden;z-index: 1;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-webkit-background-size: cover;
-	background-size: cover;
-	filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2);}
-.m-elementprimary-tohide{height: 0;line-height: 1px;margin: 0;padding: 0;position: absolute;}
-.m-elementprimary .l-grid{position: relative;z-index: 2;}
-.m-elementprimary-add{margin: 20px 0;text-align: right;font-family: "Segoeui";}
-.m-elementprimary-add > a{
-	text-decoration: underline;}
-.m-elementprimary-add-txt{color: #fff;opacity: 0.4;}
-.m-elementprimary-photo-user{overflow:hidden;width:240px;height:400px;margin: 30px 0 0 0;padding:30px;border: 1px solid rgba(255, 255, 255, 0.4);background: rgba(0, 0, 0, 0.4);}
-.m-elementprimary-photo-user > img{width:240px;height:400px;}
-.m-elementprimary-txt{line-height:1;color: #fff;}
-.m-elementprimary-txt > p{margin: 0 0 7px;font-family: "Segoeui";font-size: 1.07em;}
-.m-elementprimary-txt > p > b{margin: 0 5px 0 0;font-family: "Segoeuib";
-	font-weight: normal;
-}
-.m-elementprimary-txt > p > .reiting{font-size: 1.06em;font-family: "NeoMdCyr";
-}
-.m-elementprimary-title{margin: 30px 0 5px 0;padding:0;font-size: 4.3em;}
-.m-elementprimary-subtitle{margin: 30px 0 10px;padding:0;font-family:"FuturaNewLight";font-size: 1.85em;}
-.m-elementprimary-language{font-family:"FuturaNewLight";font-size: 1.28em;}
-.m-elementprimary-score{}
-.m-elementprimary-score-item{
-	display: inline-block;margin: 0 3px 0 0;cursor: pointer;}
-.m-elementprimary .sotial-net{margin:30px 0;color: #fff;}
-.m-elementprimary-button{margin:40px 0;}
-.m-elementprimary-button > .btn{margin:0 20px 0 0;    padding:0.4em 1em 0.5em 1em;}
+
+	.m-elementprimary-bg {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		z-index: 1;
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		-webkit-background-size: cover;
+		background-size: cover;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+
+		/*filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=5);*/
+	}
+
+	.m-elementprimary-tohide {
+		height: 0;
+		line-height: 1px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
+
+	.m-elementprimary .l-grid {
+		position: relative;
+		z-index: 2;
+	}
+
+		.m-elementprimary-add {
+			margin: 20px 0;
+			text-align: right;
+			font-family: "Segoeui";
+		}
+
+			.m-elementprimary-add > a {
+				text-decoration: underline;
+			}
+
+			.m-elementprimary-add-txt {
+				color: #fff;
+				opacity: 0.4;
+			}
+
+		.m-elementprimary-photo-user {
+			overflow: hidden;
+			width: 240px;
+			height: 400px;
+			margin: 30px 0 0 0;
+			padding: 30px;
+			border: 1px solid rgba(255, 255, 255, 0.4);
+			background: rgba(0, 0, 0, 0.4);
+		}
+
+			.m-elementprimary-photo-user > img {
+				width: 240px;
+				height: 400px;
+			}
+
+		.m-elementprimary-txt {
+			line-height: 1;
+			color: #fff;
+		}
+
+			.m-elementprimary-txt > p {
+				margin: 0 0 5px;
+				font-family: "Segoeui";
+				font-size: 1.07em;
+				line-height: 1.2;
+			}
+
+				.m-elementprimary-txt > p > b {
+					margin: 0 5px 0 0;
+					font-family: "Segoeuib";
+					font-weight: normal;
+				}
+
+				.m-elementprimary-txt > p > .reiting {
+					font-size: 1.06em;
+					font-family: "NeoMdCyr";
+				}
+
+		.m-elementprimary-title {
+			margin: 30px 0 5px 0;
+			padding: 0;
+			font-size: 4.3em;
+		}
+
+		.m-elementprimary-subtitle {
+			margin: 30px 0 10px;
+			padding: 0;
+			font-family: "FuturaNewLight";
+			font-size: 1.85em;
+		}
+
+		.m-elementprimary-language {
+			font-family: "FuturaNewLight";
+			font-size: 1.28em;
+		}
+
+		.m-elementprimary-score {
+		}
+
+			.m-elementprimary-score-item {
+				display: inline-block;
+				margin: 0 3px 0 0;
+				cursor: pointer;
+			}
+
+		.m-elementprimary .sotial-net {
+			margin: 30px 0;
+			color: #fff;
+		}
+
+	.m-elementprimary-button {
+		margin: 40px 0;
+	}
+
+		.m-elementprimary-button > .btn {
+			margin: 0 20px 0 0;
+			padding: 0.4em 1em 0.5em 1em;
+		}
