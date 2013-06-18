@@ -1,0 +1,73 @@
+.popup-vote {
+	max-width: none;
+	box-shadow: 0 0 15px #ddd;
+	padding: 0;
+	color: #fff;
+	font-family: "FuturaNewLight";
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+	.popup-vote a {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	.popup-vote a:hover {
+		text-decoration: none;
+	}
+
+	.popup-vote > .popover-title {
+		background: #e4e4e4;
+		border: none;
+		padding: 30px 20px;
+		font-size: 1.28em;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	.popup-vote > .popover-content {
+		background: #2f3d56;
+		padding: 30px 20px;
+		font-size: 1.28em;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	.popup-vote.left .arrow {
+		border-left-color: #e4e4e4;
+		top: 25px;
+	}
+
+	.popup-vote .arrow:after {
+		display: none;
+	}
+
+	.popup-vote-line {
+		height: 1px;
+		border-top: 1px solid #596478;
+		margin: 20px -20px;
+	}
+
+	.popup-vote-rows {
+		margin: 0 0 10px 0;
+		white-space: nowrap;
+	}
+
+		.popup-vote-star-lbl {
+			display: inline-block;
+			width: 145px;
+		}
+
+		.popup-vote-star {
+			display: inline-block;
+		}
+
+			.popup-vote-star img {
+				display: inline-block;
+				margin: 0 5px 0 0;
+			}

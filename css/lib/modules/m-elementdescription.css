@@ -88,4 +88,25 @@
 	margin: 30px 0 0 0;
 }
 
+.m-elementdescription-advice-score{position: relative;
+	padding: 30px 20px 30px 30px;font-family: "FuturaNewLight";
+	border-top: 1px solid #dadada;
+	color: #8c8c8c;
+}
+.m-elementdescription-advice-score:before{
+	display: block;content: "";position: absolute;top: -41px;right: 13px;height:1px;width:1px;border:20px solid;
+	border-color: transparent transparent #dadada transparent;
+}
+.m-elementdescription-advice-score:after{
+	display: block;content: "";position: absolute;top: -40px;right: 13px;height:1px;width:1px;border:20px solid;
+	border-color: transparent transparent #fff transparent;
+}
+.m-elementdescription-advice-wrapstar{margin: 10px 0;
+}
+.m-elementdescription-advice-wrapstar img{
+	display: inline-block;
+	margin: 0 5px 0 0;
+}
+.m-elementdescription-advice-why{font-size: 1.28em;font-family: "FuturaNewBook";
+}
 /*   // for .m-elementdescription    */

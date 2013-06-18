@@ -4,6 +4,10 @@
 	
 */
 
+.txt-theme{
+	color: #e54b5e;
+}
+
 .navbar.navbar-metro .nav li.active a,
 .navbar.navbar-metro .nav li.active a:hover{
 	border-bottom: 5px solid #e54b5e;
@@ -108,4 +112,14 @@
 
 .m-elementprimary-add > a{
 	color: #e54b5e;
+}
+
+/* .popup-vote */
+
+.popup-vote > .popover-title {
+	background: #e54b5e;
+}
+
+.popup-vote.left .arrow {
+	border-left-color: #e54b5e;
 }

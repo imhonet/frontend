@@ -6,6 +6,10 @@
 */
 
 
+.txt-theme{
+	color: #b995c5;
+}
+
 .m-bottom-menu .nav > li > a,
 .nav > li > a:focus,
 .nav > li > a:hover {
@@ -117,4 +121,14 @@
 
 .m-elementprimary-add > a{
 	color: #b995c5;
+}
+
+/* .popup-vote */
+
+.popup-vote > .popover-title {
+	background: #b995c5;
+}
+
+.popup-vote.left .arrow {
+	border-left-color: #b995c5;
 }

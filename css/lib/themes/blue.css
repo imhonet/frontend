@@ -2,7 +2,9 @@
 �����: 6dafce
 ���: 7cb5d0
 */
-
+.txt-theme{
+	color: #6dafce;
+}
 
 /* m-mainnavigation*/
 
@@ -108,4 +110,14 @@
 
 .m-elementprimary-add > a{
 	color: #7cb5d0;
+}
+
+/* .popup-vote */
+
+.popup-vote > .popover-title {
+	background: #7cb5d0;
+}
+
+.popup-vote.left .arrow {
+	border-left-color: #7cb5d0;
 }

@@ -3,6 +3,10 @@
 	���: f78560
 */
 
+.txt-theme{
+	color: #f6764c;
+}
+
 .navbar.navbar-metro .nav li.active a,
 .navbar.navbar-metro .nav li.active a:hover{
 	border-bottom: 5px solid #f78560;
@@ -105,4 +109,14 @@
 
 .m-elementprimary-add > a{
 	color: #f6764c;
+}
+
+/* .popup-vote */
+
+.popup-vote > .popover-title {
+	background: #f78560;
+}
+
+.popup-vote.left .arrow {
+	border-left-color: #f78560;
 }
