@@ -18,7 +18,7 @@
 
 .navbar.navbar-metro .nav li.active a,
 .navbar.navbar-metro .nav li.active a:hover{
-	border-bottom: 5px solid #b995c5;
+	border-bottom-color: #b995c5;
 }
 
 /* m-inlineimagelist */
@@ -131,4 +131,24 @@
 
 .popup-vote.left .arrow {
 	background: #b995c5;
+}
+
+/* .m-advancedcontentfilter */
+
+.m-advancedcontentfilter-title {
+	color: #b995c5;
+}
+
+.m-advancedcontentfilter-tags.active {
+	background: #b995c5;
+	border-color: #b995c5;
+}
+
+.m-advancedcontentfilter-recomendation .slideline-chose {
+	background: #b995c5;
+}
+
+.m-advanced-content-filter-years-slider .ui-slider-range.ui-widget-header {
+	background-color: #b995c5;
+	border-color: #b995c5;
 }

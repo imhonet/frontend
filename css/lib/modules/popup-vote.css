@@ -1,6 +1,6 @@
 .popup-vote {
 	max-width: none;
-	box-shadow: 0 0 15px #ddd;
+	box-shadow: 0 0 12px 1px rgba(0,0,0,.2);
 	padding: 0;
 	color: #fff;
 	font-family: "FuturaNewLight";
@@ -48,7 +48,7 @@
 		margin: -10px 0 0 0;
 		border: none;
 		background: #e4e4e4;
-		box-shadow: 0 0 15px #ddd;
+		box-shadow: 0 0 12px 1px rgba(0,0,0,.2);
 		-moz-transform: rotate(45deg);
 		-ms-transform: rotate(45deg);
 		-webkit-transform: rotate(45deg);

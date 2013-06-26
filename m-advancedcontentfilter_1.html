@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>build</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script data-main="js/main" src="js/lib/require.js"></script>
+
+    <!-- Stylesheets -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <script>
+        require(['app', 'modules/m-contentfilter', 'modules/m-subnavigation', 'modules/m-ui-slider'], function (App) {
+            App.start();
+        });
+    </script>
+
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+<div id="top-advertising" class="l-section"></div>
+
+
+<div id="top-navigation" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+
+                <div class="m-mainnavigation">
+                    <div class="navbar navbar-metro">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <a href="#" class="brand">
+                                    <img src="img/logo.png" alt="imhonet">
+                                </a>
+                                <ul class="nav">
+                                    <li class="active"><a href="#">Фильмы</a></li>
+                                    <li><a href="#">Сериалы</a></li>
+                                    <li><a href="#">Книги</a></li>
+                                    <li><a href="#">Игры</a></li>
+                                    <li><a href="#">Музыка</a></li>
+                                </ul>
+
+                                <form action="topsearch" class="navbar-search">
+                                    <input type="text" placeholder="Поиск по сайту">
+                                </form>
+                                <ul class="nav pull-right">
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Вход</a>
+                                        <ul class="dropdown-menu" style="padding-top:0">
+                                            <li>
+                                                <div class="well"
+                                                     style="margin-bottom:0;border-radius : 5px 5px 0 0; background-color: transparent; box-shadow : 0 0 0; border:0;">
+                                                    <form style="margin-bottom:0;">
+                                                        <div>
+                                                            <label class="control-label"
+                                                                   for="inputLogin">Логин</label>
+
+                                                            <div class="controls">
+                                                                <input type="text" id="inputLogin"
+                                                                       placeholder="Имя пользователя">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <label class="control-label"
+                                                                   for="inputPassword">Пароль</label>
+
+                                                            <div class="controls">
+                                                                <input type="password" id="inputPassword"
+                                                                       placeholder="* * * * * *">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="controls">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox"> Запомнить меня
+                                                                </label>
+                                                                <button type="submit" class="btn">Вход</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="subnavigation" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+                <div class="m-subnavigation expanded">
+                    <div class="m-subnavigation-item m-subnavigation-toggler">Свернуть фильтр</div>
+                    <div class="m-subnavigation-item"><a href="#">Фильмы на Имхонет</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Рекомендуемое</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Новинки кино</a></div>
+                    <div class="m-subnavigation-item"><a href="#" class="active">Лучшее</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Подборки</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="filter" class="l-section">
+<div class="l-grid">
+<div class="l-row">
+<div class="l-full">
+<div class="m-advancedcontentfilter">
+<div class="m-advanced-content-filter-years">
+    <div class="m-advanced-content-filter-years-slider"></div>
+</div>
+<div class="m-advancedcontentfilter-body">
+
+<div class="m-advancedcontentfilter-wrap">
+<div class="m-advancedcontentfilter-item hide">
+    <div class="m-advancedcontentfilter-item-hidden">
+        <div class="m-advancedcontentfilter-item-wrap">
+            <div class="m-advancedcontentfilter-title">Фильтр</div>
+            <div class="m-advancedcontentfilter-tags m-advancedcontentfilter-tags-block">Смотреть онлайн
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags m-advancedcontentfilter-tags-block">Можно скачать
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags m-advancedcontentfilter-tags-block">Можно купить
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags m-advancedcontentfilter-tags-block">Сейчас в кино
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-advancedcontentfilter-item show">
+    <div class="m-advancedcontentfilter-item-hidden">
+        <div class="m-advancedcontentfilter-item-wrap">
+            <div class="m-advancedcontentfilter-title">Жанр</div>
+            <div class="m-advancedcontentfilter-tags">Боевик
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags active">Аниме
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Артхаус
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags active">Образовательные программы
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Боевик
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags active">Аниме
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Артхаус
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Образовательные программы
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Боевик
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Аниме
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Артхаус
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Образовательные программы
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Боевик
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Аниме
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Артхаус
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Образовательные программы
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Боевик
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Аниме
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Артхаус
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Образовательные программы
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Боевик
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Аниме
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Артхаус
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Образовательные программы
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-advancedcontentfilter-item hide">
+
+    <div class="m-advancedcontentfilter-item-hidden">
+        <div class="m-advancedcontentfilter-item-wrap">
+            <div class="m-advancedcontentfilter-title">Страна</div>
+            <div class="m-advancedcontentfilter-tags">США
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">СССР
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Великобритания
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Франция
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Япония
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">США
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">СССР
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Великобритания
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Франция
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Япония
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">США
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">СССР
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Великобритания
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Франция
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Япония
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">США
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">СССР
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Великобритания
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Франция
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Япония
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">США
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">СССР
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Великобритания
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Франция
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Япония
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">США
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">СССР
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Великобритания
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Франция
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Япония
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">США
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">СССР
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Великобритания
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Франция
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Япония
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-advancedcontentfilter-item hide">
+    <div class="m-advancedcontentfilter-item-hidden">
+        <div class="m-advancedcontentfilter-item-wrap">
+            <div class="m-advancedcontentfilter-title">Награды</div>
+            <div class="m-advancedcontentfilter-tags">Оскар
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Канны
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Сатурн
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">MTV
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Оскар
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Канны
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Сатурн
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">MTV
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Оскар
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Канны
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Сатурн
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">MTV
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Оскар
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Канны
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Сатурн
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">MTV
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Оскар
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Канны
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">Сатурн
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+            <div class="m-advancedcontentfilter-tags">MTV
+                <div class="m-advancedcontentfilter-close">x</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-advancedcontentfilter-item hide">
+    <div class="m-advancedcontentfilter-item-hidden">
+        <div class="m-advancedcontentfilter-item-wrap">
+            <div class="m-advancedcontentfilter-txt">
+                <div class="m-advancedcontentfilter-title">Шкала Бобрикова</div>
+                <div class="m-advancedcontentfilter-rows">Простой 50%</div>
+                <div class="m-advancedcontentfilter-rows whitetxt">Малоизвестный 30%</div>
+                <div class="m-advancedcontentfilter-rows">Брутальный 70%</div>
+                <div class="m-advancedcontentfilter-rows whitetxt">Жесткий 20%</div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="m-advancedcontentfilter-item m-advancedcontentfilter-item-recomendation hide">
+    <div class="m-advancedcontentfilter-item-hidden">
+        <div class="m-advancedcontentfilter-item-wrap">
+            <div class="m-advancedcontentfilter-title">Рекомендации</div>
+
+            <div class="m-advancedcontentfilter-recomendation">
+                <p class="whitetxt">Точность прогноза: 80%</p>
+
+                <div class="slideline">
+                    <div class="slideline-chose" style="width: 80%"></div>
+                </div>
+
+                <p>Чтобы повысить качество работы рекомендательного сервиса поставте оценки фильмам</p>
+                <button class="btn btn-inverse btn-theme">Поставить оценки</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="m-advancedcontentfilter-bottom">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+                <div class="m-advancedcontentfilter-toggler">Сбросить фильтр</div>
+                <div class="m-advancedcontentfilter-bottom-items">
+                    <div class="m-advancedcontentfilter-bottom-item">
+                        <div class="m-advancedcontentfilter-bottom-item-lbl">Дата выхода:</div>
+                        <div class="m-advancedcontentfilter-tags">1990-2000
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                    </div>
+                    <div class="m-advancedcontentfilter-bottom-item">
+                        <div class="m-advancedcontentfilter-bottom-item-lbl">Жанр:</div>
+                        <div class="m-advancedcontentfilter-tags">Боевик
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                        <div class="m-advancedcontentfilter-tags">Приключения
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                        <div class="m-advancedcontentfilter-tags">Боевик
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                        <div class="m-advancedcontentfilter-tags">Боевик
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                        <div class="m-advancedcontentfilter-tags">Приключения
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                        <div class="m-advancedcontentfilter-tags">Боевик
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                        <div class="m-advancedcontentfilter-tags">Боевик
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                        <div class="m-advancedcontentfilter-tags">Приключения
+                            <div class="m-advancedcontentfilter-close">x</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 /*
-	
+
 	����� � ���: e54b5e
-	
+
 */
 
 .txt-theme{
@@ -10,7 +10,7 @@
 
 .navbar.navbar-metro .nav li.active a,
 .navbar.navbar-metro .nav li.active a:hover{
-	border-bottom: 5px solid #e54b5e;
+	border-bottom-color: #e54b5e;
 }
 
 /* m-inlineimagelist */
@@ -122,4 +122,22 @@
 
 .popup-vote.left .arrow {
 	background: #e54b5e;
+}
+
+/* .m-advancedcontentfilter */
+
+.m-advancedcontentfilter-title {
+	color: #e54b5e;
+}
+.m-advancedcontentfilter-tags.active {
+	background: #e54b5e;
+	border-color:  #e54b5e;
+}
+.m-advancedcontentfilter-recomendation .slideline-chose {
+	background: #e54b5e;
+}
+
+.m-advanced-content-filter-years-slider .ui-slider-range.ui-widget-header {
+	background-color: #e54b5e;
+	border-color: #e54b5e;
 }

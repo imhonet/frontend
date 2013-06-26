@@ -9,7 +9,7 @@
 		App.module('filter', function(filter){
 			
 			App.vent.on('filter:toggleSlide', function(){
-				$('.m-contentfilter').slideToggle({
+				$('#filter').slideToggle({
 					easing : 'easeInOutExpo'
 				});
 			});

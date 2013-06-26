@@ -10,7 +10,7 @@
 
 .navbar.navbar-metro .nav li.active a,
 .navbar.navbar-metro .nav li.active a:hover{
-	border-bottom: 5px solid #7cb5d0;
+	border-bottom-color: #7cb5d0;
 }
 
 
@@ -121,3 +121,23 @@
 .popup-vote.left .arrow {
 	 background: #7cb5d0;
  }
+
+/* .m-advancedcontentfilter */
+
+.m-advancedcontentfilter-title {
+	color: #7cb5d0;
+}
+
+.m-advancedcontentfilter-tags.active {
+	background: #7cb5d0;
+	border-color: #7cb5d0;
+}
+
+.m-advancedcontentfilter-recomendation .slideline-chose {
+	background: #7cb5d0;
+}
+
+.m-advanced-content-filter-years-slider .ui-slider-range.ui-widget-header {
+	background-color: #7cb5d0;
+	border-color: #7cb5d0;
+}

@@ -6,6 +6,7 @@ require.config({
 		"wookmark"      : "lib/jquery/jquery.wookmark",
 		"photogallery"  : "lib/jquery/jquery.photogallery",
 		"flip"          : "lib/jquery/jquery.flip",
+		"jquery-ui"     : "lib/jquery/jquery-ui-1.10.3.custom",
 		"underscore"    : "lib/underscore",
 		"backbone"      : "lib/backbone",
 		"marionette"    : "lib/backbone.marionette",
