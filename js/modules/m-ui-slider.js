@@ -15,14 +15,25 @@ define(
 
                     widgetEventPrefix : "m_slider",
 
-                    _refresh : function() {
-
-                        $.ui.slider.prototype._refresh.apply(this, arguments);
-                        this._createLegend();
-                        this._createHandleBlocks();
-                        this._addHandleBlocksListeners();
+                    options : {
+                        /*
+                         Cодержит легенду, массив объектов { value : X, label : Y }
+                         Если нет аттрибута label, то для отображения берется само значение value
+                         */
+                        ticks : null,
+                        // минимальная дистанция между лэйблами ползунков
+                        minlabelDistance : 4
                     },
 
+                    // переписываем метод
+                    _refresh : function() {
+                        // исполняем оригинальный
+                        $.ui.slider.prototype._refresh.apply(this,arguments);
+                        // создаем нашу легенду
+                        this._createLegend();
+                    },
+
+                    // отрисовывает легенду и расставляет лэйблы
                     _createLegend : function() {
 
                         if ( this._legend ) {
@@ -108,20 +119,21 @@ define(
                         this._legend.addClass("ui-state-visible");
                     },
 
-                    _createHandleBlocks : function() {
+                    // добавляет лэйблы к ползункам
+                    _createHandleLabels : function() {
 
-                        if ( this._handleBlocks ) {
+                        if ( this._handleLabels ) {
 
-                            var i = 0, len = this._handleBlocks.length;
+                            var i = 0, len = this._handleLabels.length;
 
                             for ( ; i++; i < len ) {
 
-                                this._handleBlocks[i].remove();
-                                this._handleBlocks[i] = null;
+                                this._handleLabels[i].remove();
+                                this._handleLabels[i] = null;
                             }
                         }
 
-                        var blocks = this._handleBlocks = [];
+                        var blocks = this._handleLabels = [];
                         var handleBlock = "<div class='ui-slider-handle-block'>";
 
                         this.handles.each(function(i, node) {
@@ -130,61 +142,94 @@ define(
                         });
                     },
 
-                    _addHandleBlocksListeners : function() {
-
-                        var fn = $.proxy(this._updateHandleBlocks,this);
-
-                        this.element
-                            .unbind(".handle:block")
-                            .bind(this.widgetEventPrefix + "create.handle:block", fn)
-                            .bind(this.widgetEventPrefix + "slide.handle:block", fn);
+                    // переписываем метод
+                    _refreshValue : function() {
+                        // исполняем оригинальный
+                        $.ui.slider.prototype._refreshValue.apply(this, arguments);
+                        // если у нас нет лэйблов к ползункам
+                        if ( !this._handleLabels ) {
+                            // вызываем соответствующий метод
+                            this._createHandleLabels();
+                        }
+                        // обновляем данные и позиционируем лэйблы ползунков
+                        this._updateHandleLabels();
                     },
 
+                    // стоит ли отображать значение лэйбла ползунка
                     _isHandleBlockVisible : function(value) {
 
                         return $.inArray(value,this._tickValues) < 0;
                     },
 
-                    _updateHandleBlocks : function(e, obj) {
+                    // обновляет содержимое и позиционирует лэйблы ползунков
+                    _updateHandleLabels : function() {
 
-                        var that = this;
-                        var values = ( obj && obj.values ) ? obj.values : this.values();
-                        var sibling = ( values[0] === values[1] - 1 );
+                        var that = this, values = this.values();
+
+                        var defaultCSS = {
+                            left : 0,
+                            visibility : "hidden"
+                        };
 
                         var visibility = [
                             this._isHandleBlockVisible(values[0]),
                             this._isHandleBlockVisible(values[1])
                         ];
 
-                        var arrangement = [
+                        var arrangement = [1,1];
 
-                            ( sibling && visibility[1] ) ? 2 : 1,
-                            ( sibling && visibility[0] ) ? 0 : 1
-                        ];
+                        // update
+                        $.each(this._handleLabels,function(i, jqNode){
 
-                        $.each(this._handleBlocks,function(i, jqNode){
+                            jqNode.html(values[i]).css(defaultCSS);
+                        });
 
-                            var value = values[i];
+                        if ( values[0] === values[1] ) {
 
-                            var css = {
-                                left : 0,
-                                visibility : "hidden"
-                            };
+                            visibility[1] = false;
+                        }
+                        else {
+
+                            var startHandleWidth = this._handleLabels[0].outerWidth(),
+                                startHandleOffsetLeft = this._handleLabels[0].offset().left,
+                                endHandleOffsetLeft = this._handleLabels[1].offset().left;
+
+                            if ( startHandleWidth + startHandleOffsetLeft + this.options.minlabelDistance > endHandleOffsetLeft ) {
+
+                                arrangement = [2,0];
+                            }
+                        }
+
+                        $.each(this._handleLabels,function(i, jqNode){
 
                             if ( visibility[i] ) {
 
-                                that._handleBlocks[i].html(value);
-
-                                css = {
+                                jqNode.css({
                                     left : ( -1 * jqNode.outerWidth()/2 ) * arrangement[i],
                                     visibility : "visible"
-                                };
+                                })
                             }
-
-                            that._handleBlocks[i].css(css);
                         });
+                    },
 
-                        return;
+                    // публичный метод для одновременной установки региона (this.options.values)
+                    setRange : function(newValues) {
+
+                        // если передан массив и установлен регион
+                        if ( $.isArray(newValues) && this.options.values && this.options.values.length ) {
+
+                            // если передан неправильный диапазон
+                            if ( newValues[0] > newValues[1] ) return;
+
+                            // иначе продолжаем с установкой новых значений
+                            this.options.values[0] = this._trimAlignValue(newValues[0]);
+                            this.options.values[1] = this._trimAlignValue(newValues[1]);
+
+                            // кидаем событие
+                            this._trigger("rangeset", null, { values : this.options.values });
+                            // обновляем UI
+                            this._refreshValue();
+                        }
                     }
                 });
 
