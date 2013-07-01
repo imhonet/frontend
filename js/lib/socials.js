@@ -35,7 +35,7 @@
     };
     // Инициализация vkontakte
     window.vkAsyncInit = function(){
-        VK.init({apiId: 3363525, onlyWidgets: true});
+        VK.init({apiId: 3740922, onlyWidgets: true});
         VK.Widgets.Like("vk_like", {type: "button", height: 20});
     };
 })();
