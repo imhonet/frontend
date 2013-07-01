@@ -8,12 +8,9 @@ define(
     function(App, $){
 
         App.module('socials', function(filter){
-
             $(function () {
                 $('.sotial-net').socialsLike();
-
             });
-
         });
     }
 );
