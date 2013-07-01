@@ -11,7 +11,8 @@ require.config({
 		"backbone"      : "lib/backbone",
 		"marionette"    : "lib/backbone.marionette",
 		"text"          : "lib/require-text",
-		"modernizr"     : "lib/modernizr.2.6.2.min"
+		"modernizr"     : "lib/modernizr.2.6.2.min",
+        "social-likes"  : "lib/socials"
 	},
 	
 	shim:{

@@ -8,6 +8,14 @@
     <title>build</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{page_url}">
+    <meta property="og:title" content="{title}">
+    <meta property="og:description" content="{description}">
+    <meta property="og:image" content="{image_url}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@SiteTwitter">
+    <meta name="twitter:creator" content="@sapegin">
 
     <script data-main="js/main" src="js/lib/require.js"></script>
 
@@ -15,7 +23,7 @@
     <link href="css/main.css" rel="stylesheet">
 
     <script>
-        require(['app', 'modules/m-subnavigation'], function (App) {
+        require(['app', 'modules/m-subnavigation', 'modules/m-sociallikes'], function (App) {
             App.start();
         });
     </script>
@@ -186,7 +194,31 @@
                     <p><b>Входит в подборки:</b> Лучшие сериалы, сериалы про врачей</p>
 
                 </div>
-                <div class="sotial-net">Иконки соц сетей</div>
+                <ul style="height:40px;list-style:none;margin:0;padding:0;" data-send="true" data-title="Название ссылки в соц сети" data-url="http://imhonet.ru/url_" data-text="Описание">
+                    <li style="float:left;">
+                        <a id="s-twitter" class="twitter-share-button"> </a></li>
+                    <li style="float:left;">
+                        <div id="s-facebook" class="fb-like" style="margin-right:40px;">
+                        </div>
+                    </li>
+                    <li style="float:left;">
+                        <div id="vk_like">
+                        </div>
+                    </li>
+                    <li style="float:left;margin-right:10px;">
+                        <div id="s-google" class="g-plusone">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="sotial-net" data-send="true" data-title="Название ссылки в соц сети" data-url="http://imhonet.ru/url_" data-text="Описание">
+                    <li class="facebook" >Facebook</li>
+                    <li class="twitter" title="Опубликовать ссылку в Твиттере">Twitter</li>
+                    <li class="mailru" title="Опубликовать ссылку в Моём мире">Мой мир</li>
+                    <li class="vkontakte" title="Опубликовать ссылку во Вконтакте">Вконтакте</li>
+                    <li class="odnoklassniki" title="Опубликовать ссылку в Одноклассниках">Одноклассники</li>
+                    <li class="plusone" data-counter="http://sapegin.ru/api/social-likes/googleplusonecount.php?url={url}&amp;callback=?" title="Опубликовать ссылку в Гугл-плюсе">Google+</li>
+                    <li class="livejournal" title="Опубликовать ссылку в ЖЖ">LiveJournal</li>
+                </ul>
                 <div class="m-elementprimary-button">
                     <button class="btn btn-inverse btn-theme">Смотреть онлайн</button>
                     <button class="btn btn-inverse btn-theme">Скачать</button>
