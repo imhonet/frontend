@@ -20,8 +20,8 @@ define(
             var menu_element_active_class = 'active';
             var menu_element_active_sub_selector = '.' + menu_element_active_class;
             var menu_element_link_sub_selector = 'a';
-            var page_prev_selector = '.page_left';
-            var page_next_selector = '.page_right';
+            var page_prev_selector = '.m-mainnavigation-page-left';
+            var page_next_selector = '.m-mainnavigation-page-right';
 
             var menu = null;
             var menu_elements = null;

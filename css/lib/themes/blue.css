@@ -141,3 +141,19 @@
 	background-color: #7cb5d0;
 	border-color: #7cb5d0;
 }
+
+/* .m-evaluator */
+
+.m-evaluator-slider-range {
+	background: #7cb5d0;
+}
+
+.m-evaluator-slider-brd.color-theme:first-child:before,
+.color-theme .m-evaluator-slider-txt {
+	color: #7cb5d0;
+}
+
+.m-evaluator-gallery-chose .chose-ul-item.checked {
+	background: #7cb5d0;
+	border-color: #7cb5d0;
+}
