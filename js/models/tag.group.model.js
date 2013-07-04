@@ -11,6 +11,7 @@ define([
             defaults : {
 
                 name : null,
+                expanded : false,
                 tags : null
             },
 
