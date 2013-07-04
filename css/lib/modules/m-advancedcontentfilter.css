@@ -17,6 +17,10 @@
 			font-size: 1.14em;
 		}
 
+        .m-advanced-content-filter-current > div {
+            display: inline-block;
+        }
+
 		.m-advancedcontentfilter-bottom-items {
 			margin-right: 130px;
 		}
@@ -131,6 +135,7 @@
 							white-space: nowrap;
 							color: #fff;
 							border: 1px solid #27364b;
+                            cursor: pointer;
 						}
 
 						.m-advancedcontentfilter-item.hide .m-advancedcontentfilter-tags {

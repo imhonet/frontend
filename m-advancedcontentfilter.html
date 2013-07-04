@@ -15,7 +15,7 @@
     <link href="css/main.css" rel="stylesheet">
 
     <script>
-        require(['app', 'modules/m-contentfilter', 'modules/m-subnavigation', 'modules/m-ui-slider'], function (App) {
+        require(['app', 'modules/m-advancedcontentfilter', 'modules/m-subnavigation'], function (App) {
             App.start();
         });
     </script>
@@ -124,14 +124,66 @@
 </div>
 
 <div id="filter" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div data-region="m-advancedcontentfilter" class="l-full"></div>
+        </div>
+    </div>
+    <div class="m-advancedcontentfilter-bottom">
+        <div class="l-grid">
+            <div class="l-row">
+                <div class="l-full">
+                    <div class="m-advancedcontentfilter-toggler">Сбросить фильтр</div>
+                    <div data-region="m-advancedcontentfilter-current" class="m-advancedcontentfilter-bottom-items">
+                        <div class="m-advancedcontentfilter-bottom-item">
+                            <div class="m-advancedcontentfilter-bottom-item-lbl">Дата выхода:</div>
+                            <div class="m-advancedcontentfilter-tags">1990-2000
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                        </div>
+                        <div class="m-advancedcontentfilter-bottom-item">
+                            <div class="m-advancedcontentfilter-bottom-item-lbl">Жанр:</div>
+                            <div class="m-advancedcontentfilter-tags">Боевик
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                            <div class="m-advancedcontentfilter-tags">Приключения
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                            <div class="m-advancedcontentfilter-tags">Боевик
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                            <div class="m-advancedcontentfilter-tags">Боевик
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                            <div class="m-advancedcontentfilter-tags">Приключения
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                            <div class="m-advancedcontentfilter-tags">Боевик
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                            <div class="m-advancedcontentfilter-tags">Боевик
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                            <div class="m-advancedcontentfilter-tags">Приключения
+                                <div class="m-advancedcontentfilter-close">x</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="filter" class="l-section">
 <div class="l-grid">
 <div class="l-row">
 <div class="l-full">
+
 <div class="m-advancedcontentfilter">
 
-
 <div class="m-advanced-content-filter-years">
-    <div class="m-advanced-content-filter-years-slider"></div>
 </div>
 
 <div class="m-advancedcontentfilter-body">
