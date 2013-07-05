@@ -17,6 +17,10 @@
 			font-size: 1.14em;
 		}
 
+        .m-advanced-content-filter-current > div {
+            display: inline-block;
+        }
+
 		.m-advancedcontentfilter-bottom-items {
 			margin-right: 130px;
 		}
