@@ -11,9 +11,10 @@ require.config({
 		"underscore"    : "lib/underscore",
 		"backbone"      : "lib/backbone",
 		"marionette"    : "lib/backbone.marionette",
-		"text"          : "lib/require-text",
+		"text"          : "lib/require.text",
 		"modernizr"     : "lib/modernizr.2.6.2.min",
-        "social-likes"  : "lib/socials"
+        "social-likes"  : "lib/socials",
+        "imhonet-ui-slider" : "lib/imhonet/imhonet-ui-slider"
 	},
 	
 	shim:{
@@ -28,9 +29,11 @@ require.config({
 			'deps'    : ['backbone', 'jquery', 'underscore'],
 			'exports' : 'Marionette'
 		},
+        bootstrap          : ['jquery'],
 		photogallery  : ['jquery'],
 		wookmark      : ['jquery'],
-		raty          : ['jquery']
+		raty          : ['jquery'],
+        "imhonet-ui-slider" : ['jquery']
 	}	
 });
 
