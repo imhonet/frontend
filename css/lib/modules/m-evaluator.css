@@ -512,6 +512,13 @@
 			font-family: "FuturaNewLight";
 		}
 
+
+		.m-evaluator-gallery-chose > .chose-body:after {
+			display: block;
+			content: '';
+			clear: both;
+		}
+
 		.m-evaluator-gallery-chose .chose-ul {
 			list-style: none;
 			margin: 0;
@@ -602,5 +609,11 @@
 			display: inline-block;
 			white-space: normal;
 			vertical-align: middle;
+		}
+
+		.m-evaluator-gallery-chose  .btn-wrap {
+			padding: 10px 0;
+			text-align: center;
+			border-top: 1px solid #38475a;
 		}
 
