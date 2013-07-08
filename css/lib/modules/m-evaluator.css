@@ -274,6 +274,7 @@
 					.m-evaluator-gallery-item-right_2d .m-evaluator-gallery-item-container > div{
 						opacity: 0.5;
 					}
+					/**/
 					.m-evaluator-gallery-item-left_2d.m-evaluator-gallery-item-left_1 .m-evaluator-gallery-item-container > div,
 					.m-evaluator-gallery-item-right_2d.m-evaluator-gallery-item-right_1 .m-evaluator-gallery-item-container > div{
 						opacity: 0.32;
@@ -297,11 +298,34 @@
 					}
 
 			.m-evaluator-gallery-item_transition {
+
+
+				-webkit-transition-property: -webkit-transform, left;
+				-webkit-transition-duration: 0.3s, 0.5s;
+				-webkit-transition-timing-function: ease-in-out;
+
+				-moz-transition-property: -moz-transform, left;
+				-moz-transition-duration: 0.3s, 0.5s;
+				-moz-transition-timing-function: ease-in-out;
+
+				-o-transition-property: -o-transform, left;
+				-o-transition-duration: 0.3s, 0.5s;
+				-o-transition-timing-function: ease-in-out;
+
+				-ms-transition-property: -ms-transform, left;
+				-ms-transition-duration: 0.3s, 0.5s;
+				-ms-transition-timing-function: ease-in-out;
+
+				transition-property: transform, left;
+				transition-duration: 0.3s, 0.5s;
+				transition-timing-function: ease-in-out;
+
+		/*
 				-webkit-transition: all 0.5s ease-in-out;
 				-moz-transition: all 0.5s ease-in-out;
 				-o-transition: all 0.5s ease-in-out;
 				-ms-transition: all 0.5s ease-in-out;
-				transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;*/
 			}
 
 			.m-evaluator-gallery-item-left {
@@ -325,12 +349,12 @@
 			}
 
 			.m-evaluator-gallery-item-left_0 {
-				margin-left: -300px;
+				left: -300px;
 				z-index: 90;
 			}
 
 			.m-evaluator-gallery-item-left_1 {
-				margin-left: -390px;
+				left: -390px;
 				-webkit-transform: translateZ(-400px) rotateY(70deg);
 				-moz-transform: translateZ(-400px) rotateY(70deg);
 				-o-transform: translateZ(-400px) rotateY(70deg);
@@ -340,7 +364,7 @@
 			}
 
 			.m-evaluator-gallery-item-left_2 {
-				margin-left: -480px;
+				left: -480px;
 				-webkit-transform: translateZ(-500px) rotateY(70deg);
 				-moz-transform: translateZ(-500px) rotateY(70deg);
 				-o-transform: translateZ(-500px) rotateY(70deg);
@@ -350,7 +374,7 @@
 			}
 
 			.m-evaluator-gallery-item-left_3 {
-				margin-left: -580px;
+				left: -580px;
 				-webkit-transform: scale(0.7) translateZ(-500px) rotateY(70deg);
 				-moz-transform: scale(0.7) translateZ(-500px) rotateY(70deg);
 				-o-transform: scale(0.7) translateZ(-500px) rotateY(70deg);
@@ -362,12 +386,12 @@
 			}
 
 			.m-evaluator-gallery-item-right_0 {
-				margin-left: 300px;
+				left: 300px;
 				z-index: 90;
 			}
 
 			.m-evaluator-gallery-item-right_1 {
-				margin-left: 390px;
+				left: 390px;
 				-webkit-transform: translateZ(-400px) rotateY(-70deg);
 				-moz-transform: translateZ(-400px) rotateY(-70deg);
 				-o-transform: translateZ(-400px) rotateY(-70deg);
@@ -377,7 +401,7 @@
 			}
 
 			.m-evaluator-gallery-item-right_2 {
-				margin-left: 480px;
+				left: 480px;
 				-webkit-transform: translateZ(-500px) rotateY(-70deg);
 				-moz-transform: translateZ(-500px) rotateY(-70deg);
 				-o-transform: translateZ(-500px) rotateY(-70deg);
@@ -387,7 +411,7 @@
 			}
 
 			.m-evaluator-gallery-item-right_3 {
-				margin-left: 580px;
+				left: 580px;
 				-webkit-transform: scale(0.7) translateZ(-500px) rotateY(-70deg);
 				-moz-transform: scale(0.7) translateZ(-500px) rotateY(-70deg);
 				-o-transform: scale(0.7) translateZ(-500px) rotateY(-70deg);
@@ -449,86 +473,85 @@
 			.m-evaluator-gallery-item-left_simple.m-evaluator-gallery-item-left_3{
 				opacity: 0;
 				visibility: hidden;
-				margin-left: -350px;
+				left: -350px;
 				margin-top: -50px;}
 
 			.m-evaluator-gallery-item-right_simple.m-evaluator-gallery-item-right_3,
 			.m-evaluator-gallery-item-right_2d.m-evaluator-gallery-item-right_3  {
 				opacity: 0;
 				visibility: hidden;
-				margin-left: 350px;
+				left: 350px;
 				margin-top: -50px;
 			}
 
 			.m-evaluator-gallery-item-left_2d.m-evaluator-gallery-item-left_2 {
-				margin-left: -320px;
+				left: -320px;
 				margin-top: -30px;
 				z-index: 70;
 			}
 
 			.m-evaluator-gallery-item-left_2d.m-evaluator-gallery-item-left_1 {
-				margin-left: -290px;
+				left: -290px;
 				margin-top: 0;
 				z-index: 80;
 			}
 
 			.m-evaluator-gallery-item-left_2d.m-evaluator-gallery-item-left_0 {
-				margin-left: -260px;
+				left: -260px;
 				margin-top: 30px;
 				z-index: 90;
 			}
 
 			.m-evaluator-gallery-item-right_2d.m-evaluator-gallery-item-right_0{
-				margin-left: 260px;
+				left: 260px;
 				margin-top: 30px;
 				z-index: 90;
 			}
 
 			.m-evaluator-gallery-item-right_2d.m-evaluator-gallery-item-right_1{
-				margin-left: 290px;
+				left: 290px;
 				margin-top: 0;
 				z-index: 80;
 			}
 
 			.m-evaluator-gallery-item-right_2d.m-evaluator-gallery-item-right_2 {
-				margin-left: 320px;
+				left: 320px;
 				margin-top: -30px;
 				z-index: 70;
 			}
 
 			.m-evaluator-gallery-item-left_simple.m-evaluator-gallery-item-left_2 {
-							 margin-left: -230px;
-							 margin-top: 50px;
-							 z-index: 70;
-
-						 }
+			left: -230px;
+			margin-top: 50px;
+			z-index: 70;
+			}
 
 			.m-evaluator-gallery-item-left_simple.m-evaluator-gallery-item-left_1 {
-				margin-left: -200px;
+				left: -200px;
 				margin-top: 80px;
 				z-index: 80;
 			}
 
 			.m-evaluator-gallery-item-left_simple.m-evaluator-gallery-item-left_0 {
-				margin-left: -170px;
+				left: -170px;
 				margin-top: 110px;
 				z-index: 90;
 			}
 
 			.m-evaluator-gallery-item-right_simple.m-evaluator-gallery-item-right_0 {
-				margin-left: 370px;
+				left: 370px;
 				margin-top: 110px;
 				z-index: 90;
 			}
 
 			.m-evaluator-gallery-item-right_simple.m-evaluator-gallery-item-right_1 {
-				margin-left: 400px;
+				left: 400px;
 				margin-top: 80px;
 				z-index: 80;
 			}
 
 			.m-evaluator-gallery-item-right_simple.m-evaluator-gallery-item-right_2 {
-				margin-left: 430px;
+				left: 430px;
 				margin-top: 50px;
 				z-index: 70;
 			}
