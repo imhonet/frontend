@@ -46,6 +46,15 @@ define([
             initialize : function() {
 
                 this.listenTo(this,"change:tags",this._notifyParent);
+                this.listenTo(this,"change:expanded",this._notifyParent2);
+            },
+
+            _notifyParent2 : function() {
+
+                if ( this.parent && this.parent.trigger ) {
+
+                    this.parent.trigger("change:tagsGroupStatus",this);
+                }
             },
 
             _notifyParent : function() {

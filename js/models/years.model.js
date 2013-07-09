@@ -32,8 +32,16 @@ define([
 
                 if ( this.parent && this.parent.trigger ) {
 
-                    this.parent.trigger("change:year",this);
+                    this.parent.trigger("update:filter",this);
                 }
+            },
+
+            resetYears : function(options) {
+
+                this.set({
+                    from : this.get("defaultFrom"),
+                    to : this.get("defaultTo")
+                },options);
             }
         });
 

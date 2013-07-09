@@ -9,6 +9,21 @@ define([
 ],
     function($, _, Backbone, Marionette, Template, YearsTemplate, TagGroupTemplate) {
 
+        var ResetFilter = Marionette.ItemView.extend({
+
+            template : "Сбросить фильтр",
+
+            events : {
+
+                "click" : "resetFilter"
+            },
+
+            resetFilter : function() {
+
+                this.model.resetFilter();
+            }
+        });
+
         var Years = Marionette.ItemView.extend({
 
             template : YearsTemplate,
@@ -121,7 +136,7 @@ define([
                 this.collection.each(function(item,index){
 
                     var tags = item.get("tags");
-                    if ( tags.find(function(tag){ return tag.get("active") === true;}) ) activeGroups.push(item);
+                    if ( tags && tags.find(function(tag){ return tag.get("active") === true;}) ) activeGroups.push(item);
 
                 }, this);
 
@@ -135,21 +150,26 @@ define([
 
         var FilterCurrentLayout = Marionette.Layout.extend({
 
-            className : "m-advanced-content-filter-current",
+//            className : "m-advanced-content-filter-current",
             template : Template,
             regions : {
                 years : "[data-region='m-advanced-filter-current-years']",
-                tagsGroups : "[data-region='m-advanced-filter-current-tag-groups']"
+                tagsGroups : "[data-region='m-advanced-filter-current-tag-groups']",
+                resetFilter : $("[data-region='m-advancedcontentfilter-reset']")
             },
 
             onShow : function() {
 
-                this.listenTo(this.model,"change:year",this.goGo);
-                this.listenTo(this.model,"change:tagsGroup",this.goGo);
-                this.goGo();
+                this.listenTo(this.model,"update:filter",this.showViews);
+
+                this.resetFilter.show(new ResetFilter({
+                    model : this.model
+                }))
+
+                this.showFilterViews();
             },
 
-            goGo : function() {
+            showFilterViews : function() {
 
                 this.years.show(new Years({
                     model : this.model.get("years")
@@ -158,6 +178,7 @@ define([
                 this.tagsGroups.show(new TagsGroups({
                     collection : this.model.get("tagsGroups")
                 }))
+
             }
         });
 

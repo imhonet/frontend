@@ -137,6 +137,7 @@
 							text-transform: uppercase;
 							font-weight: normal;
 							line-height: 1;
+                            cursor: pointer;
 						}
 
 						.m-advancedcontentfilter-tags {

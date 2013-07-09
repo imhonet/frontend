@@ -2,13 +2,31 @@ define([
     "jquery",
     "underscore",
     "backbone",
-    "models/tag.group.model"
+    "collections/custom.collection",
+    "models/tags.group.model"
 ],
-    function($, _, Backbone, TagGroup) {
+    function($, _, Backbone, CustomCollection, TagsGroup) {
 
-        var TagsGroups = Backbone.Collection.extend({
+        var CustomModel = Backbone.Model.extend({
 
-            model : TagGroup,
+            defaults : {
+
+                name : null,
+                message : null,
+                expanded : false,
+                model : "scale"
+            }
+        });
+
+        var TagsGroups = CustomCollection.extend({
+
+            model : TagsGroup,
+
+            _models : {
+                scale : CustomModel,
+                recommendationStatus : CustomModel
+            },
+
             parent : null,
 
             constructor : function(models, options) {
@@ -18,19 +36,19 @@ define([
                     this.parent = options.parent;
                 }
 
-                Backbone.Collection.apply(this,arguments);
+                CustomCollection.prototype.constructor.apply(this,arguments);
             },
 
             initialize : function() {
 
-                this.listenTo(this,"change:tags",this._notifyParent);
+                this.listenTo(this,"change",this._notifyParent);
             },
 
             _notifyParent : function() {
 
                 if ( this.parent && this.parent.trigger ) {
 
-                    this.parent.trigger("change:tagsGroup",this);
+                    this.parent.trigger("update:filter",this);
                 }
             }
         });

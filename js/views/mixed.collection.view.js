@@ -1,18 +1,17 @@
 define([
     'jquery',
     'underscore',
-    'marionette',
-    'views/smart.collection.view'
+    'marionette'
 ],
-    function($, _, Marionette, SmartCollectionView) {
+    function($, _, Marionette) {
 
-        var MixedCollectionView = SmartCollectionView.extend({
+        var MixedCollectionView = Marionette.CollectionView.extend({
 
             getItemView: function(item){
 
-                var itemViewTypeOption = Marionette.getOption(this, "itemViewType") || "itemType";
-                var itemViewType = item.get(itemViewTypeOption) || null;
-                var itemViewsOption = Marionette.getOption(this, "itemViews");
+                var itemViewTypeOption = Marionette.getOption(this, "itemViewType") || "itemType",
+                    itemViewType = item.get(itemViewTypeOption) || null,
+                    itemViewsOption = Marionette.getOption(this, "itemViews");
 
                 return ( itemViewType && itemViewsOption.hasOwnProperty(itemViewType) )
 

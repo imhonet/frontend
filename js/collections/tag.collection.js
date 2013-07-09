@@ -30,7 +30,7 @@ define([
 
                 if ( this.parent && this.parent.trigger ) {
 
-                    this.parent.trigger("change:tags",this);
+                    this.parent.trigger("change",this);
                 }
             }
         });

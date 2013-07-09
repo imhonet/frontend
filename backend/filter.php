@@ -40,16 +40,28 @@
         }
     }
 
+    class CustomModel {
+
+        public $name, $expanded = false, $model, $itemView;
+
+        function __construct($name, $model) {
+
+            $this->name = $name;
+            $this->model = $this->itemView = $model;
+        }
+
+    }
+
     class TagGroup {
 
-        public $id, $name;
-        public $tags = array('');
+        public $id, $name, $tags = array('');
         private $_isBlock;
 
         function __construct($id, $name, $isBlock = false) {
 
             $this->id = $id;
             $this->name = $name;
+//            $this->expanded = false;
             $this->_isBlock = $isBlock;
 
             return this;
@@ -90,6 +102,10 @@
 
         for ( $i = 0, $len = count($filter); $i < $len; $i++ ) {
 
+            $filter[$i]->expanded = $request->tagsGroups[$i]->expanded;
+
+            if ( !method_exists($filter[$i],"getTags") ) continue;
+
             $groupTags = $filter[$i]->getTags();
             $requestTags = $request->tagsGroups[$i]->tags;
 
@@ -107,6 +123,9 @@
     addTagGroup($tagsGroups, new TagGroup(2,"Жанр"),array_merge(["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"]));
     addTagGroup($tagsGroups, new TagGroup(3,"Страна"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
     addTagGroup($tagsGroups, new TagGroup(4,"Награды"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
+
+    array_push($tagsGroups,new CustomModel("шкала бобрикова","scale"));
+    array_push($tagsGroups,new CustomModel("Рекомендации","recommendationStatus"));
 
     if ( ($request = getRequest()) !== null ) {
 
@@ -134,6 +153,7 @@
 
     if ( !getRequest() ) {
 
+//        $payload->tagsGroups[4]->expanded = true;
         $payload->tagsGroups[1]->tags[0]->setActive(true);
     }
 

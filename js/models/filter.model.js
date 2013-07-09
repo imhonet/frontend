@@ -72,6 +72,40 @@ define([
                 if ( !model._lastXHR ) model._lastXHR = {};
 
                 return model._lastXHR[method] = Backbone.sync.apply(this, arguments);
+            },
+
+            resetFilter : function() {
+
+                // tags, years, flag
+                var tagsGroups = this.get("tagsGroups"),
+                    years = this.get("years"),
+                    trigger = false;
+
+                tagsGroups.each(function(model,index,collection){
+
+                    var tags = model.get("tags");
+
+                    if ( tags ) {
+
+                        tags.each(function(model,index,collection){
+
+                            if ( model.get("active") ) {
+
+                                model.set("active",false,{silent : true});
+                                trigger = true;
+                            }
+                        })
+                    }
+                })
+
+                years.resetYears({silent:true});
+
+                if ( !trigger ) {
+
+                    trigger = years.hasChanged();
+                }
+
+                if ( trigger ) this.trigger("update:filter");
             }
         });
 

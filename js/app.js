@@ -18,7 +18,7 @@ define(
             return ( template ) ? _.template(template,{data : data}) : false;
         };
 
-        var App = new Marionette.Application();
+        App = new Marionette.Application();
 		
 		return App;
 	}
