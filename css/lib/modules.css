@@ -6,6 +6,7 @@
 @import url("modules/m-elementdescription.css");
 @import url("modules/m-footer.css");
 @import url("modules/m-tiles.css");
+@import url("modules/metroJs.css");
 @import url("modules/m-inlineitemslist.css");
 @import url("modules/m-pagination.css");
 @import url("modules/m-subnavigation.css");
@@ -20,5 +21,6 @@
 @import url("modules/popup-vote.css");
 @import url("modules/m-advancedcontentfilter.css");
 @import url("modules/m-filter.css");
+@import url("modules/m-rating.css");
 @import url("modules/m-socials.css");
 @import url("modules/m-evaluator.css");

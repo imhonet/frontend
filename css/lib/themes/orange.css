@@ -1,6 +1,6 @@
 /*
-	�����: f6764c
-	���: f78560
+	background: f78560
+	color: f6764c
 */
 
 .txt-theme{
@@ -155,4 +155,25 @@
 .m-evaluator-gallery-chose .chose-ul-item.checked {
 	background: #f78560;
 	border-color: #f78560;
+}
+
+/* .m-rating */
+
+.m-rating > .icon-star:hover,
+.m-rating > .icon-star.active{
+	color: #f6764c;
+}
+
+/* .m-tiles-promo-card */
+
+.flip-list > li > .flip-back,
+.flip-list > li > .flip-front,
+.m-tiles-promo-card-label .icon-bell,
+.m-tiles-promo-card-label .icon-feather,
+.m-tiles-poster-btn:hover,
+.m-tiles-poster-rating{
+	background-color: #f78560;
+}
+.m-tiles-promo-card-label {
+	color: #f6764c;
 }

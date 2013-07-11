@@ -1,4 +1,4 @@
-[class^="icon-"],
+/*[class^="icon-"],
 [class*=" icon-"] {
   display: inline-block;
   width: 14px;
@@ -11,7 +11,6 @@
   background-repeat: no-repeat;
   margin-top: 1px;
 }
-/* White icons with optional class, or on hover/focus/active states of certain elements */
 .icon-white,
 .nav-pills > .active > a > [class^="icon-"],
 .nav-pills > .active > a > [class*=" icon-"],
@@ -456,4 +455,78 @@
 }
 .icon-facebook{background: url("../../../img/icons/i-facebook.png") no-repeat 0 0;display: inline-block; margin: 0 10px 0 0;width: 31px;height: 31px;}
 .icon-vk{background: url("../../../img/icons/i-vk.png") no-repeat 0 0; display: inline-block;margin: 0 10px 0 0;width: 31px;height: 31px;}
+*/
 
+/* icons by font */
+
+
+@font-face {
+	font-family: 'icon-font';
+	src:url('../../../img/icons/icon-fonts/icon-font.eot');
+	src:url('../../../img/icons/icon-fonts/icon-font.eot?#iefix') format('embedded-opentype'),
+	url('../../../img/icons/icon-fonts/icon-font.woff') format('woff'),
+	url('../../../img/icons/icon-fonts/icon-font.ttf') format('truetype'),
+	url('../../../img/icons/icon-fonts/icon-font.svg#icon-font') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icon-font';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-cross, .icon-bars, .icon-comment, .icon-feather, .icon-arrow-down, .icon-star, .icon-play, .icon-bell, .icon-user, .icon-bookmark {
+	font-family: 'icon-font';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-cross:before {
+	content: "\e002";
+}
+.icon-bars:before {
+	content: "\e001";
+}
+.icon-comment:before {
+	content: "\e003";
+}
+.icon-feather:before {
+	content: "\e006";
+}
+.icon-arrow-down:before {
+	content: "\e007";
+}
+.icon-star:before {
+	content: "\e004";
+}
+.icon-play:before {
+	content: "\e000";
+}
+.icon-bell:before {
+	content: "\e005";
+}
+.icon-user:before {
+	content: "\e008";
+}
+.icon-bookmark:before {
+	content: "\e009";
+}

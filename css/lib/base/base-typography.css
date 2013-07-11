@@ -24,6 +24,16 @@ body {
 	font-style: normal;
 
 }
+
+@font-face {
+	font-family: 'FuturaNewLightOblique';
+	src: url('../../../fonts/FuturaNewLightOblique.eot');
+	src: url('../../../fonts/FuturaNewLightOblique.eot?#iefix') format('embedded-opentype'), url('../../../fonts/FuturaNewLightOblique.woff') format('woff'), url('../../../fonts/FuturaNewLightOblique.ttf') format('truetype'), url('../../../fonts/FuturaNewLightOblique.svg#FuturaNewLightOblique') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
 @font-face {
 	font-family: 'Segoeui';
 	src: url('../../../fonts/Segoeui.eot');

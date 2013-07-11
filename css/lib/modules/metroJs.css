@@ -1,0 +1,739 @@
+﻿
+/* flip-list tile grid sprite styles */
+
+.flip-list{
+	width: 300px;
+	height: 240px;
+	padding: 0;
+	margin: 0;
+	background: #bbb;
+}
+.flip-list > li {
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+}
+.flip-list.fourTiles > li {
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 50%;
+  width: 50%;
+}
+.flip-list.nineTiles > li {
+  height: 33%;
+  width: 33%;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.flip-list.fourTiles > li > div,
+.flip-list.fourTiles > li > div > a,
+.flip-list.fourTiles > li > div > img,
+.flip-list.nineTiles > li > div,
+.flip-list.nineTiles > li > div > a,
+.flip-list.nineTiles > li > div > img {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* fourTile background positions */
+.fourTiles .fourTiles1 img,
+.fourTiles img.fourTiles1,
+.fourTiles .fourTiles1 a,
+.fourTiles .tile-1 img,
+.fourTiles .tile-1 a {
+  background-position: 0 0;
+}
+.fourTiles .fourTiles2 img,
+.fourTiles img.fourTiles2,
+.fourTiles .fourTiles2 a,
+.fourTiles .tile-2 img,
+.fourTiles .tile-2 a {
+  background-position: -75px 0;
+}
+.fourTiles .fourTiles3 img,
+.fourTiles img.fourTiles3,
+.fourTiles .fourTiles3 a,
+.fourTiles .tile-3 img,
+.fourTiles .tile-3 a {
+  background-position: 0 -75px;
+}
+.fourTiles .fourTiles4 img,
+.fourTiles img.fourTiles4,
+.fourTiles .fourTiles4 a,
+.fourTiles .tile-4 img,
+.fourTiles .tile-4 a {
+  background-position: -75px -75px;
+}
+/* nineTile background positions */
+.nineTiles .nineTiles1 img,
+.nineTiles img.nineTiles1,
+.nineTiles .nineTiles1 a,
+.nineTiles .tile-1 img,
+.nineTiles .tile-1 a {
+  background-position: 0 0;
+}
+.nineTiles .nineTiles2 img,
+.nineTiles img.nineTiles2,
+.nineTiles .nineTiles2 a,
+.nineTiles .tile-2 img,
+.nineTiles .tile-2 a {
+  background-position: -50px 0;
+}
+.nineTiles .nineTiles3 img,
+.nineTiles img.nineTiles3,
+.nineTiles .nineTiles3 a,
+.nineTiles .tile-3 img,
+.nineTiles .tile-3 a {
+  background-position: -100px 0;
+}
+.nineTiles .nineTiles4 img,
+.nineTiles img.nineTiles4,
+.nineTiles .nineTiles4 a,
+.nineTiles .tile-4 img,
+.nineTiles .tile-4 a {
+  background-position: 0 -50px;
+}
+.nineTiles .nineTiles5 img,
+.nineTiles img.nineTiles5,
+.nineTiles .nineTiles5 a,
+.nineTiles .tile-5 img,
+.nineTiles .tile-5 a {
+  background-position: -50px -50px;
+}
+.nineTiles .nineTiles6 img,
+.nineTiles img.nineTiles6,
+.nineTiles .nineTiles6 a,
+.nineTiles .tile-6 img,
+.nineTiles .tile-6 a {
+  background-position: -100px -50px;
+}
+.nineTiles .nineTiles7 img,
+.nineTiles img.nineTiles7,
+.nineTiles .nineTiles7 a,
+.nineTiles .tile-7 img,
+.nineTiles .tile-7 a {
+  background-position: 0 -100px;
+}
+.nineTiles .nineTiles8 img,
+.nineTiles img.nineTiles8,
+.nineTiles .nineTiles8 a,
+.nineTiles .tile-8 img,
+.nineTiles .tile-8 a {
+  background-position: -50px -100px;
+}
+.nineTiles .nineTiles9 img,
+.nineTiles img.nineTiles9,
+.nineTiles .nineTiles9 a,
+.nineTiles .tile-9 img,
+.nineTiles .tile-9 a {
+  background-position: -100px -100px;
+}
+.tile-group,
+.tile-strip {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -ms-perspective: 800px;
+  perspective: 800px;
+}
+.tile-group.one-tile,
+.tile-strip.one-tile {
+  height: 160px;
+  width: 160px;
+}
+.tile-group.half-wide,
+.tile-strip.half-wide {
+  width: 80px;
+}
+.tile-group.one-wide,
+.tile-strip.one-wide {
+  width: 160px;
+}
+.tile-group.two-wide,
+.tile-strip.two-wide {
+  width: 320px;
+}
+.tile-group.three-wide,
+.tile-strip.three-wide {
+  width: 480px;
+}
+.tile-group.four-wide,
+.tile-strip.four-wide {
+  width: 640px;
+}
+.tile-group.five-wide,
+.tile-strip.five-wide {
+  width: 800px;
+}
+.tile-group.six-wide,
+.tile-strip.six-wide {
+  width: 960px;
+}
+.tile-group.seven-wide,
+.tile-strip.seven-wide {
+  width: 1120px;
+}
+.tile-group.eight-wide,
+.tile-strip.eight-wide {
+  width: 1280px;
+}
+.tile-group.nine-wide,
+.tile-strip.nine-wide {
+  width: 1440px;
+}
+.tile-group.ten-wide,
+.tile-strip.ten-wide {
+  width: 1600px;
+}
+.tile-group.half-tall,
+.tile-strip.half-tall {
+  height: 80px;
+}
+.tile-group.one-tall,
+.tile-strip.one-tall {
+  height: 160px;
+}
+.tile-group.two-tall,
+.tile-strip.two-tall {
+  height: 320px;
+}
+.tile-group.three-tall,
+.tile-strip.three-tall {
+  height: 480px;
+}
+.tile-group.four-tall,
+.tile-strip.four-tall {
+  height: 640px;
+}
+.tile-group.five-tall,
+.tile-strip.five-tall {
+  height: 800px;
+}
+.tile-group.six-tall,
+.tile-strip.six-tall {
+  height: 960px;
+}
+.tile-group.seven-tall,
+.tile-strip.seven-tall {
+  height: 1120px;
+}
+.tile-group.eight-tall,
+.tile-strip.eight-tall {
+  height: 1280px;
+}
+.tile-group.nine-tall,
+.tile-strip.nine-tall {
+  height: 1440px;
+}
+.tile-group.ten-tall,
+.tile-strip.ten-tall {
+  height: 1600px;
+}
+/* liveTile styles */
+.tile-strip,
+.live-tile,
+.list-tile,
+.copy-tile,
+.slide {
+  float: left;
+}
+.tile-strip.bounce,
+.live-tile.bounce,
+.list-tile.bounce,
+.copy-tile.bounce,
+.slide.bounce {
+  cursor: pointer;
+  outline: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.tile-strip.bounce.bounce-c,
+.live-tile.bounce.bounce-c,
+.list-tile.bounce.bounce-c,
+.copy-tile.bounce.bounce-c,
+.slide.bounce.bounce-c {
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.95, M12=0, M21=0, M22=0.95);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.tile-strip.bounce.bounce-t,
+.live-tile.bounce.bounce-t,
+.list-tile.bounce.bounce-t,
+.copy-tile.bounce.bounce-t,
+.slide.bounce.bounce-t {
+  -webkit-transform: rotateX(20deg);
+  -ms-transform: rotateX(20deg);
+  -moz-transform: rotateX(20deg);
+  -o-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+}
+.tile-strip.bounce.bounce-b,
+.live-tile.bounce.bounce-b,
+.list-tile.bounce.bounce-b,
+.copy-tile.bounce.bounce-b,
+.slide.bounce.bounce-b {
+  -webkit-transform: rotateX(-20deg);
+  -ms-transform: rotateX(-20deg);
+  -moz-transform: rotateX(-20deg);
+  -o-transform: rotateX(-20deg);
+  transform: rotateX(-20deg);
+  -webkit-transform-origin: 50% 0%;
+  -moz-transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -o-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+.tile-strip.bounce.bounce-r,
+.live-tile.bounce.bounce-r,
+.list-tile.bounce.bounce-r,
+.copy-tile.bounce.bounce-r,
+.slide.bounce.bounce-r {
+  -webkit-transform: rotateY(20deg);
+  -ms-transform: rotateY(20deg);
+  -moz-transform: rotateY(20deg);
+  -o-transform: rotateY(20deg);
+  transform: rotateY(20deg);
+  -webkit-transform-origin: 0% 50%;
+  -moz-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  -o-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+.tile-strip.bounce.bounce-l,
+.live-tile.bounce.bounce-l,
+.list-tile.bounce.bounce-l,
+.copy-tile.bounce.bounce-l,
+.slide.bounce.bounce-l {
+  -webkit-transform: rotateY(-20deg);
+  -ms-transform: rotateY(-20deg);
+  -moz-transform: rotateY(-20deg);
+  -o-transform: rotateY(-20deg);
+  transform: rotateY(-20deg);
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+.tile-strip.bounce.bounce-tl,
+.live-tile.bounce.bounce-tl,
+.list-tile.bounce.bounce-tl,
+.copy-tile.bounce.bounce-tl,
+.slide.bounce.bounce-tl {
+  -webkit-transform: rotateX(10deg) rotateY(-10deg);
+  -ms-transform: rotateX(10deg) rotateY(-10deg);
+  -moz-transform: rotateX(10deg) rotateY(-10deg);
+  -o-transform: rotateX(10deg) rotateY(-10deg);
+  transform: rotateX(10deg) rotateY(-10deg);
+}
+.tile-strip.bounce.bounce-tr,
+.live-tile.bounce.bounce-tr,
+.list-tile.bounce.bounce-tr,
+.copy-tile.bounce.bounce-tr,
+.slide.bounce.bounce-tr {
+  -webkit-transform: rotateX(10deg) rotateY(10deg);
+  -ms-transform: rotateX(10deg) rotateY(10deg);
+  -moz-transform: rotateX(10deg) rotateY(10deg);
+  -o-transform: rotateX(10deg) rotateY(10deg);
+  transform: rotateX(10deg) rotateY(10deg);
+}
+.tile-strip.bounce.bounce-bl,
+.live-tile.bounce.bounce-bl,
+.list-tile.bounce.bounce-bl,
+.copy-tile.bounce.bounce-bl,
+.slide.bounce.bounce-bl {
+  -webkit-transform: rotateX(-10deg) rotateY(-10deg);
+  -ms-transform: rotateX(-10deg) rotateY(-10deg);
+  -moz-transform: rotateX(-10deg) rotateY(-10deg);
+  -o-transform: rotateX(-10deg) rotateY(-10deg);
+  transform: rotateX(-10deg) rotateY(-10deg);
+}
+.tile-strip.bounce.bounce-br,
+.live-tile.bounce.bounce-br,
+.list-tile.bounce.bounce-br,
+.copy-tile.bounce.bounce-br,
+.slide.bounce.bounce-br {
+  -webkit-transform: rotateX(-10deg) rotateY(10deg);
+  -ms-transform: rotateX(-10deg) rotateY(10deg);
+  -moz-transform: rotateX(-10deg) rotateY(10deg);
+  -o-transform: rotateX(-10deg) rotateY(10deg);
+  transform: rotateX(-10deg) rotateY(10deg);
+}
+.live-tile,
+.list-tile,
+.copy-tile {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  z-index: 20;
+}
+.live-tile p,
+.list-tile p,
+.copy-tile p,
+.live-tile .face,
+.list-tile .face,
+.copy-tile .face {
+  display: block;
+  font-size: 1em;
+  line-height: 1.2em;
+  margin: 0;
+}
+.live-tile .face,
+.list-tile .face,
+.copy-tile .face {
+  padding: 0;
+}
+.live-tile p,
+.list-tile p,
+.copy-tile p {
+  padding: 10px;
+}
+.live-tile.half-tile p,
+.list-tile.half-tile p,
+.copy-tile.half-tile p {
+  padding: 5px;
+}
+.live-tile .face.full,
+.list-tile .face.full,
+.copy-tile .face.full {
+  height: 100%;
+  width: 100%;
+}
+.live-tile img,
+.list-tile img,
+.copy-tile img {
+  border: none;
+}
+.live-tile .tile-title,
+.list-tile .tile-title,
+.copy-tile .tile-title {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  left: 0;
+  padding: 0 0 6px 2%;
+  text-decoration: none;
+  width: 98%;
+  z-index: 30;
+}
+.live-tile a,
+.list-tile a,
+.copy-tile a {
+  color: #fff;
+}
+.live-tile a.tile-title:link,
+.list-tile a.tile-title:link,
+.copy-tile a.tile-title:link,
+.live-tile a.tile-title:visited,
+.list-tile a.tile-title:visited,
+.copy-tile a.tile-title:visited,
+.live-tile a.tile-title:hover,
+.list-tile a.tile-title:hover,
+.copy-tile a.tile-title:hover,
+.live-tile a.tile-title,
+.list-tile a.tile-title,
+.copy-tile a.tile-title {
+  text-decoration: none;
+}
+.live-tile a:link,
+.list-tile a:link,
+.copy-tile a:link,
+.live-tile a:visited,
+.list-tile a:visited,
+.copy-tile a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+.live-tile a:hover,
+.list-tile a:hover,
+.copy-tile a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.light .copy-tile {
+  color: #000;
+}
+.light .copy-tile.accent {
+  color: #fff;
+}
+.light .copy-tile.accent a,
+.light .copy-tile.accent a:link,
+.light .copy-tile.accent a:visited,
+.light .copy-tile.accent a:hover {
+  color: #fff;
+}
+.light .copy-tile a,
+.light .copy-tile a:link,
+.light .copy-tile a:visited,
+.light .copy-tile a:hover {
+  color: #000;
+}
+.light .copy-tile .face,
+.light .copy-tile .accent {
+  color: #fff;
+}
+.light .copy-tile .face a,
+.light .copy-tile .accent a,
+.light .copy-tile .face a:link,
+.light .copy-tile .accent a:link,
+.light .copy-tile .face a:visited,
+.light .copy-tile .accent a:visited,
+.light .copy-tile .face a:hover,
+.light .copy-tile .accent a:hover {
+  color: #fff;
+}
+.copy-tile p {
+  padding: 5px 5px 0 5px;
+  font-size: .95em;
+}
+.noselect > div,
+.noselect > .slide,
+.noselect > .slide-front,
+.noselect > .slide-back,
+.noselect > .fade-front,
+.noselect > .fade-back,
+.noselect > .flip-front,
+.noselect > .flip-back {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.live-tile > div,
+.list-tile > div,
+.live-tile > .slide,
+.carousel > .slide,
+.live-tile > .slide-front,
+.live-tile > .slide-back,
+.live-tile > .fade-front,
+.live-tile > .fade-back,
+.live-tile > .flip-front,
+.live-tile > .flip-back {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 5;
+}
+.list-tile > div {
+/*  position: relative;
+  background-color: transparent;*/
+}
+img.full,
+a.full,
+.live-tile .full,
+.list-tile .full {
+  display: block;
+  margin: 0;
+  height: 100%;
+  text-decoration: none;
+  width: 100%;
+}
+.live-tile > .back,
+.live-tile > .slide-back,
+.live-tile > .fade-back,
+.live-tile > .flip-back,
+.flip-list .flip-back {
+  position: absolute;
+  z-index: 10;
+}
+/*  ========== flip-list Styles ==========
+	.flip-list
+	---li
+	------div.flip-front
+	------div.flip-back
+*/
+.flip-list > li > a {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.flip-list > li img {
+  border: none;
+  outline: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.flip-list > li {
+  float: left;
+  list-style-type: none;
+  outline: none;
+  position: relative;
+}
+.flip-list > li > div {
+  border: none;
+  background: white;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  padding: 0;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+.flip-list > li > div.flip-back {
+  height: 0;
+}
+/* ------ Hardware Accelerated Tiles --------*/
+/* flip */
+.live-tile.flip.ha,
+.flip-list.ha {
+  position: relative;
+  overflow: hidden;
+}
+.live-tile.flip .ha.flip-front,
+.flip-list .ha.flip-front,
+.live-tile.flip .ha.flip-back,
+.flip-list .ha.flip-back {
+  position: absolute;
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-list > li > .ha.flip-back,
+.flip-list > li > .ha.flip-back img {
+  /* override the values set for margin and ensure the back tile is visible  */
+
+  margin: 0 !important;
+  height: 100%;
+}
+
+.metroBig,
+.metroExtraLarge,
+.face.metroBig,
+.face.metroExtraLarge,
+.live-tile .metroExtraLarge {
+  font-size: 2em;
+  line-height: 1.1em;
+}
+a.metroBig:link,
+a.metroExtraLarge:link,
+a.face.metroBig:link,
+a.face.metroExtraLarge:link,
+a.live-tile .metroExtraLarge:link {
+  text-decoration: none;
+}
+.metroLarger,
+.face.metroLarger,
+.live-tile .metroLarger {
+  font-size: 1.5em;
+  line-height: 1.1em;
+}
+a.metroLarger:link,
+a.face.metroLarger:link,
+a.live-tile .metroLarger:link {
+  text-decoration: none;
+}
+.metroLarge,
+.face.metroLarge,
+.live-tile .metroLarge {
+  font-size: 1.2em;
+  line-height: 1.1em;
+}
+a.metroLarge:link,
+a.face.metroLarge:link,
+a.live-tile .metroLarge:link {
+  text-decoration: none;
+}
+.metroSmall,
+.face.metroSmall,
+.live-tile .metroSmall {
+  font-size: .9em;
+  line-height: 1em;
+}
+a.metroSmall:link,
+a.face.metroSmall:link,
+a.live-tile .metroSmall:link {
+  text-decoration: none;
+}
+.metroSmaller,
+.face.metroSmaller,
+.live-tile .metroSmaller {
+  font-size: .8em;
+  line-height: 1em;
+}
+a.metroSmaller:link,
+a.face.metroSmaller:link,
+a.live-tile .metroSmaller:link {
+  text-decoration: none;
+}
+.metroExtraSmall,
+.face.metroExtraSmall,
+.live-tile .metroExtraSmall {
+  font-size: .7em;
+  line-height: 1em;
+}
+a.metroExtraSmall:link,
+a.face.metroExtraSmall:link,
+a.live-tile .metroExtraSmall:link {
+  text-decoration: none;
+}
+.live-tile.me .metroBig,
+.live-tile .bottom {
+  display: block;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  padding: 0;
+  text-decoration: none;
+}
+.live-tile.half-tile .bottom {
+  left: 5px;
+}
+
+
+

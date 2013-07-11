@@ -1,0 +1,52 @@
+.m-rating {
+	margin: 5px 0;
+	text-align: center;
+}
+
+.m-rating > .icon-star:hover,
+.m-rating > .icon-star.active {
+	color: #01a58d;
+}
+
+.m-rating > .icon-star {
+	display: inline-block;
+	margin: 0 8px 0 0;
+	font-size: 20px;
+	color: #737c8d;
+}
+
+
+/* themes */
+
+/* .color-blue */
+
+.color-blue .m-rating > .icon-star:hover,
+.color-blue .m-rating > .icon-star.active{
+	color: #6dafce;
+}
+/* .color-green */
+.color-green .m-rating > .icon-star:hover,
+.color-green .m-rating > .icon-star.active{
+	color: #01a58d;
+}
+
+/* .color-orange */
+
+.color-orange .m-rating > .icon-star:hover,
+.color-orange .m-rating > .icon-star.active{
+	color: #f6764c;
+}
+
+/* .color-purple */
+
+.color-purple .m-rating > .icon-star:hover,
+.color-purple .m-rating > .icon-star.active{
+	color: #b27cc4;
+}
+
+/* .color-red */
+
+.color-red .m-rating > .icon-star:hover,
+.color-red .m-rating > .icon-star.active{
+	color: #e54b5e;
+}

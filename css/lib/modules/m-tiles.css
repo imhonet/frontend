@@ -1,171 +1,609 @@
-
-
-.m-header {
-    background: url("../../../img/header.jpg");
-    width: 100%;
-    height: 260px;
-    margin: auto;
-}
-
-.m-footer {
-    width: auto;
-    height: 100px;
-}
-
-.m-title h1 {
-    color: #00ba8d;
-    font-weight: 100;
-    font-family: FuturaNewBook;
-    margin: 0px 0px 20px 0px;
-}
-
-
-#middle{
-
-	background-color: #e4e4e4;
-
-}
-
-.m-films {
-    position: relative;
+#middle {
 	background-color: #e4e4e4;
 }
 
-.m-films-promo-card {
-    background-color: #fff;
-    width: 300px;
-    overflow: hidden;
-	
-	-webkit-transition: all 0.5s ease;/* Safari 3.2+, Chrome */
-	-moz-transition: all 0.5s ease;/* Firefox 4-15 */
-	-o-transition: all 0.5s ease;/* Opera 10.5-12.00 */
-	transition: all 0.5s ease;/* Firefox 16+, Opera 12.50+ */
-	
-}
-.m-films-promo-card-img {
-    margin: 0 0 14px 0;
-    overflow: hidden;
-}
-.m-films-promo-card-img img {
-    width: 100%;
-}
-.m-films-promo-card-label {
-    height: 20px;
-}
-.m-films-promo-card-label span {
-    margin: 0 0 0 6px;
-    font-weight: bold;
-    vertical-align: top;
-    padding: 0px;
-    text-transform: uppercase;
-    color: #00ba8d;
-}
-.m-films-promo-card-title {
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.m-films-promo-card-title span {
-    display: inline-block;
-    color: #151515;
-    line-height: 1.35em;
-    font-weight: 100;
-}
-.m-films-promo-card-counters {
-    margin: 0 15px 10px 15px;
-}
-.m-films-promo-card-counter {
-    margin: 0 14px 0 0;
-    color: #999999;
-}
-.m-films-promo-card-banner240 {
-    height: 400px !important;
-    padding: 50px 0;
-    text-align: center;
-}
-.m-films-promo-card-facebook {
-    background: #4a5f96;
-    height:  190px !important;
-    padding: 25px 0;
-}
-.m-films-promo-card-facebook-title {
-    padding: 0 15px 20px 15px;
-    border-bottom: 1px solid #8895b6;
-}
-.m-films-promo-card-facebook-title span {
-    color: #fff;
-}
-.m-films-promo-card-facebook-desc {
-    height: 100px;
-    padding: 12px 15px 0 15px;
-}
-.m-films-promo-card-facebook-desc p {
-    color: #fff;
-}
-.m-films-promo-card-facebook-link {
-    background: #fff;
-    border-radius: 4px;
-    padding: 10px 0;
-    margin: 0 15px;
-    text-align: center;
-
-}
-.m-films-promo-card-facebook-link a {
-    color: #4a5f96;
-}
-.m-films-opinion {
-    height: 210px !important;
-    padding: 15px 0;
-}
-.m-films-opinion .m-films-promo-card-title {
-    height: 110px !important;
-}
-.m-films-promo-card-profile {
-    padding: 15px 15px 0 15px;
-    overflow: hidden;
-    border-top: 1px solid #d9d9d9;
-}
-.m-films-promo-card-profile-left {
-    float: left;
-}
-.m-films-promo-card-profile-right {
-    float: left;
-}
-.m-films-promo-card-profile-name {
-    margin: 0 0 15px 15px;
-}
-.m-films-video .m-films-promo-card-img {
-    height: 240px !important;
-    margin-bottom: -80px;
-}
-.m-films-video .m-films-promo-card-label span,
-.m-films-video .m-films-promo-card-title span
-{
-    color: #fff;
-}
-.m-films-promo-card.large {
-    height: 500px;
-}
-.m-films-promo-card.large .m-films-promo-card-img {
-    height: 325px;
-}
-.m-films-promo-card.large .m-films-promo-card-label {
-    margin: 0 15px 10px 15px;
-}
-.m-films-promo-card.large .m-films-promo-card-title {
-    height: 80px;
-    margin: 0 17px 19px 17px;
-}
-.m-films-promo-card.small {
-    height: 240px;
-}
-.m-films-promo-card.small .m-films-promo-card-img {
-    height: 130px;
-}
-.m-films-promo-card.small .m-films-promo-card-label {
-    margin: 0 15px 3px 15px;
-}
-.m-films-promo-card.small .m-films-promo-card-title {
-    height: 37px;
-    margin: 0 17px 6px 17px;
+.m-tiles {
+	position: relative;
+	background-color: #e4e4e4;
+	margin-top: 20px;
 }
 
+	.m-tiles .icon-cross {
+		display: none;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		right: 16px;
+		top: 16px;
+		z-index: 20;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		color: #fff;
+		font-size: 16px;
+		background-color: rgba(0,0,0,0.4);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+
+	.m-tiles-promo-card:hover .icon-cross {
+		display: block;
+	}
+	.m-tiles-promo-card {
+		width: 300px;
+		cursor: pointer;
+		-webkit-transition: all 0.5s ease; /* Safari 3.2+, Chrome */
+		-moz-transition: all 0.5s ease; /* Firefox 4-15 */
+		-o-transition: all 0.5s ease; /* Opera 10.5-12.00 */
+		transition: all 0.5s ease; /* Firefox 16+, Opera 12.50+ */
+	}
+		.m-tiles-promo-card-wrap{
+			background-color: #fff;
+			overflow: hidden;
+			height: 240px;
+		}
+		.m-tiles-promo-card.large .m-tiles-promo-card-wrap{
+			height: 500px;
+		}
+
+			.m-tiles-promo-card-img {
+				margin: 0 0 14px 0;
+				overflow: hidden;
+				position: relative;
+			}
+
+				.m-tiles-promo-card-img img {
+					width: 100%;
+				}
+
+			.m-tiles-promo-card-txt {
+				margin: 0 15px;
+			}
+				.m-tiles-promo-card-label {
+					margin: 10px 0;
+					font-size: 0.785em;
+					text-transform: uppercase;
+					font-family: 'Segoeuib';
+					color: #01a58d;
+				}
+
+					.m-tiles-promo-card-label .icon-bell,
+					.m-tiles-promo-card-label .icon-feather {
+						display: inline-block;
+						position: relative;
+						top: 1px;
+						margin: 0 5px 0 0;
+						height: 20px;
+						width: 20px;
+						font-size: 12px;
+						line-height: 20px;
+						text-align: center;
+						color: #fff;
+						background-color: #01a58d;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+
+				.m-tiles-promo-card-title {
+					margin: 12px 0 0;
+					font-family: "FuturaNewLight";
+					font-size: 1.85em;
+					color: #151515;
+					height: 34px;
+					position: relative;
+					overflow: hidden;
+				}
+				.m-tiles-promo-card-title:before{
+					display: block;
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 300px;
+					height: 20px;
+					background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* IE10+ */
+					background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+				}
+
+				.m-tiles-promo-card-counters {
+					margin:5px 0 0 0;
+				}
+
+					.m-tiles-promo-card-counter {
+						margin: 0 14px 0 0;
+						color: #999999;
+					}
+
+					.m-tiles-promo-card-counter > span{margin: 0 5px 0 0;
+					}
+
+					.m-tiles-promo-card-counter > .icon-comment{position: relative;top:1px;
+					}
+
+			.m-tiles-promo-card-banner240 {
+				height: 400px !important;
+				padding: 50px 0;
+				text-align: center;
+				background: #fff;
+			}
+
+			.m-tiles-promo-card-facebook {
+				background: #4a5f96;
+				height: 190px !important;
+				padding: 25px 0;
+			}
+
+				.m-tiles-promo-card-facebook-title {
+					padding: 0 15px 20px 15px;
+					border-bottom: 1px solid #8895b6;
+					color: #FFFFFF;
+					font-family: "FuturaNewLight";
+					font-size: 3em;
+				}
+
+					.m-tiles-promo-card-facebook-title span {
+						color: #fff;
+					}
+
+				.m-tiles-promo-card-facebook-desc {
+					height: 100px;
+					padding: 12px 15px 0 15px;
+				}
+
+					.m-tiles-promo-card-facebook-desc p {
+						color: #fff;
+						font-family: "FuturaNewLight";
+						font-size: 1.28em;
+					}
+
+				.m-tiles-promo-card-facebook .btn-facebook {
+					display: block;
+					margin: 15px auto 0 auto;
+				}
+
+
+	.m-tiles-promo-card.large {
+		height: 500px;
+	}
+
+		.m-tiles-promo-card.large .m-tiles-promo-card-img {
+			height: 325px;
+		}
+
+		.m-tiles-promo-card.large .m-tiles-promo-card-label {
+			margin: 0 0 10px;
+		}
+
+		.m-tiles-promo-card.large .m-tiles-promo-card-title {
+			height: 101px;
+			margin: 0;
+		}
+
+	.m-tiles-promo-card.small {
+		height: 240px;
+	}
+
+		.m-tiles-promo-card.small .m-tiles-promo-card-img {
+			height: 130px;
+		}
+
+/* .m-tiles-selection */
+
+.m-tiles-selection {
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+	.m-tiles-selection.animation .m-tiles-selection-title {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.m-tiles-selection-title {
+		position: absolute;
+		z-index: 30;
+		width: 100%;
+		height: 240px;
+		left: 0;
+		top: 0;
+		text-align: center;
+		line-height: 1;
+		color: #fff;
+		opacity: 1;
+		pointer-events: none;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+
+		.m-tiles-selection-title .txt-big {
+			font-family: 'Segoeuib';
+			font-size: 12.1em;
+		}
+
+		.m-tiles-selection-title .txt-small {
+			font-family: "FuturaNewLight";
+			font-size: 1.85em;
+		}
+
+/* .m-tiles-trailer */
+
+.m-tiles-trailer {
+	background-color: #fff;
+	overflow: hidden;
+	height: 240px;
+}
+
+/* .m-tiles-opinion */
+
+.m-tiles-opinion {
+	width: 300px;
+	height: 240px;
+	position: relative;
+}
+
+	.m-tiles-opinion-wrap {
+		width: 100%;
+		height: 100%;
+	}
+
+	.m-tiles-opinion-wrap.flipIt {
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	}
+
+		.m-tiles-opinion .m-tiles-promo-card-title:before {
+			display: none;
+		}
+
+		.m-tiles-opinion .m-tiles-promo-card-txt .m-tiles-promo-card-title {
+			font-family: "FuturaNewLightOblique", "FuturaNewLight";
+			margin: 15px 0 0 0;
+			height: 98px;
+			line-height: 1;
+		}
+
+		.m-tiles-opinion .m-tiles-promo-card-txt {
+			padding: 0 15px;
+			margin: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.m-tiles-opinion .m-tiles-promo-card-txt:before {
+			display: block;
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 300px;
+			height: 20px;
+			background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 1))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* IE10+ */
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00ffffff', endColorstr = '#ffffff', GradientType = 0); /* IE6-9 */
+			z-index: 1;
+		}
+
+		.m-tiles-opinion-user {
+			padding: 15px;
+			position: relative;
+			border-top: 1px solid #dadada;
+			z-index: 2;
+		}
+
+		.m-tiles-opinion-user:before,
+		.m-tiles-opinion-user:after {
+			display: block;
+			content: '';
+			position: absolute;
+		}
+
+		.m-tiles-opinion-user:before {
+			border: 12px solid transparent;
+			border-width: 0 12px 12px 12px;
+			border-color: transparent transparent #dadada transparent;
+			top: -12px;
+			right: 15px;
+		}
+
+		.m-tiles-opinion-user:after {
+			border: 11px solid transparent;
+			border-width: 0 11px 11px 11px;
+			border-color: transparent transparent #FFFFFF transparent;
+			top: -11px;
+			right: 16px;
+		}
+
+			.m-tiles-opinion-user > img {
+				width: 60px;
+				height: 60px;
+				float: left;
+				-webkit-border-radius: 30px;
+				-moz-border-radius: 30px;
+				border-radius: 30px;
+
+			}
+
+			.m-tiles-opinion-user-txt {
+				margin: 2px 0 0 80px;
+			}
+
+				.m-tiles-opinion-user-txt .m-tiles-promo-card-title {
+					margin-top: 0;
+				}
+
+				.m-tiles-opinion-user-txt > p {
+					font-family: "Segoeui";
+					font-size: 1.14em;
+					color: #8c8c8c;
+				}
+
+
+
+		.m-tiles-opinion-side-txt,
+		.m-tiles-opinion-side-img {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 240px;
+			background: #fff;
+		}
+
+	.m-tiles-opinion.scroll {
+		overflow: hidden;
+	}
+
+		.m-tiles-opinion.scroll  .m-tiles-opinion-side-img {
+			bottom: -400px;
+			z-index: 5;
+		}
+			.m-tiles-opinion-img-label {
+				position: absolute;
+				bottom: 15px;
+				left: 15px;
+				color: #fff;
+				font-family: "FuturaNewLight";
+				font-size: 1.85em;
+			}
+/* CSS 3D Card Flip Effect */
+
+.m-tiles-opinion.flip {
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-ms-perspective: 800px;
+	-o-perspective: 800px;
+	perspective: 800px;
+}
+
+	.m-tiles-opinion .m-tiles-opinion-wrap {
+		-webkit-transition: -webkit-transform 1s;
+		-moz-transition: -moz-transform 1s;
+		-ms-transition: -ms-transform 1s;
+		-o-transition: -o-transform 1s;
+		transition: transform 1s;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+
+	.m-tiles-opinion.flip .m-tiles-opinion-side-img {
+		-webkit-transform:  rotateY(-180deg);
+		-moz-transform: rotateY(-180deg);
+		-ms-transform: rotateY(-180deg);
+		-o-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);
+	}
+	.m-tiles-opinion.flip .m-tiles-opinion-side-txt {
+		-webkit-transform: rotateY(-360deg);
+		-moz-transform: rotateY(-360deg);
+		-ms-transform: rotateY(-360deg);
+		-o-transform: rotateY(-360deg);
+		transform: rotateY(-360deg);
+	}
+
+	.m-tiles-opinion.flip .m-tiles-opinion-side-img,
+	.m-tiles-opinion.flip .m-tiles-opinion-side-txt {/**/
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+	}
+
+	.m-tiles-opinion.flip .flipIt {
+		-webkit-transform: rotateY(-180deg);
+		-moz-transform: rotateY(-180deg);
+		-ms-transform: rotateY(-180deg);
+		-o-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);
+		z-index: 10;
+	}
+
+/* .m-tiles-poster */
+.m-tiles-poster {
+	background-color: #fff;
+	overflow: hidden;
+	height: 240px;
+}
+
+	.m-tiles-poster-wrap-button {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		height: 0;
+		background: #2f3d56;
+		box-shadow: inset 0 -5px 5px -5px #333333, inset 0 5px 5px -5px #333333;
+		text-align: center;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		box-shadow: inset 0 -5px 5px -5px #333333, inset 0 5px 5px -5px #333333;
+
+	}
+
+	.m-tiles-promo-card:hover .m-tiles-poster-wrap-button {
+		height: 83px;
+	}
+
+		.m-tiles-poster-btn {
+			display: block;
+			float: left;
+			width: 100px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			margin-left: -1px;
+			background: transparent;
+			border: none;
+			color: #fff;
+			border-bottom: 1px solid #3a475f;
+			border-left: 1px solid #3a475f;
+		}
+
+		.m-tiles-poster-btn-wrap:after {
+			display: block;
+			content: '';
+			clear: both;
+
+		}
+
+			.m-tiles-poster-btn:first-child {
+				border-left: none;
+				margin-left: 0;
+
+			}
+
+			.m-tiles-poster-btn:hover {
+				background: #01a58d;
+				box-shadow: inset 0 5px 5px -5px #333333;
+
+			}
+
+				.m-tiles-poster-btn > i {
+					font-size: 30px;
+					line-height: 49px;
+				}
+
+		.m-tiles-poster-rating {
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			line-height: 25px;
+			padding: 0 10px;
+			font-family: "Segoeui";
+			color: #fff;
+			background: #01a58d;
+			-webkit-border-radius: 15px;
+			-moz-border-radius: 15px;
+			border-radius: 15px;
+			z-index: 10;
+
+		}
+
+			.m-tiles-poster-rating > .icon-star {
+				font-size: 15px;
+				margin: 0 5px 0 0;
+				position: relative;
+				top: 1px;
+
+			}
+
+/* themes */
+
+/* .color-blue */
+
+.color-blue .flip-list > li > .flip-back,
+.color-blue .flip-list > li > .flip-front,
+.color-blue .m-tiles-promo-card-label .icon-bell,
+.color-blue .m-tiles-promo-card-label .icon-feather,
+.color-blue .m-tiles-poster-btn:hover,
+.color-blue .m-tiles-poster-rating{
+	background-color: #7cb5d0;
+}
+.color-blue .m-tiles-promo-card-label {
+	color: #6dafce;
+}
+/* .color-green */
+.color-green .flip-list > li > .flip-back,
+.color-green .flip-list > li > .flip-front,
+.color-green .m-tiles-promo-card-label .icon-bell,
+.color-green .m-tiles-promo-card-label .icon-feather,
+.color-green .m-tiles-poster-btn:hover,
+.color-green .m-tiles-poster-rating{
+	background-color: #01a58d;
+}
+.color-green .m-tiles-promo-card-label {
+	color: #01a58d;
+}
+
+/* .color-orange */
+
+.color-orange .flip-list > li > .flip-back,
+.color-orange .flip-list > li > .flip-front,
+.color-orange .m-tiles-promo-card-label .icon-bell,
+.color-orange .m-tiles-promo-card-label .icon-feather,
+.color-orange .m-tiles-poster-btn:hover,
+.color-orange .m-tiles-poster-rating{
+	background-color: #f78560;
+}
+.color-orange .m-tiles-promo-card-label {
+	color: #f6764c;
+}
+
+/* .color-purple */
+
+.color-purple .flip-list > li > .flip-back,
+.color-purple .flip-list > li > .flip-front,
+.color-purple .m-tiles-promo-card-label .icon-bell,
+.color-purple .m-tiles-promo-card-label .icon-feather,
+.color-purple .m-tiles-poster-btn:hover,
+.color-purple .m-tiles-poster-rating{
+	background-color: #b995c5;
+}
+.color-purple .m-tiles-promo-card-label {
+	color: #b27cc4;
+}
+
+/* .color-red */
+
+.color-red .flip-list > li > .flip-back,
+.color-red .flip-list > li > .flip-front,
+.color-red .m-tiles-promo-card-label .icon-bell,
+.color-red .m-tiles-promo-card-label .icon-feather,
+.color-red .m-tiles-poster-btn:hover,
+.color-red .m-tiles-poster-rating{
+	background-color: #e54b5e;
+}
+.color-red .m-tiles-promo-card-label {
+	color: #e54b5e;
+}
+
+/*
+.m-tiles-promo-card-txt > div{
+	overflow: hidden;
+}
+.m-tiles-opinion-side-txt span,
+.m-tiles-opinion-side-txt div,
+.m-tiles-opinion-side-txt > div div{position: static!important;}
+*/

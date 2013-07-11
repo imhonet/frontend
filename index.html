@@ -9,999 +9,928 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-	<script data-main="js/main" src="js/lib/require.js"></script>
-	
+    <script data-main="js/main" src="js/lib/require.js"></script>
+
     <!-- Stylesheets -->
     <link href="css/main.css" rel="stylesheet">
-	
-	<script>
-		require(['app', 'modules/page', 'modules/pager', 'modules/m-wookmark'], function(App){
-			App.start();
-		});
-	</script>
-	
+
+    <script>
+        require(['app', 'modules/page', 'modules/pager', 'modules/m-wookmark', 'modules/m-tiles-selection', 'modules/m-flip'], function (App) {
+            App.start();
+        });
+    </script>
+
 </head>
-
-
 
 
 <body>
 
 <div id="wrapper">
-	
-	<div id="top-advertising" class="l-section"></div>
-	
-	
-	
-	<div id="top-navigation" class="l-section">
-		<div class="l-grid">
-			<div class="l-row">
-				<div class="l-full">
-					
-					<div class="m-mainnavigation">
-						<div class="navbar navbar-metro">
-							<div class="navbar-inner">
-								<div class="container">
-									<a href="#" class="brand">
-										<img src="img/logo.png" alt="imhonet">
-									</a>
-									<ul class="nav">
-										<li class="active"><a href="#films">Фильмы</a></li>
-										<li><a href="#shows">Сериалы</a></li>
-										<li><a href="#books">Книги</a></li>
-										<li><a href="#games">Игры</a></li>
-										<li><a href="#music">Музыка</a></li>
-									</ul>
 
-                                    <a href="#" class="m-mainnavigation-page-left"></a>
-                                    <a href="#" class="m-mainnavigation-page-right"></a>
-									
-									<form action="topsearch" class="navbar-search">
-										<input type="text" placeholder="Поиск по сайту">
-									</form>
-									<ul class="nav pull-right" >
-										<li class="dropdown" >
-											<a data-toggle="dropdown" class="dropdown-toggle" href="#">Вход</a>
-											<ul class="dropdown-menu" style="padding-top:0">
-											<li>
-												<div class="well" style="margin-bottom:0;border-radius : 5px 5px 0 0; background-color: transparent; box-shadow : 0 0 0; border:0;">
-													<form style="margin-bottom:0;">
-														<div>
-															<label class="control-label" for="inputLogin">Логин</label>
-															<div class="controls">
-																<input type="text" id="inputLogin" placeholder="Имя пользователя">
-															</div>
-														</div>
-														<div>
-															<label class="control-label" for="inputPassword">Пароль</label>
-															<div class="controls">
-																<input type="password" id="inputPassword" placeholder="* * * * * *">
-															</div>
-														</div>
-														<div>
-															<div class="controls">
-																<label class="checkbox">
-																	<input type="checkbox"> Запомнить меня
-																</label>
-																<button type="submit" class="btn">Вход</button>
-															</div>
-														</div>
-													</form>
-												</div>
-											
-											</li>
-											
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-	
-	
-	<div id="el_desc" class="l-section">
-        <div class="l-grid">
-			<div class="l-row">
-			<div class="l-full">
-		
-		<div class="m-elementdescription">
-		<div class="m-elementdescription-h1">Описание фильма</div>
-        <div class="m-elementdescription-advice">
-            <div class="m-elementdescription-advice-wrap">
-                <div class="m-elementdescription-advice-txt">Стоит ли вам
-                    смотреть фильм
-                    «Велиий Гэтсби»?
+<div id="top-advertising" class="l-section"></div>
+
+
+<div id="top-navigation" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+
+                <div class="m-mainnavigation">
+                    <div class="navbar navbar-metro">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <a href="#" class="brand">
+                                    <img src="img/logo.png" alt="imhonet">
+                                </a>
+                                <ul class="nav">
+                                    <li class="active"><a href="#films">Фильмы</a></li>
+                                    <li><a href="#shows">Сериалы</a></li>
+                                    <li><a href="#books">Книги</a></li>
+                                    <li><a href="#games">Игры</a></li>
+                                    <li><a href="#music">Музыка</a></li>
+                                </ul>
+
+                                <a href="#" class="m-mainnavigation-page-left"></a>
+                                <a href="#" class="m-mainnavigation-page-right"></a>
+
+                                <form action="topsearch" class="navbar-search">
+                                    <input type="text" placeholder="Поиск по сайту">
+                                </form>
+                                <ul class="nav pull-right">
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">Вход</a>
+                                        <ul class="dropdown-menu" style="padding-top:0">
+                                            <li>
+                                                <div class="well"
+                                                     style="margin-bottom:0;border-radius : 5px 5px 0 0; background-color: transparent; box-shadow : 0 0 0; border:0;">
+                                                    <form style="margin-bottom:0;">
+                                                        <div>
+                                                            <label class="control-label" for="inputLogin">Логин</label>
+
+                                                            <div class="controls">
+                                                                <input type="text" id="inputLogin"
+                                                                       placeholder="Имя пользователя">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <label class="control-label"
+                                                                   for="inputPassword">Пароль</label>
+
+                                                            <div class="controls">
+                                                                <input type="password" id="inputPassword"
+                                                                       placeholder="* * * * * *">
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="controls">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox"> Запомнить меня
+                                                                </label>
+                                                                <button type="submit" class="btn">Вход</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="btn btn-theme active" type="button">Проверить прямо сейчас</button>
+
+
             </div>
         </div>
-        <div class="m-elementdescription-wrap">
-            <div class="m-elementdescription-image">
-                <img src="img/dumm/elen_desc.jpg" alt="">
-            </div>
-            <div class="m-elementdescription-description">
-
-                <p>Весной 1927 года, в эпоху разлагающейся морали, блистательного джаза и «королей контрабандного
-                    алкоголя», Ник Каррауэй приезжает из Среднего Запада в Нью-Йорк. Преследуя собственную американскую
-                    мечту, он селится по соседству с таинственным, известным своими вечеринками миллионером Джеем
-                    Гэтсби, а на противоположном берегу бухты проживают его кузина Дэзи и её муж, повеса и аристократ,
-                    Том Бьюкенен.</p>
-
-                <p>Так Ник оказывается вовлечённым в захватывающий мир богатых — их иллюзий, любви и обманов. Он
-                    становится свидетелем происходящего в этом мире и пишет историю невозможной любви, вечных мечтаний и
-                    человеческой трагедии, которые являются отражением современных времен и нравов.</p>
-
-                <p class="m-elementdescription-graytxt">Рейтинг фильма на Имхонете: 8 из 10 по оценке 32 7564
-                    пользователей, написавших 347 отзывов</p>
-            </div>
-        </div>
-		</div>
-		
-		</div>
-		
-		
-		
-		</div>
-		</div>
-
     </div>
-	
-	
-	
-	<div id="photogallery" class="l-section">
-		
-		 <div class="l-grid">
-			<div class="l-row">
-				<div class="l-threequaters">
-					<div class="m-photogallery green">
-						<div class="m-photogallery-title">Кадры</div>
-						<div class="m-photogallery-view">
-							<i class="m-arrow m-left"></i>
-							<i class="m-arrow m-right"></i>
-							<ul class="m-list">
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/1.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/2.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/3.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/4.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/1.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/2.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/3.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/4.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/1.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/2.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/3.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/4.jpg">
-								</li>
-							</ul>
-						</div>
-						<div class="m-photogallery-preview" style="display: none">
-							<i class="m-arrow m-left">◀</i>
-							<i class="m-arrow m-right">▶</i>
-							<ul class="m-list">
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/1_tmb.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/2_tmb.jpg"></li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/3_tmb.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/4_tmb.jpg">
-								</li>
-								<li class="m-list-item ">
-									<img class="m-img" src="img/photogall/1_tmb.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/2_tmb.jpg"></li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/3_tmb.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/4_tmb.jpg">
-								</li>
-								<li class="m-list-item ">
-									<img class="m-img" src="img/photogall/1_tmb.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/2_tmb.jpg"></li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/3_tmb.jpg">
-								</li>
-								<li class="m-list-item">
-									<img class="m-img" src="img/photogall/4_tmb.jpg">
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			
-				<div class="l-quater">
-					 <div style="padding-top:50px">
-						<img src="img/films/banner240x400.jpg">
-					</div>
-				</div>
-			
-			</div>
-		</div>
-	</div>
-	
-	
-	 <div id="middle" class="l-section">
+</div>
 
-        <div class="l-grid">
 
-            <div class="l-row">
+<div id="el_desc" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
 
-                <div class="l-full">
-
-                    <div class="m-films">
-                        <div class="m-films-promo-card large">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/cruds.jpg" />
+                <div class="m-elementdescription">
+                    <div class="m-elementdescription-h1">Описание фильма</div>
+                    <div class="m-elementdescription-advice">
+                        <div class="m-elementdescription-advice-wrap">
+                            <div class="m-elementdescription-advice-txt">Стоит ли вам
+                                смотреть фильм
+                                «Велиий Гэтсби»?
                             </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-ring text-xx-small"></i><span class="text-xx-small">Новинка</span>
-                            </div>
-
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Семейка Крудс. Они останутся в истории эволюции</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter text-xx-small"><i class="i-star"></i> 100</span>
-                                <span class="m-films-promo-card-counter text-xx-small"><i class="i-man"></i> 1000</span>
-                                <span class="m-films-promo-card-counter text-xx-small"><i class="i-cloud"></i> 40</span>
-                            </div>
+                            <button class="btn btn-theme active" type="button">Проверить прямо сейчас</button>
                         </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/super.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Самое популярное</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Человек из стали</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 100</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 1000</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 40</span>
-                            </div>
+                    </div>
+                    <div class="m-elementdescription-wrap">
+                        <div class="m-elementdescription-image">
+                            <img src="img/dumm/elen_desc.jpg" alt="">
                         </div>
+                        <div class="m-elementdescription-description">
 
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/kanyewest.jpg">
-                            </div>
+                            <p>Весной 1927 года, в эпоху разлагающейся морали, блистательного джаза и «королей
+                                контрабандного
+                                алкоголя», Ник Каррауэй приезжает из Среднего Запада в Нью-Йорк. Преследуя собственную
+                                американскую
+                                мечту, он селится по соседству с таинственным, известным своими вечеринками миллионером
+                                Джеем
+                                Гэтсби, а на противоположном берегу бухты проживают его кузина Дэзи и её муж, повеса и
+                                аристократ,
+                                Том Бьюкенен.</p>
 
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Популярная музыка</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Kanye West</span>
-                            </div>
+                            <p>Так Ник оказывается вовлечённым в захватывающий мир богатых — их иллюзий, любви и
+                                обманов. Он
+                                становится свидетелем происходящего в этом мире и пишет историю невозможной любви,
+                                вечных мечтаний и
+                                человеческой трагедии, которые являются отражением современных времен и нравов.</p>
 
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
+                            <p class="m-elementdescription-graytxt">Рейтинг фильма на Имхонете: 8 из 10 по оценке 32
+                                7564
+                                пользователей, написавших 347 отзывов</p>
                         </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/krowuipotom.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый сериал</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Кровью и потом</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card large">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/unaletz.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Популярная книга</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Шуршание философа, бегающего по своей оси</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card m-films-promo-card-banner m-films-promo-card-banner240 large">
-                            <img src="img/films/banner240x400.jpg">
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/prizrakivkonnektikute.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый фильм</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Призраки в Коннектикуте</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/deeppurple.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый альбом</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Deep Purple</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/skyrim.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Свежая игра</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">The Elder Scrolls 5: Skyrim</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card m-films-promo-card-facebook small">
-                            <div class="m-films-promo-card-facebook-title">
-                                <span class="text-xx-large">Facebook</span>
-                            </div>
-                            <div class="m-films-promo-card-facebook-desc">
-                                <p>
-                                    Улучши свои рекомендации на 25%, заходи под аккаунтом Facebook
-                                </p>
-                            </div>
-                            <div class="m-films-promo-card-facebook-link">
-                                <a href="/">Зайти под аккаунтом Facebook</a>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/sobaka.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Популярная книга</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Собака Баскервилей</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card m-films-opinion small">
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Отзыв о фильме</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">"Этот фильм просто невероятный. Я в диком восторге!!!"</span>
-                            </div>
-
-                            <div class="m-films-promo-card-profile">
-                                <div class="m-films-promo-card-profile-left">
-                                    <img src="img/films/avatar.jpg">
-                                </div>
-                                <div class="m-films-promo-card-profile-right">
-                                    <div class="m-films-promo-card-profile-name">
-                                        <span class="text-large">Влад Кагитин</span>
-                                    </div>
-                                    <div class="m-films-promo-card-counters">
-                                        <span class="m-films-promo-card-counter"><i class="i-like"></i> 259</span>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/nfs.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Свежая игра</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Need For Speed</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card m-films-video small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/pozner.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Видеовстреча</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Владимир Познер</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/vozmezdie.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый трейлер</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Возмездие</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/linkinpark.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый клип</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Linkin park</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/dhouse.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новая серия</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Доктор Хаус</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card large">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/gagarin.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">В ожидании премьеры</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Гагарин. Первый в космосе. Долгожданный фильм про героя</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/vozbujden.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый сериал</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Я очень возбужден</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/prometey.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый фильм</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Прометей</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card m-films-promo-card-banner large">
-                            <img src="img/films/banner300x500.jpg">
-                        </div>
-
-                        <div class="m-films-promo-card large">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/garrypotter.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Популярная книга</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Гарри Поттер и дары смерти. Часть 2</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card m-films-promo-card-banner small">
-                            <img src="img/films/25.jpg">
-                        </div>
-
-                        <div class="m-films-promo-card large">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/malchishnik.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">На экранах кинотеатров</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Мальчишник: Часть 3 готовит новые испытания старым героям</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/graf.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Популярная книга</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Граф Монте-Кристо</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/sc2.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Свежая игра</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Star Craft 2</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/master.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый фильм</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Великий мастер</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/igra.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый сериал</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Игра престолов</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/justice.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Свежая игра</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Injustice: Gods Among Us</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card large">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/golos.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">На экранах кинотеатров</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Идеальный голос</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/britney.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новая музыка</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Britney Spears</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/d3.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Популярная игра</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Diablo 3</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card large">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/300.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый фильм</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">300 спартанцев: Расцвет Империи</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/teoria.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый сезон сериала</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Теория большого взрыва</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
-                        <div class="m-films-promo-card small">
-                            <div class="m-films-promo-card-img">
-                                <img src="img/films/teoria.jpg">
-                            </div>
-
-                            <div class="m-films-promo-card-label">
-                                <i class="i-tube text-xx-small"></i><span class="text-xx-small">Новый трек сериала</span>
-                            </div>
-                            <div class="m-films-promo-card-title">
-                                <span class="text-xx-large">Gangnam Style</span>
-                            </div>
-
-                            <div class="m-films-promo-card-counters">
-                                <span class="m-films-promo-card-counter"><i class="i-star"></i> 78</span>
-                                <span class="m-films-promo-card-counter"><i class="i-man"></i> 2509</span>
-                                <span class="m-films-promo-card-counter"><i class="i-cloud"></i> 26</span>
-                            </div>
-                        </div>
-
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<div id="photogallery" class="l-section">
+
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-threequaters">
+                <div class="m-photogallery green">
+                    <div class="m-photogallery-title">Кадры</div>
+                    <div class="m-photogallery-view">
+                        <i class="m-arrow m-left"></i>
+                        <i class="m-arrow m-right"></i>
+                        <ul class="m-list">
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/1.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/2.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/3.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/4.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/1.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/2.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/3.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/4.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/1.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/2.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/3.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/4.jpg">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="m-photogallery-preview" style="display: none">
+                        <i class="m-arrow m-left">◀</i>
+                        <i class="m-arrow m-right">▶</i>
+                        <ul class="m-list">
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/1_tmb.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/2_tmb.jpg"></li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/3_tmb.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/4_tmb.jpg">
+                            </li>
+                            <li class="m-list-item ">
+                                <img class="m-img" src="img/photogall/1_tmb.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/2_tmb.jpg"></li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/3_tmb.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/4_tmb.jpg">
+                            </li>
+                            <li class="m-list-item ">
+                                <img class="m-img" src="img/photogall/1_tmb.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/2_tmb.jpg"></li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/3_tmb.jpg">
+                            </li>
+                            <li class="m-list-item">
+                                <img class="m-img" src="img/photogall/4_tmb.jpg">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="l-quater">
+                <div style="padding-top:50px">
+                    <img src="img/films/banner240x400.jpg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div id="middle" class="l-section">
+
+<div class="l-grid">
+
+<div class="l-row">
+
+<div class="l-full">
+
+<div class="m-tiles">
+<div class="m-tiles-promo-card large color-blue">
+    <span class="icon-cross" aria-hidden="true"></span>
+    <div class="m-tiles-promo-card-wrap">
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/cruds.jpg"/>
+        </div>
+        <div class="m-tiles-promo-card-txt">
+        <div class="m-tiles-promo-card-label">
+            <span class="icon-bell"></span>Новинка
+        </div>
+
+        <div class="m-tiles-promo-card-title">Семейка Крудс. Они останутся в истории эволюции
+        </div>
+        <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+        </div></div>
+    </div>
+</div>
+
+<div class="m-tiles-promo-card small color-red">
+    <span class="icon-cross" aria-hidden="true"></span>
+
+    <div class="m-tiles-selection">
+        <div class="m-tiles-selection-title">
+            <div class="txt-big">25</div>
+            <div class="txt-small">Лучших фильмов<br/>
+                всех времен
+            </div>
+        </div>
+        <ul  class="flip-list" data-initdelay="500" data-mode="flip-list" data-delay="3000" data-swap="image">
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="m-tiles-promo-card small color-orange">
+
+    <span class="icon-cross" aria-hidden="true"></span>
+
+    <div class="m-tiles-trailer">
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/kanyewest.jpg">
+        </div>
+        <div class="m-tiles-promo-card-txt">
+            <div class="m-tiles-promo-card-label">
+                <span class="icon-bell"></span>трейлер
+            </div>
+            <div class="m-tiles-promo-card-title">Железный человек Железный человек
+            </div>
+
+            <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-tiles-promo-card small color-purple">
+    <div class="m-tiles-opinion scroll">
+        <div class="m-tiles-opinion-wrap">
+
+            <div class="m-tiles-opinion-side-img">
+                <span class="icon-cross" aria-hidden="true"></span>
+
+                <div class="m-tiles-opinion-img-label">Форсаж 6</div>
+                <img src="img/films/pozner.jpg" alt="">
+            </div>
+            <div class="m-tiles-opinion-side-txt">
+                <div class="m-tiles-promo-card-txt">
+                    <div class="m-tiles-promo-card-label">
+                        <span class="icon-feather"></span>Отзыв дня
+                    </div>
+                    <div class="m-tiles-promo-card-title">«Это просто самый
+                        классный фильм за
+                        долгое время»
+                        долгое время»
+                        долгое время»
                     </div>
 
                 </div>
+                <div class="m-tiles-opinion-user">
+                    <img src="img/photogall/user.jpg" alt="">
 
+                    <div class="m-tiles-opinion-user-txt">
+                        <div class="m-tiles-promo-card-title">Ирина Нагорная</div>
+                        <p>На сайте с 2009 года</p>
+                    </div>
+                </div>
             </div>
 
         </div>
+    </div>
+</div>
 
+<div class="m-tiles-promo-card small color-orange">
+
+    <span class="icon-cross" aria-hidden="true"></span>
+
+    <div class="m-tiles-poster">
+        <div class="m-tiles-poster-rating"><span class="icon-star"></span>7.8</div>
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/kanyewest.jpg">
+
+            <div class="m-tiles-poster-wrap-button">
+                <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-bookmark"></i></div>
+                </div>
+                <div class="m-rating"><span class="icon-star"></span><span class="icon-star"></span><span
+                        class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span
+                        class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span
+                        class="icon-star"></span><span class="icon-star"></span></div>
+            </div>
+        </div>
+        <div class="m-tiles-promo-card-txt">
+            <div class="m-tiles-promo-card-label">
+                <span class="icon-bell"></span>новинкa
+            </div>
+            <div class="m-tiles-promo-card-title">Прометей
+            </div>
+
+            <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-tiles-promo-card small color-blue">
+    <span class="icon-cross" aria-hidden="true"></span>
+    <div class="m-tiles-promo-card-wrap">
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/krowuipotom.jpg">
+        </div>
+        <div class="m-tiles-promo-card-txt">
+
+            <div class="m-tiles-promo-card-label">
+                <span class="icon-bell"></span>Новый сериал
+            </div>
+            <div class="m-tiles-promo-card-title">Кровью и потом
+            </div>
+            <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-tiles-promo-card small">
+    <span class="icon-cross" aria-hidden="true"></span>
+    <div class="m-tiles-promo-card-wrap">
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/krowuipotom.jpg">
+        </div>
+        <div class="m-tiles-promo-card-txt">
+
+            <div class="m-tiles-promo-card-label">
+
+                <span class="icon-bell"></span>Новый сериал
+            </div>
+            <div class="m-tiles-promo-card-title">Кровью и потом
+            </div>
+            <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="m-tiles-promo-card m-tiles-promo-card-banner m-tiles-promo-card-banner240 large">
+
+    <span class="icon-cross" aria-hidden="true"></span>
+    <img src="img/films/banner240x400.jpg">
+</div>
+
+
+<div class="m-tiles-promo-card m-tiles-promo-card-banner large">
+    <span class="icon-cross" aria-hidden="true"></span>
+    <img src="img/films/banner300x500.jpg">
+</div>
+<div class="m-tiles-promo-card small color-green">
+    <span class="icon-cross" aria-hidden="true"></span>
+
+    <div class="m-tiles-selection">
+        <div class="m-tiles-selection-title">
+            <div class="txt-big">25</div>
+            <div class="txt-small">Лучших фильмов<br/>
+                всех времен
+            </div>
+        </div>
+        <ul  class="flip-list" data-initdelay="500" data-mode="flip-list" data-delay="3000" data-swap="image">
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/2tw.gif" alt="2"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/3tw.gif" alt="3"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/4tw.gif" alt="4"/></div>
+            </li>
+            <li>
+                <div class="accent "></div>
+                <div><img src="http://www.drewgreenwell.com/images/sample/1tw.gif" alt="1"/></div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="m-tiles-promo-card small">
+
+    <span class="icon-cross" aria-hidden="true"></span>
+
+    <div class="m-tiles-trailer">
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/kanyewest.jpg">
+        </div>
+        <div class="m-tiles-promo-card-txt">
+            <div class="m-tiles-promo-card-label">
+                <span class="icon-bell"></span>трейлер
+            </div>
+            <div class="m-tiles-promo-card-title">Железный человек Железный человек
+            </div>
+
+            <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-tiles-promo-card small">
+    <div class="m-tiles-opinion scroll">
+        <div class="m-tiles-opinion-wrap">
+            <div class="m-tiles-opinion-side-txt">
+                <div class="m-tiles-promo-card-txt">
+                    <div class="m-tiles-promo-card-label">
+                        <span class="icon-feather"></span>Отзыв дня
+                    </div>
+                    <div class="m-tiles-promo-card-title">«Это просто самый
+                        классный фильм за
+                        долгое время»
+                        долгое время»
+                        долгое время»
+                    </div>
+
+                </div>
+                <div class="m-tiles-opinion-user">
+                    <img src="img/photogall/user.jpg" alt="">
+
+                    <div class="m-tiles-opinion-user-txt">
+                        <div class="m-tiles-promo-card-title">Ирина Нагорная</div>
+                        <p>На сайте с 2009 года</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="m-tiles-opinion-side-img">
+                <span class="icon-cross" aria-hidden="true"></span>
+                <img src="img/films/pozner.jpg" alt="">
+
+                <div class="m-tiles-opinion-img-label">Форсаж 6</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="m-tiles-promo-card small">
+
+    <span class="icon-cross" aria-hidden="true"></span>
+
+    <div class="m-tiles-poster">
+        <div class="m-tiles-poster-rating"><span class="icon-star"></span>7.8</div>
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/kanyewest.jpg">
+
+            <div class="m-tiles-poster-wrap-button">
+                <div class="m-tiles-poster-btn-wrap">
+                    <div class="m-tiles-poster-btn">
+                        <i class="icon-play"></i>
+                    </div>
+                    <div class="m-tiles-poster-btn">
+                        <i class="icon-arrow-down"></i></div>
+                    <div class="m-tiles-poster-btn">
+                        <i class="icon-bookmark"></i></div>
+                </div>
+                <div class="m-rating"><span class="icon-star"></span><span class="icon-star"></span><span
+                        class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span
+                        class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span
+                        class="icon-star"></span><span class="icon-star"></span></div>
+            </div>
+        </div>
+        <div class="m-tiles-promo-card-txt">
+            <div class="m-tiles-promo-card-label">
+                <span class="icon-bell"></span>новинкa
+            </div>
+            <div class="m-tiles-promo-card-title">Прометей
+            </div>
+
+            <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-tiles-promo-card small">
+    <span class="icon-cross" aria-hidden="true"></span>
+    <div class="m-tiles-promo-card-wrap">
+        <div class="m-tiles-promo-card-img">
+            <img src="img/films/krowuipotom.jpg">
+        </div>
+        <div class="m-tiles-promo-card-txt">
+
+            <div class="m-tiles-promo-card-label">
+                <span class="icon-bell"></span>Новый сериал
+            </div>
+            <div class="m-tiles-promo-card-title">Кровью и потом
+            </div>
+            <div class="m-tiles-promo-card-counters">
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-bars"></span> 2509</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-user"></span>
+                                    78</span>
+                                <span class="m-tiles-promo-card-counter">
+                                    <span class="icon-comment"></span> 26</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="m-tiles-promo-card m-tiles-promo-card-facebook small">
+    <span class="icon-cross" aria-hidden="true"></span>
+    <div class="m-tiles-promo-card-facebook-title">
+        Facebook
+    </div>
+    <div class="m-tiles-promo-card-facebook-desc">
+        <p>
+            Улучши свои рекомендации на 25%, заходи под аккаунтом Facebook
+        </p>
+    </div>
+    <button class="btn btn-facebook">Зайти под аккаунтом Facebook</button>
+</div>
+<div class="m-tiles-promo-card m-tiles-promo-card-banner small">
+    <span class="icon-cross" aria-hidden="true"></span>
+    <img src="img/films/25.jpg">
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div id="sim_entities" class="l-section">
+
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+
+                <div class="m-inlineimagelist">
+
+
+                    <h1 class="m-inlineimagelist-h1">Похожие фильмы</h1>
+
+                    <ul class="m-inlineimagelist-gallery">
+                        <li class="m-inlineimagelist-gallery-item">
+                            <a href="">
+                                <div class="m-inlineimagelist-gallery-image">
+                                    <img src="img/dumm/img1.jpg" alt="">
+                                </div>
+                                <div class="m-inlineimagelist-gallery-txt">Крестный отец</div>
+                            </a>
+                        </li>
+                        <li class="m-inlineimagelist-gallery-item">
+                            <a href="">
+                                <div class="m-inlineimagelist-gallery-image">
+                                    <img src="img/dumm/img2.jpg" alt="">
+                                </div>
+                                <div class="m-inlineimagelist-gallery-txt">Клан Сопрано</div>
+                            </a>
+                        </li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img3.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Гангстер</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img4.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Самый пьяный округв районе</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img5.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Оружейный барон</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img6.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Джонни Д.</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img1.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Крестный отец</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img2.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Клан Сопрано</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img3.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Гангстер</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img4.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Самый пьяный округв районе</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img5.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Оружейный барон</div>
+                        </a></li>
+                        <li class="m-inlineimagelist-gallery-item"><a href="">
+                            <div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img6.jpg" alt="">
+                            </div>
+                            <div class="m-inlineimagelist-gallery-txt">Джонни Д.</div>
+                        </a></li>
+                    </ul>
+
+                    <button type="button" class="btn btn-large btn-theme">Все фильмы, похожие на «Великий Гэтсби»
+                    </button>
+
+                </div>
+            </div>
+        </div>
     </div>
 
-	
-	
-	
-	<div id="sim_entities" class="l-section">
-        
-		<div class="l-grid">
-			<div class="l-row">
-			<div class="l-full">
-		
-        <div class="m-inlineimagelist">
-			
-		
-			
-			
-			<h1 class="m-inlineimagelist-h1">Похожие фильмы</h1>
-		
-			<ul class="m-inlineimagelist-gallery">
-				<li class="m-inlineimagelist-gallery-item">
-					<a href="">
-						<div class="m-inlineimagelist-gallery-image">
-							<img src="img/dumm/img1.jpg" alt="">
-						</div>
-						<div class="m-inlineimagelist-gallery-txt">Крестный отец</div>
-					</a>
-				</li>
-				<li class="m-inlineimagelist-gallery-item">
-					<a href="">
-						<div class="m-inlineimagelist-gallery-image">
-							<img src="img/dumm/img2.jpg" alt="">
-						</div>
-						<div class="m-inlineimagelist-gallery-txt">Клан Сопрано</div>
-					</a>
-				</li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img3.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Гангстер</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img4.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Самый пьяный округв районе</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img5.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Оружейный барон </div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img6.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Джонни Д.</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img1.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Крестный отец</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img2.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Клан Сопрано</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img3.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Гангстер</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img4.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Самый пьяный округв районе</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img5.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Оружейный барон</div>
-				</a></li>
-				<li class="m-inlineimagelist-gallery-item"><a href="">
-					<div class="m-inlineimagelist-gallery-image"><img src="img/dumm/img6.jpg" alt="">
-					</div>
-					<div class="m-inlineimagelist-gallery-txt">Джонни Д.</div>
-				</a></li>
-			</ul>
-			
-			<button type="button" class="btn btn-large btn-theme">Все фильмы, похожие на «Великий Гэтсби»</button>
-			
-			</div>
-			</div>
-			</div>
-		</div>
-       
+</div>
+
+
+<div id="comments" class="l-section" style="background: #e4e4e4;">
+<div class="l-grid">
+<div class="l-row">
+<div class="l-full">
+<div class="m-comments color-scheme-green">
+<h2 class="m-comments-title">Отзывы</h2>
+
+<div class="m-comments-item">
+    <div class="m-comments-user-avatar">
+        <img src="img/dumm/m-comments-user-avatar1.jpg" alt=""/>
     </div>
-	
-	
-	
-	<div id="comments" class="l-section" style="background: #e4e4e4;">
-		<div class="l-grid">
-			<div class="l-row">
-				<div class="l-full">
-					<div class="m-comments color-scheme-green">
-						<h2 class="m-comments-title">Отзывы</h2>
-
-						<div class="m-comments-item">
-							<div class="m-comments-user-avatar">
-								<img src="img/dumm/m-comments-user-avatar1.jpg" alt="" />
-							</div>
-							<div class="m-comments-item-body">
-								<span class="m-comments-body-arrow"></span>
+    <div class="m-comments-item-body">
+        <span class="m-comments-body-arrow"></span>
 								<span class="m-comments-rating">
 									8.0
 									<span class="m-comments-rating-arrow"></span>
@@ -1014,29 +943,30 @@
 									20 мая
 								</span>
 
-								<div class="m-comments-content">
-									Стоит сразу же отметить, что данная картина НЕ шедевр, как было уже сказано,
-									она не пробудет в вас какие-то чувства, но все же приятный, хорошо снятый фильм.
-									Мне до сих пор не очень понятно
-								</div>
+        <div class="m-comments-content">
+            Стоит сразу же отметить, что данная картина НЕ шедевр, как было уже сказано,
+            она не пробудет в вас какие-то чувства, но все же приятный, хорошо снятый фильм.
+            Мне до сих пор не очень понятно
+        </div>
 
-								<div class="m-comments-buttons-area clearfix">
-									<a class="m-comments-button-add-comment" href="#">Комментировать отзыв</a>
-									<div class="m-comments-buttons-likers">
-										<button class="btn btn-round btn-theme active">15</button>
-										<button class="btn btn-round btn-theme">15</button>
-									</div>
-								</div>
+        <div class="m-comments-buttons-area clearfix">
+            <a class="m-comments-button-add-comment" href="#">Комментировать отзыв</a>
 
-							</div>
-						</div>
+            <div class="m-comments-buttons-likers">
+                <button class="btn btn-round btn-theme active">15</button>
+                <button class="btn btn-round btn-theme">15</button>
+            </div>
+        </div>
 
-						<div class="m-comments-item">
-							<div class="m-comments-user-avatar">
-								<img src="img/dumm/m-comments-user-avatar2.jpg" alt="" />
-							</div>
-							<div class="m-comments-item-body">
-								<span class="m-comments-body-arrow"></span>
+    </div>
+</div>
+
+<div class="m-comments-item">
+    <div class="m-comments-user-avatar">
+        <img src="img/dumm/m-comments-user-avatar2.jpg" alt=""/>
+    </div>
+    <div class="m-comments-item-body">
+        <span class="m-comments-body-arrow"></span>
 								<span class="m-comments-rating">
 									8.0
 									<span class="m-comments-rating-arrow"></span>
@@ -1049,51 +979,53 @@
 									20 мая
 								</span>
 
-								<div class="m-comments-content">
-									Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать,
-									много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
-									в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой минус это
-									Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю историю,
-									и не очень качественная игра, очень повредила данный фильм. Когда я читала книгу,
-									героя Тобби я представляла по другом, и именно в этот раз он мне очень разочаровал.
-									На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он буквально
-									спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал лучшим
-									из всех Гэтсби которых я видела.
-								</div>
+        <div class="m-comments-content">
+            Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать,
+            много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
+            в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой минус
+            это
+            Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю историю,
+            и не очень качественная игра, очень повредила данный фильм. Когда я читала книгу,
+            героя Тобби я представляла по другом, и именно в этот раз он мне очень разочаровал.
+            На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он буквально
+            спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал лучшим
+            из всех Гэтсби которых я видела.
+        </div>
 
-								<div class="m-comments-buttons-area clearfix">
-									<a class="m-comments-button-add-comment active" href="#">Комментировать отзыв</a>
-									<div class="m-comments-buttons-likers">
-										<button class="btn btn-round btn-theme">345</button>
-										<button class="btn btn-round btn-theme active">15</button>
-									</div>
-								</div>
+        <div class="m-comments-buttons-area clearfix">
+            <a class="m-comments-button-add-comment active" href="#">Комментировать отзыв</a>
 
-								<div class="m-comments-form-add-comment clearfix">
-								   
-									<div class="m-comments-user-avatar">
-										<img src="img/dumm/m-comments-current-user-avatar.jpg" alt="" />
-									</div>
-									<form>
-										<div class="m-comments-add-textarea">
-											<textarea placeholder="Напишите ваш комментарий"></textarea>
-										</div>
-										<div class="m-comments-add-form-buttons">
-											<button class="btn btn-small">Отменить</button>
-											<button class="btn btn-theme active">Отправить</button>
-										</div>
-									</form>
-								</div>
+            <div class="m-comments-buttons-likers">
+                <button class="btn btn-round btn-theme">345</button>
+                <button class="btn btn-round btn-theme active">15</button>
+            </div>
+        </div>
 
-							</div>
-						</div>
+        <div class="m-comments-form-add-comment clearfix">
 
-						<div class="m-comments-item">
-							<div class="m-comments-user-avatar">
-								<img src="img/dumm/m-comments-user-avatar1.jpg" alt="" />
-							</div>
-							<div class="m-comments-item-body">
-								<span class="m-comments-body-arrow"></span>
+            <div class="m-comments-user-avatar">
+                <img src="img/dumm/m-comments-current-user-avatar.jpg" alt=""/>
+            </div>
+            <form>
+                <div class="m-comments-add-textarea">
+                    <textarea placeholder="Напишите ваш комментарий"></textarea>
+                </div>
+                <div class="m-comments-add-form-buttons">
+                    <button class="btn btn-small">Отменить</button>
+                    <button class="btn btn-theme active">Отправить</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="m-comments-item">
+    <div class="m-comments-user-avatar">
+        <img src="img/dumm/m-comments-user-avatar1.jpg" alt=""/>
+    </div>
+    <div class="m-comments-item-body">
+        <span class="m-comments-body-arrow"></span>
 								<span class="m-comments-rating">
 									8.0
 									<span class="m-comments-rating-arrow"></span>
@@ -1106,32 +1038,34 @@
 									20 мая
 								</span>
 
-								<div class="m-comments-content">
-									Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать,
-									много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
-									в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой минус это
-									Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю историю,
-									и не очень качественная игра, очень повредила данный фильм. Когда я читала книгу,
-									героя Тобби я представляла по другом, и именно в этот раз он мне очень разочаровал.
-									На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он буквально
-									спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал лучшим
-									из всех Гэтсби которых я видела.
-								</div>
+        <div class="m-comments-content">
+            Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать,
+            много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
+            в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой минус
+            это
+            Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю историю,
+            и не очень качественная игра, очень повредила данный фильм. Когда я читала книгу,
+            героя Тобби я представляла по другом, и именно в этот раз он мне очень разочаровал.
+            На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он буквально
+            спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал лучшим
+            из всех Гэтсби которых я видела.
+        </div>
 
-								<div class="m-comments-buttons-area clearfix">
-									<a class="m-comments-button-add-comment" href="#">Комментировать отзыв</a>
-									<div class="m-comments-buttons-likers">
-										<button class="btn btn-round btn-theme active">35</button>
-										<button class="btn btn-round btn-theme">55</button>
-									</div>
-								</div>
+        <div class="m-comments-buttons-area clearfix">
+            <a class="m-comments-button-add-comment" href="#">Комментировать отзыв</a>
 
-								<!-- subitems -->
-								<div class="m-comments-item">
-									<div class="m-comments-user-avatar">
-										<img src="img/dumm/m-comments-user-avatar2.jpg" alt="" />
-									</div>
-									<div class="m-comments-item-body">
+            <div class="m-comments-buttons-likers">
+                <button class="btn btn-round btn-theme active">35</button>
+                <button class="btn btn-round btn-theme">55</button>
+            </div>
+        </div>
+
+        <!-- subitems -->
+        <div class="m-comments-item">
+            <div class="m-comments-user-avatar">
+                <img src="img/dumm/m-comments-user-avatar2.jpg" alt=""/>
+            </div>
+            <div class="m-comments-item-body">
 										<span class="m-comments-user-name">
 											Владислав Камельский
 										</span>
@@ -1139,26 +1073,33 @@
 											20 мая
 										</span>
 
-										<div class="m-comments-content">
-											Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать,
-											много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
-											в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой минус это
-											Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю историю,
-											и не очень качественная игра, очень повредила данный фильм. Когда я читала книгу,
-											героя Тобби я представляла по другом, и именно в этот раз он мне очень разочаровал.
-											На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он буквально
-											спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал лучшим
-											из всех Гэтсби которых я видела.
-										</div>
+                <div class="m-comments-content">
+                    Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и
+                    срезать,
+                    много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
+                    в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой
+                    минус это
+                    Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю
+                    историю,
+                    и не очень качественная игра, очень повредила данный фильм. Когда я читала
+                    книгу,
+                    героя Тобби я представляла по другом, и именно в этот раз он мне очень
+                    разочаровал.
+                    На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он
+                    буквально
+                    спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал
+                    лучшим
+                    из всех Гэтсби которых я видела.
+                </div>
 
-									</div>
-								</div>
+            </div>
+        </div>
 
-								<div class="m-comments-item">
-									<div class="m-comments-user-avatar">
-										<img src="img/dumm/m-comments-user-avatar1.jpg" alt="" />
-									</div>
-									<div class="m-comments-item-body">
+        <div class="m-comments-item">
+            <div class="m-comments-user-avatar">
+                <img src="img/dumm/m-comments-user-avatar1.jpg" alt=""/>
+            </div>
+            <div class="m-comments-item-body">
 										<span class="m-comments-user-name">
 											Владислав Камельский
 										</span>
@@ -1166,86 +1107,93 @@
 											20 мая
 										</span>
 
-										<div class="m-comments-content">
-											Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать,
-											много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
-											в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой минус это
-											Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю историю,
-											и не очень качественная игра, очень повредила данный фильм. Когда я читала книгу,
-											героя Тобби я представляла по другом, и именно в этот раз он мне очень разочаровал.
-											На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он буквально
-											спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал лучшим
-											из всех Гэтсби которых я видела.
-										</div>
+                <div class="m-comments-content">
+                    Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и
+                    срезать,
+                    много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается
+                    в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой
+                    минус это
+                    Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю
+                    историю,
+                    и не очень качественная игра, очень повредила данный фильм. Когда я читала
+                    книгу,
+                    героя Тобби я представляла по другом, и именно в этот раз он мне очень
+                    разочаровал.
+                    На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он
+                    буквально
+                    спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКаприо стал
+                    лучшим
+                    из всех Гэтсби которых я видела.
+                </div>
 
-									</div>
-								</div>
-								<!-- subitems end -->
+            </div>
+        </div>
+        <!-- subitems end -->
 
-							</div>
-						</div>
-					</div>
+    </div>
+</div>
+</div>
 
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-	
-	
-	 <div id="footer" class="l-section">
-        <div class="l-grid">
-            <div class="l-row">
-               <div class="m-footer">
-					
-					<div class="m-footer-richtext">
-						
-						<h3>Имхонет</h3>
-						<h4>Рекомендательный сервис</h4>
-						<div>
-							Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать, много пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается в атмосферу картины. Что насчет актеров, так мне кажется единственный и большой минус это Тобби Магуайр. Ему доверили фактически главную роль, ведь он рассказывает всю историю, и не очень качественная игра, очень повредила данный фильм. Когда я читала книгу, героя Тобби я представляла по другом, и именно в этот раз он мне очень разочаровал. На против, стоит похвалить Леонардо ДиКаприо, своим талантом, эмоциями он буквально спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКапри
-						</div>
-					</div>
-					<div class="m-footer-links">
-						 <ul>
-                            <li><a href="/">Имхонет</a></li>
-                            <li><a href="/">Фильмы</a></li>
-                            <li><a href="/">Сериалы</a></li>
-                            <li><a href="/">Книги</a></li>
-                            <li><a href="/">Музыка</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="/">Игры</a></li>
-                            <li><a href="/">Видео встречи</a></li>
-                            <li><a href="/">Сообщество</a></li>
-                            <li><a href="/">Все разделы</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="/">Публикации</a></li>
-                            <li><a href="/">Блог Имхонета</a></li>
-                            <li><a href="/">Правообладателям</a></li>
-                            <li><a href="/">Реклама на сайте</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="/">О проекте</a></li>
-                            <li><a href="/">Правила пользования</a></li>
-                            <li><a href="/">Помощь</a></li>
-                            <li><a href="/">Инструменты</a></li>
-                        </ul>
-					</div>
-					
-				</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="footer" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="m-footer">
+
+                <div class="m-footer-richtext">
+
+                    <h3>Имхонет</h3>
+                    <h4>Рекомендательный сервис</h4>
+
+                    <div>
+                        Порой Гэтсби кажется слишком уж затянутом, большинство сцен, можно было бы и срезать, много
+                        пустых и лишних разговоров. Музыкальное сопровождение идеально вписывается в атмосферу картины.
+                        Что насчет актеров, так мне кажется единственный и большой минус это Тобби Магуайр. Ему доверили
+                        фактически главную роль, ведь он рассказывает всю историю, и не очень качественная игра, очень
+                        повредила данный фильм. Когда я читала книгу, героя Тобби я представляла по другом, и именно в
+                        этот раз он мне очень разочаровал. На против, стоит похвалить Леонардо ДиКаприо, своим талантом,
+                        эмоциями он буквально спасает провальную игру Магуайра. Для меня Гэтсби в исполнение ДиКапри
+                    </div>
+                </div>
+                <div class="m-footer-links">
+                    <ul>
+                        <li><a href="/">Имхонет</a></li>
+                        <li><a href="/">Фильмы</a></li>
+                        <li><a href="/">Сериалы</a></li>
+                        <li><a href="/">Книги</a></li>
+                        <li><a href="/">Музыка</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/">Игры</a></li>
+                        <li><a href="/">Видео встречи</a></li>
+                        <li><a href="/">Сообщество</a></li>
+                        <li><a href="/">Все разделы</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/">Публикации</a></li>
+                        <li><a href="/">Блог Имхонета</a></li>
+                        <li><a href="/">Правообладателям</a></li>
+                        <li><a href="/">Реклама на сайте</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="/">О проекте</a></li>
+                        <li><a href="/">Правила пользования</a></li>
+                        <li><a href="/">Помощь</a></li>
+                        <li><a href="/">Инструменты</a></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
-	
-	
-	
-	
-	
+</div>
 
-   
+
 </div>
 
 </body>

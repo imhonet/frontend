@@ -219,12 +219,12 @@
 		.m-signature-item.flip .m-signature-item-wrap {
 			-webkit-transition: -webkit-transform 1s;
 			-moz-transition: -moz-transform 1s;
-			-ms-transition: -moz-transform 1s;
-			-o-transition: -moz-transform 1s;
-			transition: -moz-transform 1s;
+			-ms-transition: -ms-transform 1s;
+			-o-transition: -o-transform 1s;
+			transition: transform 1s;
 			-webkit-transform-style: preserve-3d;
 			-moz-transform-style: preserve-3d;
-			-ms-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;nm
 			-o-transform-style: preserve-3d;
 			transform-style: preserve-3d;
 		}
