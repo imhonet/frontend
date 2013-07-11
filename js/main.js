@@ -14,7 +14,8 @@ require.config({
 		"text"          : "lib/require.text",
 		"modernizr"     : "lib/modernizr.2.6.2.min",
         "social-likes"  : "lib/socials",
-        "imhonet-ui-slider" : "lib/imhonet/imhonet-ui-slider"
+        "imhonet-ui-slider" : "lib/imhonet/imhonet-ui-slider",
+        "metroJs"       : "lib/metroJs"
 	},
 	
 	shim:{
