@@ -2,37 +2,15 @@ define([
     "jquery",
     "underscore",
     "backbone",
+    "collections/child.custom.collection",
     "models/tag.model"
 ],
-    function($, _, Backbone, Tag) {
+    function($, _, Backbone, ChildCustomCollection, Tag) {
 
-        var Tags = Backbone.Collection.extend({
+        var Tags = ChildCustomCollection.extend({
 
             model : Tag,
-            parent : null,
-
-            constructor : function(models, options) {
-
-                if ( options && options.parent ) {
-
-                    this.parent = options.parent;
-                }
-
-                Backbone.Collection.apply(this,arguments);
-            },
-
-            initialize : function() {
-
-                this.listenTo(this,"change:active",this._notifyParent);
-            },
-
-            _notifyParent : function() {
-
-                if ( this.parent && this.parent.trigger ) {
-
-                    this.parent.trigger("change",this);
-                }
-            }
+            parentEvent : "change"
         });
 
         return Tags;

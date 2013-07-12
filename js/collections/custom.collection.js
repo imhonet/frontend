@@ -7,15 +7,15 @@ define([
 
         var CustomCollection = Backbone.Collection.extend({
 
-            _models : {},
-            _modelOption : "model",
+            modelTypes : {},
+            modelOption : "model",
 
             constructor : function(models, options) {
 
                 options || (options = {});
 
-                this._models = ( options.models ) ? options.models : this._models;
-                this._modelOption = ( options.modelOption ) ? options.modelOption : this._modelOption;
+                this.modelTypes = ( options.modelTypes ) ? options.modelTypes : this.modelTypes;
+                this.modelOption = ( options.modelOption ) ? options.modelOption : this.modelOption;
 
                 Backbone.Collection.prototype.constructor.apply(this,arguments);
             },
@@ -38,8 +38,8 @@ define([
             _getModelClass : function(attrs, options) {
 
                 var model,
-                    modelClass = attrs[this._modelOption],
-                    definedModelClass = this._models[modelClass];
+                    modelClass = attrs[this.modelOption],
+                    definedModelClass = this.modelTypes[modelClass];
 
                 model = ( modelClass && definedModelClass )
                     ? definedModelClass

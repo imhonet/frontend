@@ -1,2 +1,2 @@
 <div class="m-advancedcontentfilter-bottom-item-lbl">Дата выхода:</div>
-<div class="m-advancedcontentfilter-tags"><%= data.label %><div class="m-advancedcontentfilter-close">x</div></div>
+<div class="m-advancedcontentfilter-tags<%= data.noCloseButton ? ' cursor-default' : ''%>"><%= data.label %><% if ( !data.noCloseButton ) { %><div class="m-advancedcontentfilter-close">x</div><%}%></div>

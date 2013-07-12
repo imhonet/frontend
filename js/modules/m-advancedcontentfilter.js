@@ -33,7 +33,14 @@ define(
                     return this;
                 },
 
+                updateFilterModel : function() {
+
+                    filterModel.save();
+                },
+
                 showLayout : function() {
+
+                    this.listenTo(filterModel,"update:filter",this.updateFilterModel);
 
                     filterRegion.show(new FilterLayout({
                         model : filterModel

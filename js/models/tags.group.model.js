@@ -2,67 +2,20 @@ define([
     "jquery",
     "underscore",
     "backbone",
-    "collections/tag.collection"
+    "collections/tag.collection",
+    "models/child.model"
 ],
-    function($, _, Backbone, Tags) {
+    function($, _, Backbone, Tags, ChildModel) {
 
-        var TagsGroup = Backbone.Model.extend({
+        var TagsGroup = ChildModel.extend({
+
+            parentEvent : "update:filter",
 
             defaults : {
 
                 name : null,
                 expanded : false,
                 tags : null
-            },
-
-            constructor : function(attributes, options) {
-
-                if ( options && options.parent ) {
-
-                    this.parent = options.parent;
-                }
-
-                Backbone.Model.apply(this,arguments);
-            },
-
-            toJSON : function() {
-
-                // clone all attributes
-                var attributes = _.clone(this.attributes);
-
-                // go through each attribute
-                $.each(attributes, function(key, value) {
-
-                    // check if we have some nested object with a toJSON method
-                    if ( value && _.isFunction(value.toJSON) ) {
-                        // execute toJSON and overwrite the value in attributes
-                        attributes[key] = value.toJSON();
-                    }
-                });
-
-                return attributes;
-            },
-
-            initialize : function() {
-
-                this.listenTo(this,"change:tags",this._notifyParent);
-                this.listenTo(this,"change:expanded",this._notifyParent2);
-            },
-
-            _notifyParent2 : function() {
-
-                if ( this.parent && this.parent.trigger ) {
-
-                    this.parent.trigger("change:tagsGroupStatus",this);
-                }
-            },
-
-            _notifyParent : function() {
-
-                if ( this.parent && this.parent.trigger ) {
-
-                    this.parent.trigger("change:tagsGroup",this);
-                }
             },
 
             parse : function(response, options) {

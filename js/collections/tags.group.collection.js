@@ -2,10 +2,10 @@ define([
     "jquery",
     "underscore",
     "backbone",
-    "collections/custom.collection",
+    "collections/child.custom.collection",
     "models/tags.group.model"
 ],
-    function($, _, Backbone, CustomCollection, TagsGroup) {
+    function($, _, Backbone, ChildCustomCollection, TagsGroup) {
 
         var CustomModel = Backbone.Model.extend({
 
@@ -18,38 +18,14 @@ define([
             }
         });
 
-        var TagsGroups = CustomCollection.extend({
+        var TagsGroups = ChildCustomCollection.extend({
 
             model : TagsGroup,
+            parentEvent : "update:filter",
 
-            _models : {
+            modelTypes : {
                 scale : CustomModel,
                 recommendationStatus : CustomModel
-            },
-
-            parent : null,
-
-            constructor : function(models, options) {
-
-                if ( options && options.parent ) {
-
-                    this.parent = options.parent;
-                }
-
-                CustomCollection.prototype.constructor.apply(this,arguments);
-            },
-
-            initialize : function() {
-
-                this.listenTo(this,"change",this._notifyParent);
-            },
-
-            _notifyParent : function() {
-
-                if ( this.parent && this.parent.trigger ) {
-
-                    this.parent.trigger("update:filter",this);
-                }
             }
         });
 

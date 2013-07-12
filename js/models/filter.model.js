@@ -2,37 +2,22 @@ define([
     "jquery",
     "underscore",
     "backbone",
+    "models/child.model",
     "models/years.model",
     "collections/tags.group.collection"
 ],
-    function($, _, Backbone, Years, TagsGroup) {
+    function($, _, Backbone, ChildModel, Years, TagsGroup) {
 
-        var Filter = Backbone.Model.extend({
+        var Filter = ChildModel.extend({
 
             url : "/backend/filter.php",
+
+            ownEvent : null,
 
             defaults : {
 
                 years : null,
                 tagsGroups : null
-            },
-
-            toJSON : function() {
-
-                // clone all attributes
-                var attributes = _.clone(this.attributes);
-
-                // go through each attribute
-                $.each(attributes, function(key, value) {
-
-                    // check if we have some nested object with a toJSON method
-                    if ( value && _.isFunction(value.toJSON) ) {
-                        // execute toJSON and overwrite the value in attributes
-                        attributes[key] = value.toJSON();
-                    }
-                });
-
-                return attributes;
             },
 
             parse : function(response, options) {
@@ -91,7 +76,11 @@ define([
 
                             if ( model.get("active") ) {
 
-                                model.set("active",false,{silent : true});
+                                model.set({
+                                    active : false
+                                },{
+                                    silent : true
+                                });
                                 trigger = true;
                             }
                         })
@@ -100,11 +89,7 @@ define([
 
                 years.resetYears({silent:true});
 
-                if ( !trigger ) {
-
-                    trigger = years.hasChanged();
-                }
-
+                if ( !trigger ) trigger = years.hasChanged();
                 if ( trigger ) this.trigger("update:filter");
             }
         });

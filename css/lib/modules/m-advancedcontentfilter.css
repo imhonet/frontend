@@ -150,6 +150,10 @@
 							cursor: pointer;
 						}
 
+                        .m-advancedcontentfilter-tags.cursor-default {
+                            cursor: default;
+                        }
+
 						.m-advancedcontentfilter-item.hide .m-advancedcontentfilter-tags {
 							color: #59606e;
 						}

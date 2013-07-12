@@ -1,39 +1,40 @@
 define([
     "jquery",
     "underscore",
-    "backbone"
+    "backbone",
+    "models/child.model"
 ],
-    function($, _, Backbone) {
+    function($, _, Backbone, ChildModel) {
 
-        var Years = Backbone.Model.extend({
+        var Years = ChildModel.extend({
 
-            defaults : {
+            parentEvent : "update:filter",
+            localData : {},
 
-                from : null,
-                to : null
-            },
+            setExtraAttributes : function() {
 
-            constructor : function(attributes, options) {
+                var from = this.get("from"),
+                    to = this.get("to"),
+                    defaultFrom = this.get("defaultFrom"),
+                    defaultTo = this.get("defaultTo");
 
-                if ( options && options.parent ) {
+                var extraAttributes = this.localData;
 
-                    this.parent = options.parent;
+                if ( from == to ) {
+
+                    this.extraAttributes = ( from <= 1960 ) ? "До " + from : from;
+                }
+                else {
+
+                    var fromLabel, toLabel;
+
+                    fromLabel = ( from <= 1960 ) ? "До " + from : from;
+                    toLabel = ( to >= 2013 ) ? 2013 : to;
+
+                    extraAttributes.label = fromLabel + " — " + toLabel;
                 }
 
-                Backbone.Model.apply(this,arguments);
-            },
-
-            initialize : function() {
-
-                this.listenTo(this,"change",this._notifyParent);
-            },
-
-            _notifyParent : function() {
-
-                if ( this.parent && this.parent.trigger ) {
-
-                    this.parent.trigger("update:filter",this);
-                }
+                extraAttributes.noCloseButton = from === defaultFrom && to === defaultTo;
             },
 
             resetYears : function(options) {
@@ -42,7 +43,9 @@ define([
                     from : this.get("defaultFrom"),
                     to : this.get("defaultTo")
                 },options);
-            }
+            },
+
+
         });
 
         return Years;
