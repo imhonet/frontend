@@ -12,18 +12,21 @@
 	
 	$.ShowCase.defaults = {
         show                : 9,
-		current             : 4,
+		current             : 3,
         selector_wraper     : '.m-evaluator-gallery-items',
         selector_nav_prev   : '.m-evaluator-gallery-page-left',
         selector_nav_next   : '.m-evaluator-gallery-page-right',
+        class_item          : 'm-evaluator-gallery-item',
         class_left          : 'm-evaluator-gallery-item-left',
         class_center        : 'm-evaluator-gallery-item-center',
         class_right         : 'm-evaluator-gallery-item-right',
         class_suff_2d       : '_2d',
         class_suff_simple   : '_simple',
         class_suff_number   : '_{n}',
-        class_transition    : 'm-evaluator-gallery-item_transition'
-
+        class_transition    : 'm-evaluator-gallery-item_transition',
+        onNext              : null,
+        onPrev              : null,
+        onChange            : null
     };
 	
 	$.ShowCase.prototype = {
@@ -71,9 +74,13 @@
             this.$navPrev		= this.$el.find(this.options.selector_nav_prev);
             this.$navNext		= this.$el.find(this.options.selector_nav_next);
 
+            for (var i=0; i<this.sideShow+1; i++){
+                this.$wrapper.prepend('<div class="'+ this.options.class_item+'"></div>');
+            }
+
             this.$items			= this.$wrapper.children();
 			this.itemsCount		= this.$items.length;
-			this.current		= this.options.current;
+			this.current		= this.options.current+this.sideShow+1;
 
             this.isAnim			= false;
 
@@ -98,25 +105,29 @@
 
             this.$current	= this.$items.eq(this.current);
             this.$current.addClass(this.classCenter);
-
             for (var i = 0; i<this.sideShow; i++){
                 var right_pos = i+1+this.current;
                 var left_pos = this.current-i-1;
-                if (right_pos>this.itemsCount-1){
+                /*if (right_pos>this.itemsCount-1){
                     right_pos = right_pos-this.itemsCount;
                 }
                 if (left_pos<0){
                     left_pos = this.itemsCount+left_pos;
                 }
-                this.$lefts[i] = this.$items.eq(left_pos);
-                this.$lefts[i].addClass(this.classLeft + ' ' + this.classesLeft[i]);
-
+                */
+                if (left_pos>this.sideShow){
+                    this.$lefts[i] = this.$items.eq(left_pos);
+                    this.$lefts[i].addClass(this.classLeft + ' ' + this.classesLeft[i]);
+                }
                 this.$rights[i] = this.$items.eq(right_pos);
                 this.$rights[i].addClass(this.classRight + ' ' + this.classesRight[i]);
             }
+            if (this.options.onChange && typeof this.options.onChange == 'function'){
+                this.options.onChange(this.current, this.$items.length);
+            }
 		},
 
-		_loadEvents			: function() {
+		_loadEvents: function() {
 			var _self	= this;
 
 			this.$navPrev.on( 'click.showCase', function( event ) {
@@ -129,49 +140,76 @@
 				return false;
 			});
 
-			this.$wrapper.on( 'webkitTransitionEnd.showCase transitionend.showCase OTransitionEnd.showCase', function( event ) {
-				_self.$items.removeClass(_self.options.class_transition);
-				_self.isAnim	= false;
-			});
+            if (this.supportTrans){
+                this.$wrapper.on( 'webkitTransitionEnd.showCase transitionend.showCase OTransitionEnd.showCase', function( event ) {
+                    _self.$items.removeClass(_self.options.class_transition);
+                    _self.isAnim	= false;
+                });
+            }
 		},
-		_navigate			: function( dir ) {
-			if( this.supportTrans && this.isAnim )
+		_navigate : function( dir ) {
+			if( this.supportTrans && this.isAnim ){
 				return false;
-			this.isAnim	= true;
-			
+            }
 			switch( dir ) {
 			
 				case 'next' :
-					this.current	= this.$rights[0].index();
-                    this.$current.addClass(this.options.class_transition).addClass(this.classLeft + ' ' + this.classesLeft[0]);
-                    this.$rights[0].addClass(this.options.class_transition).addClass(this.classCenter);
-                    for (var i=1; i<this.sideShow; i++){
-                        this.$rights[i].addClass(this.options.class_transition).addClass(this.classesRight[i-1]);
-                    }
-                    for (var i=0; i<this.sideShow-1; i++){
-                        this.$lefts[i].addClass(this.options.class_transition).addClass(this.classesLeft[i+1]);
-                    }
+                        this.isAnim	= true;
+                        this.current = this.$rights[0].index();
+                        this.$current.addClass(this.options.class_transition).addClass(this.classLeft + ' ' + this.classesLeft[0]);
+                        this.$rights[0].addClass(this.options.class_transition).addClass(this.classCenter);
+                        for (var i=1; i<this.sideShow; i++){
+                            if (this.$rights[i]){
+                                this.$rights[i].addClass(this.options.class_transition).addClass(this.classesRight[i-1]);
+                            }
+                        }
+                        for (var i=0; i<this.sideShow-1; i++){
+                            if (this.$lefts[i]){
+                                this.$lefts[i].addClass(this.options.class_transition).addClass(this.classesLeft[i+1]);
+                            }
+                        }
+                        if (this.options.onNext && typeof this.options.onNext == 'function'){
+                            this.options.onNext(this.current, this.$items.length);
+                        }
+                        this._setItems();
 					break;
 					
 				case 'prev' :
-                    this.current	= this.$lefts[0].index();
-                    this.$current.addClass(this.options.class_transition).addClass(this.classRight + ' ' + this.classesRight[0]);
-                    this.$lefts[0].addClass(this.options.class_transition).addClass(this.classCenter);
-                    for (var i=1; i<this.sideShow; i++){
-                        this.$lefts[i].addClass(this.options.class_transition).addClass(this.classesLeft[i-1]);
-                    }
-                    for (var i=0; i<this.sideShow-1; i++){
-                        this.$rights[i].addClass(this.options.class_transition).addClass(this.classesRight[i+1]);
+                    if (this.current>this.sideShow+1){
+                        this.isAnim	= true;
+                        this.current = this.$lefts[0].index();
+                        this.$current.addClass(this.options.class_transition).addClass(this.classRight + ' ' + this.classesRight[0]);
+                        this.$lefts[0].addClass(this.options.class_transition).addClass(this.classCenter);
+                        for (var i=1; i<this.sideShow; i++){
+                            if (this.$lefts[i]){
+                                this.$lefts[i].addClass(this.options.class_transition).addClass(this.classesLeft[i-1]);
+                            }
+                        }
+                        for (var i=0; i<this.sideShow-1; i++){
+                            if (this.$rights[i]){
+                                this.$rights[i].addClass(this.options.class_transition).addClass(this.classesRight[i+1]);
+                            }
+                        }
+                        if (this.options.onPrev && typeof this.options.onPrev == 'function'){
+                            this.options.onPrev(this.current, this.$items.length);
+                        }
+                        this._setItems();
                     }
                     break;
 			};
-			this._setItems();
 		},
 		destroy : function(){
 			this.$navPrev.off('.showCase');
 			this.$navNext.off('.showCase');
 			this.$wrapper.off('.showCase');
-		}
+		},
+        length: function(){
+            return this.$items.length;
+        },
+        calcChildren: function(){
+            this.$items			= this.$wrapper.children();
+            this.itemsCount		= this.$items.length;
+        }
 	};
 	
 	$.fn.showCase = function( options ) {
@@ -179,8 +217,15 @@
             var instance = $.data( this, 'showCase' );
             if ( !instance ) {
                 $.data( this, 'showCase', new $.ShowCase( options, this ) );
+            } else {
+                if (options && typeof(options) == 'string') {
+                    if (options == 'recalc') {
+                        instance.calcChildren();
+                        return;
+                    }
+                }
             }
         });
-		return this;
+        return this;
 	};
 }));
