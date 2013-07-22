@@ -6,11 +6,9 @@ define([
     "models/evaluator.gallery.item.model",
     "models/evaluator.gallery.html.model",
     "models/evaluator.gallery.rate.model",
-    "models/evaluator.gallery.list.model",
-    "models/evaluator.gallery.doublelist.model",
-    "models/evaluator.gallery.thumbs.model"
+    "models/evaluator.gallery.list.model"
 ],
-    function($, _, Backbone, View, Item, ItemHtml, ItemRate, ItemList, ItemDoubleList, ItemThumbs) {
+    function($, _, Backbone, View, Item, ItemHtml, ItemRate, ItemList) {
 
         function getModelByName(name, attributes){
             switch (name){
@@ -22,12 +20,6 @@ define([
                 break;
                 case 'list':
                     return new ItemList(attributes);
-                break;
-                case 'doublelist':
-                    return new ItemDoubleList(attributes);
-                    break;
-                case 'thumbs':
-                    return new ItemThumbs(attributes);
                 break;
                 default:
                     attributes.model = 'item';
@@ -46,7 +38,11 @@ define([
             },
 
             addItem: function(item){
-                var model = getModelByName(item.model, item);
+                var self = this;
+                var model = getModelByName(item.type, item);
+                model.on('save', function(item){
+                    self.trigger('saveItem',item);
+                }, this);
                 this.used_ids.push(model.id);
                 this.add(model);
                 this.trigger('addItem', model);

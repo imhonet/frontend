@@ -13,6 +13,10 @@ define([
             constructor : function(attributes, options) {
                 this.viewClass = View;
                 Backbone.Model.apply(this,arguments);
+            },
+
+            save: function(){
+                this.trigger('saveItem',this);
             }
         });
 

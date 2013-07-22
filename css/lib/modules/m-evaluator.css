@@ -582,9 +582,11 @@
 
 			.m-evaluator-gallery-films > .films-score{
 				display: none;
+                padding: 0px 10px 15px 10px;
+                white-space: nowrap;
 			}
 				.m-evaluator-gallery-films > .films-score > img {
-					margin: 0 5px;
+					margin: 0 2px;
 				}
 			.m-evaluator-gallery-item-center .m-evaluator-gallery-films > .films-name,
 			.m-evaluator-gallery-item-center .m-evaluator-gallery-films > .films-score,
@@ -677,6 +679,7 @@
 			color: rgba(255, 255, 255, 0.7);
 			vertical-align: middle;
 			white-space: nowrap;
+            cursor: pointer;
 		}
 
 		.m-evaluator-gallery-chose .chose-radiobutton {

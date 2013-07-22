@@ -209,6 +209,9 @@
         calcChildren: function(){
             this.$items			= this.$wrapper.children();
             this.itemsCount		= this.$items.length;
+        },
+        next: function(){
+            this._navigate('next');
         }
 	};
 	
@@ -221,6 +224,10 @@
                 if (options && typeof(options) == 'string') {
                     if (options == 'recalc') {
                         instance.calcChildren();
+                        return;
+                    }
+                    if (options == 'next') {
+                        instance.next();
                         return;
                     }
                 }

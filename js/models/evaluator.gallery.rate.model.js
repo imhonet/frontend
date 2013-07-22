@@ -11,8 +11,16 @@ define([
 
         var EvaluatorGalleryRate = Item.extend({
             constructor : function(attributes, options) {
+                if (attributes.title){
+                    attributes.alt = attributes.title.replace(/"/g, "'");
+                }
                 this.viewClass = View;
                 Backbone.Model.apply(this,arguments);
+            },
+
+            save: function(score){
+                this.set('rate', score);
+                this.trigger('saveItem',this);
             }
         });
 

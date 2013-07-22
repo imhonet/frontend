@@ -11,7 +11,17 @@ define([
 function($, _, Backbone, Marionette, ShowCase, Template, ItemView) {
 
     var ItemView = ItemView.extend({
-        template : Template
+        template : Template,
+        onRender: function(){
+            var self = this;
+            if (this.model.get('clickable')){
+
+                this.$el.bind('click',function(){
+                    self.model.set('click',true)
+                    self.model.save();
+                }).css('cursor','pointer');
+            }
+        }
     });
 
     return ItemView;

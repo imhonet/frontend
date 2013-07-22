@@ -1,0 +1,11 @@
+<li class="chose-ul-item">
+    <div class="chose-radiobutton"></div>
+    <% if (data.img) { %>
+        <div class="chose-img">
+            <img src="<%= data.thumb %>" class="chose-img-small"  alt="<%= data.alt %>">
+            <img src="<%= data.img %>" class="chose-img-big"  alt="<%= data.alt %>">
+        </div>
+    <% } else { %>
+        <div class="chose-txt"><%= data.title %></div>
+    <% } %>
+</li>
