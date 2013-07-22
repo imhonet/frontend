@@ -207,7 +207,7 @@
         }
 
         static public function getRandomEvaluatorItem(){
-            $type = self::$types[rand(0,0)];
+            $type = self::$types[rand(0,2)];
             $item = false;
             switch ($type){
                 case 'html':
