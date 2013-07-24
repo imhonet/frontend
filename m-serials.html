@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>build</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script data-main="js/main" src="js/lib/require.js"></script>
+
+    <!-- Stylesheets -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <script>
+        require(['app', 'modules/m-contentfilter', 'modules/m-subnavigation'], function (App) {
+            App.start();
+        });
+    </script>
+
+</head>
+
+
+<body>
+
+<div id="wrapper">
+
+<div id="top-advertising" class="l-section"></div>
+
+
+<div id="top-navigation" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+
+                <div class="m-mainnavigation">
+                    <div class="navbar navbar-metro navbar-user">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <a href="#" class="brand">
+                                    <img src="img/logo.png" alt="imhonet">
+                                </a>
+                                <ul class="nav">
+                                    <li class="active"><a href="#">Фильмы</a></li>
+                                    <li><a href="#">Сериалы</a></li>
+                                    <li><a href="#">Книги</a></li>
+                                    <li><a href="#">Игры</a></li>
+                                    <li><a href="#">Музыка</a></li>
+                                </ul>
+
+                                <form action="topsearch" class="navbar-search">
+                                    <input type="text" placeholder="Поиск по сайту">
+                                </form>
+
+                                <div class="m-username">
+                                    <a href="#" class="m-username-message">
+                                        <div class="m-username-message-count">3</div>
+                                    </a>
+
+                                    <div class="m-username-photo"><img src="img/photogall/user.jpg" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="subnavigation" class="l-section">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+                <div class="m-subnavigation expanded">
+                    <div class="m-subnavigation-item m-subnavigation-toggler">Свернуть фильтр</div>
+                    <div class="m-subnavigation-item"><a href="#">Рекомендуемое</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Новинки кино</a></div>
+                    <div class="m-subnavigation-item"><a href="#" class="active">Лучшее</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Подборки</a></div>
+                    <div class="m-subnavigation-item"><a href="#">Мои сериалы<span
+                            class="m-subnavigation-item-count">2</span></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="filter" class="l-section" style="display: none;">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-full">
+                <div class="m-contentfilter">
+                    <div class="m-contentfilter-wrap">
+                        <div class="m-contentfilter-column left">
+
+                            <h3 class="m-contentfilter-title">Фильтры</h3>
+                            <ul class="m-contentfilter-ul">
+                                <li class="m-contentfilter-item"><a href="#">Сейчас в кино</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Смотреть онлайн</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Что можно скачать</a></li>
+                            </ul>
+
+                            <h3 class="m-contentfilter-title">Дата выхода</h3>
+                            <ul class="m-contentfilter-ul">
+                                <li class="m-contentfilter-item"><a href="#">2014</a>&nbsp;&nbsp;<a href="#">2013</a>&nbsp;&nbsp;<a
+                                        href="#">2012</a>&nbsp;&nbsp;<a href="#">2011</a>&nbsp;&nbsp;<a
+                                        href="#">2010</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="m-contentfilter-column center">
+
+                            <h3 class="m-contentfilter-title">Жанры</h3>
+                            <ul class="m-contentfilter-ul">
+                                <li class="m-contentfilter-item"><a href="#">Аниме</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Артхаус</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Биография</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Боевики</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Военные фильмы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Детективы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Документальные</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Драмы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Исторические фильмы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Комедии</a></li>
+                            </ul>
+                            <ul class="m-contentfilter-ul">
+                                <li class="m-contentfilter-item"><a href="#">Короткометражные</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Криминал</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Мелодрамы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Мистика</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Музыкальные программы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Мультфильмы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Мюзиклы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Научные</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Образовательные программы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Приключения</a></li>
+                            </ul>
+                            <ul class="m-contentfilter-ul">
+                                <li class="m-contentfilter-item"><a href="#">Прочее</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Спорт</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Триллеры</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Ужасы</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Фантастика</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Фильмы для детей</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Эротика</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Юмор</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="m-contentfilter-column right">
+                            <h3 class="m-contentfilter-title">Страны</h3>
+                            <ul class="m-contentfilter-ul">
+                                <li class="m-contentfilter-item"><a href="#">США</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Россия</a></li>
+                                <li class="m-contentfilter-item"><a href="#">СССР</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Франция</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Великобритания</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Япония</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Германия</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Италия</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Канада</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Индия</a></li>
+                            </ul>
+                            <ul class="m-contentfilter-ul">
+                                <li class="m-contentfilter-item"><a href="#">Испания</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Китай/Гонконг</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Южная Корея</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Австралия</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Польша</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Украина</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Швеция</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Дания</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Нидерланды</a></li>
+                                <li class="m-contentfilter-item"><a href="#">Бельгия</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="l-section">
+
+<div class="l-grid">
+
+<div class="l-row">
+
+<div class="l-full">
+
+<div class="m-serials">
+<div class="m-serials-symbols">
+    <div class="m-serials-symbols-item"><span class="m-serials-episode m-serials-episode-showed"></span>Посомтренная
+        серия
+    </div>
+    <div class="m-serials-symbols-item"><span class="m-serials-episode m-serials-episode-missed"></span>Пропущенная
+        серия
+    </div>
+    <div class="m-serials-symbols-item"><span class="m-serials-episode m-serials-episode-next"></span>Следующая
+        серия
+    </div>
+</div>
+
+<h1 class="m-serials-h1">Мои сериалы</h1>
+
+
+<div class="m-serials-item">
+<div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+<div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-star">
+                <span class="icon-star active"></span>
+                <span class="icon-star active"></span>
+                <span class="icon-star active"></span>
+                <span class="icon-star active"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+                <span class="icon-star"></span>
+            </div>
+            <div class="popup-serials-line"></div>
+
+            <div class="popup-serials-txt"><a href="#"><span class="dashed">Начать сначала</span></a></div>
+        </div>
+    </div>
+
+</div>
+<div class="m-serials-prev"></div>
+
+
+<div class="m-serials-seasons">
+<div class="m-serials-seasons-item">
+    <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+    <div class="m-serials-episodes">
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-seasons-item">
+    <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+    <div class="m-serials-episodes">
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-seasons-item">
+    <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+    <div class="m-serials-episodes">
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-episode m-serials-episode-showed">
+
+            <div class="popover fade bottom in popup-serials">
+                <div class="popover-content">
+                    <div class="arrow"></div>
+
+                    <div class="popup-serials-title">
+                        Преступная империя
+                    </div>
+                    <p>5 сезон, 2 серия</p>
+
+                    <div class="m-tiles-poster-btn-wrap">
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-arrow-down-2"></i></div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-play-2"></i>
+                        </div>
+                        <div class="m-tiles-poster-btn">
+                            <i class="icon-eye-2"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-seasons-item">
+<div class="m-serials-seasons-txt">2 сезон. Троица</div>
+<div class="m-serials-episodes">
+<div class="m-serials-episode m-serials-episode-showed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-2"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-showed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-2"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-showed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-2"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-missed">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>5 сезон, 2 серия</p>
+
+            <div class="m-tiles-poster-btn-wrap">
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-arrow-down-2"></i></div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-play-2"></i>
+                </div>
+                <div class="m-tiles-poster-btn">
+                    <i class="icon-eye-blocked"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode m-serials-episode-next">
+    <div class="popover fade bottom in popup-serials">
+        <div class="popover-content">
+            <div class="arrow"></div>
+
+            <div class="popup-serials-title">
+                Преступная империя
+            </div>
+            <p>8 серия 5 сезона выйдет 20 июля,<br/>
+                в понедельник</p>
+        </div>
+    </div>
+</div>
+<div class="m-serials-episode-txt">10 июля</div>
+</div>
+</div>
+</div>
+<div class="m-serials-next"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"></div>
+
+
+    <div class="m-serials-seasons m-serials-seasons-last">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"  style="display:none;"></div>
+
+
+    <div class="m-serials-seasons">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+                <div class="m-serials-episode-txt">10 июля</div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next" style="display:none;"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"></div>
+
+
+    <div class="m-serials-seasons m-serials-seasons-last">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"  style="display:none;"></div>
+
+
+    <div class="m-serials-seasons">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+                <div class="m-serials-episode-txt">10 июля</div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next" style="display:none;"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"></div>
+
+
+    <div class="m-serials-seasons m-serials-seasons-last">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"  style="display:none;"></div>
+
+
+    <div class="m-serials-seasons">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+                <div class="m-serials-episode-txt">10 июля</div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next" style="display:none;"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"></div>
+
+
+    <div class="m-serials-seasons m-serials-seasons-last">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next"></div>
+
+
+</div>
+<div class="m-serials-item">
+    <div class="m-serials-img"><img src="img/photogall/user.jpg" alt=""></div>
+    <div class="m-serials-name">Преступная империя <span class="icon-cross"></span>
+
+
+    </div>
+    <div class="m-serials-prev"  style="display:none;"></div>
+
+
+    <div class="m-serials-seasons">
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">1 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+            </div>
+        </div>
+        <div class="m-serials-seasons-item">
+            <div class="m-serials-seasons-txt">2 сезон. Троица</div>
+            <div class="m-serials-episodes">
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-showed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-missed">
+                </div>
+                <div class="m-serials-episode m-serials-episode-next">
+                </div>
+                <div class="m-serials-episode-txt">10 июля</div>
+            </div>
+        </div>
+    </div>
+    <div class="m-serials-next" style="display:none;"></div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+<div class="popover fade bottom in popup-serials" style="display:block; top: 20px;">
+    <div class="popover-content">
+        <div class="arrow"></div>
+
+        <div class="popup-serials-title">
+            Преступная империя
+        </div>
+        <p>5 сезон, 2 серия</p>
+
+        <div class="m-tiles-poster-btn-wrap">
+            <div class="m-tiles-poster-btn">
+                <i class="icon-arrow-down-2"></i></div>
+            <div class="m-tiles-poster-btn">
+                <i class="icon-play-2"></i>
+            </div>
+            <div class="m-tiles-poster-btn">
+                <i class="icon-eye-2"></i></div>
+        </div>
+    </div>
+</div>
+
+<div class="popover fade bottom in popup-serials" style="display:block;  top: 200px;">
+    <div class="popover-content">
+        <div class="arrow"></div>
+
+        <div class="popup-serials-title">
+            Преступная империя
+        </div>
+        <p>5 сезон, 2 серия</p>
+
+        <div class="m-tiles-poster-btn-wrap">
+            <div class="m-tiles-poster-btn">
+                <i class="icon-arrow-down-2"></i></div>
+            <div class="m-tiles-poster-btn">
+                <i class="icon-play-2"></i>
+            </div>
+            <div class="m-tiles-poster-btn">
+                <i class="icon-eye-blocked"></i></div>
+        </div>
+    </div>
+</div>
+
+<div class="popover fade bottom in popup-serials" style="display:block;  top: 400px;">
+    <div class="popover-content">
+        <div class="arrow"></div>
+
+        <div class="popup-serials-title">
+            Преступная империя
+        </div>
+        <p>8 серия 5 сезона выйдет 20 июля,<br/>
+            в понедельник</p>
+    </div>
+</div>
+
+<div class="popover fade bottom in popup-serials" style="display:block;  top: 600px;">
+    <div class="popover-content">
+        <div class="arrow"></div>
+
+        <div class="popup-serials-star">
+            <span class="icon-star active"></span>
+            <span class="icon-star active"></span>
+            <span class="icon-star active"></span>
+            <span class="icon-star active"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </div>
+        <div class="popup-serials-line"></div>
+
+        <div class="popup-serials-txt"><a href="#"><span class="dashed">Начать сначала</span></a></div>
+    </div>
+</div>
+<div class="popover fade bottom in last popup-serials" style="display:block;  top: 800px;">
+    <div class="popover-content">
+        <div class="arrow"></div>
+
+        <div class="popup-serials-title">
+            Преступная империя
+        </div>
+        <p>8 серия 5 сезона выйдет 20 июля,<br/>
+            в понедельник</p>
+    </div>
+</div>
+
+</body>
+
+</html>

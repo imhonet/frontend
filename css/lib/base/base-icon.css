@@ -490,7 +490,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-cross, .icon-bars, .icon-comment, .icon-feather, .icon-arrow-down, .icon-star, .icon-play, .icon-bell, .icon-user, .icon-bookmark {
+.icon-cross, .icon-bars, .icon-comment, .icon-feather, .icon-arrow-down, .icon-star, .icon-play, .icon-bell, .icon-user, .icon-bookmark, .icon-play-2, .icon-arrow-down-2, .icon-eye, .icon-eye-blocked, .icon-eye-2  {
 	font-family: 'icon-font';
 	speak: none;
 	font-style: normal;
@@ -529,4 +529,19 @@ you can use the generic selector below, but it's slower:
 }
 .icon-bookmark:before {
 	content: "\e009";
+}
+.icon-play-2:before {
+	content: "\e00f";
+}
+.icon-arrow-down-2:before {
+	content: "\e00b";
+}
+.icon-eye:before {
+	content: "\e00c";
+}
+.icon-eye-blocked:before {
+	content: "\e00d";
+}
+.icon-eye-2:before {
+	content: "\e00e";
 }
