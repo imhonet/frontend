@@ -16,7 +16,7 @@ define([
 
             resetFilter : function() {
 
-                this.model.resetFilter();
+                this.model.resetFilterOnBackend();
             }
         });
 

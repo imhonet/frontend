@@ -1,6 +1,6 @@
 <?php
 
-//    sleep(3);
+    sleep(5);
 
     class Years {
 
@@ -54,15 +54,16 @@
 
     class TagGroup {
 
-        public $id, $name, $tags = array('');
+        public $id, $name, $internalName, $tags = array('');
         private $_isBlock;
 
-        function __construct($id, $name, $isBlock = false) {
+        function __construct($id, $name, $internalName, $isBlock = false) {
 
             $this->id = $id;
             $this->name = $name;
 //            $this->expanded = false;
             $this->_isBlock = $isBlock;
+            $this->internalName = $internalName;
 
             return this;
         }
@@ -119,10 +120,10 @@
 
     $years = new Years(1980,2000);
 
-    addTagGroup($tagsGroups, new TagGroup(1,"Фильтр",true),["Смотреть онлайн","Можно скачать","Можно купить"]);
-    addTagGroup($tagsGroups, new TagGroup(2,"Жанр"),array_merge(["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"]));
-    addTagGroup($tagsGroups, new TagGroup(3,"Страна"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
-    addTagGroup($tagsGroups, new TagGroup(4,"Награды"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
+    addTagGroup($tagsGroups, new TagGroup(1,"Фильтр","consume",true),["Смотреть онлайн","Можно скачать","Можно купить"]);
+    addTagGroup($tagsGroups, new TagGroup(2,"Жанр","genre"),array_merge(["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"]));
+    addTagGroup($tagsGroups, new TagGroup(3,"Страна","country"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
+    addTagGroup($tagsGroups, new TagGroup(4,"Награды","awards"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
 
     array_push($tagsGroups,new CustomModel("шкала бобрикова","scale"));
     array_push($tagsGroups,new CustomModel("Рекомендации","recommendationStatus"));
@@ -136,7 +137,7 @@
         if ( false ) {
 
             if ( count($request->tagsGroups) == 2 ) {
-                addTagGroup($tagsGroups, new TagGroup(3,"Крутотень"),["Опа","Шмопа"]);
+                addTagGroup($tagsGroups, new TagGroup(3,"Крутотень","crazyStuff"),["Опа","Шмопа"]);
                 $tagsGroups[2]->tags[0]->setActive(true);
             }
             else if ( count($request->tagsGroups) == 3 ) {

@@ -2,10 +2,10 @@ define([
     "jquery",
     "underscore",
     "backbone",
-    "collections/child.custom.collection",
+    "collections/custom.collection",
     "models/tags.group.model"
 ],
-    function($, _, Backbone, ChildCustomCollection, TagsGroup) {
+    function($, _, Backbone, CustomCollection, TagsGroup) {
 
         var CustomModel = Backbone.Model.extend({
 
@@ -18,10 +18,9 @@ define([
             }
         });
 
-        var TagsGroups = ChildCustomCollection.extend({
+        var TagsGroups = CustomCollection.extend({
 
             model : TagsGroup,
-            parentEvent : "update:filter",
 
             modelTypes : {
                 scale : CustomModel,

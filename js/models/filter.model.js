@@ -12,12 +12,67 @@ define([
 
             url : "/backend/filter.php",
 
+            type : "POST",
+
             ownEvent : null,
+
+            subFilters : null,
 
             defaults : {
 
                 years : null,
                 tagsGroups : null
+            },
+
+            addSubFilter : function(subFilter) {
+
+                if ( !(subFilter && subFilter.getFilterData) ) return this;
+
+                this.subFilters = this.subFilters || {};
+
+                var subFilterConfig = subFilter.getFilterData();
+
+                if ( subFilterConfig ) {
+
+                    var subFilterName = subFilterConfig.name;
+
+                    // remove given property (object) if any
+                    this.subFilters = _.omit(this.subFilters,subFilterName);
+                    // set config object by given property
+                    this.subFilters[subFilterName] = _.omit(subFilterConfig,"name");
+                }
+
+                return this;
+            },
+
+            sendFilterToBackend : function() {
+
+                this.fetch({
+                    type : this.type,
+                    data : {
+                        action : "updateFilter",
+                        filters : this.subFilters
+                    }
+                }).success(_.bind(this.filterUpdated,this));
+            },
+
+            resetFilterOnBackend : function() {
+
+                this.fetch({
+                    type : this.type,
+                    data : {
+                        action : "resetFilter"
+                    }
+                }).success(_.bind(this.filterUpdated,this));
+            },
+
+            filterUpdated : function() {
+
+                this.subFilters = {}
+
+                // TODO: let the people know (model event > view listens > controller event)
+
+                return this;
             },
 
             parse : function(response, options) {
@@ -36,7 +91,7 @@ define([
                 }
                 else {
 
-                    response.tagsGroups = this.get("tagsGroups").reset(response.tagsGroups, { parse : true });
+                    response.tagsGroups = this.get("tagsGroups").reset(response.tagsGroups, { parent : this, parse : true});
                 }
 
                 return response;

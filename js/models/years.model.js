@@ -11,6 +11,20 @@ define([
             parentEvent : "update:filter",
             localData : {},
 
+            defaults : {
+
+                name : "years"
+            },
+
+            getFilterData : function() {
+
+                return {
+                    name : this.get("name"),
+                    from : this.get("from"),
+                    to : this.get("to")
+                }
+            },
+
             setExtraAttributes : function() {
 
                 var from = this.get("from"),

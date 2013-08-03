@@ -33,9 +33,13 @@ define(
                     return this;
                 },
 
-                updateFilterModel : function() {
+                updateFilterModel : function(model) {
 
-                    filterModel.save();
+                    filterModel
+                        .addSubFilter(model)
+                        .sendFilterToBackend();
+
+                    //filterModel.save();
                 },
 
                 showLayout : function() {

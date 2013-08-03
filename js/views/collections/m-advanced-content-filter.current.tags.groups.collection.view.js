@@ -11,6 +11,11 @@ define([
             tagName : "div",
             itemView : CurrentTagsGroupCompositeView,
 
+            initialize : function() {
+
+                this.listenTo(this.collection,"update:tags",this.render);
+            },
+
             showCollection: function(){
 
                 var ItemView,

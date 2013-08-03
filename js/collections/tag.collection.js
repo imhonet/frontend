@@ -10,7 +10,7 @@ define([
         var Tags = ChildCustomCollection.extend({
 
             model : Tag,
-            parentEvent : "change"
+            parentEvent : "update:tags"
         });
 
         return Tags;

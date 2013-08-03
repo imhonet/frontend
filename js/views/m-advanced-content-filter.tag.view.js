@@ -11,6 +11,11 @@ define([
 
             className : "m-advancedcontentfilter-tags",
 
+            modelEvents : {
+
+              "change"  : "render"
+            },
+
             events : {
 
                 "click" : "switchStatus"
@@ -19,7 +24,7 @@ define([
             onRender : function() {
 
                 if ( this.model.get("isBlock") ) this.$el.addClass("m-advancedcontentfilter-tags-block");
-                if ( this.model.get("active") ) this.$el.addClass("active");
+                this.model.get("active") && this.$el.addClass("active") || this.$el.removeClass("active");
             },
 
             switchStatus : function() {
