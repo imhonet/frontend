@@ -1,20 +1,16 @@
 define([
-    "jquery",
     "underscore",
     "backbone",
-    "models/child.model",
-    "models/years.model",
-    "collections/tags.group.collection"
+    "models/m-advancedcontentfilter.years.model",
+    "collections/m-advancedcontentfilter.tags.group.collection"
 ],
-    function($, _, Backbone, ChildModel, Years, TagsGroup) {
+    function(_, Backbone, YearsModel, AdvancedContentFilterTagsGroupCollection) {
 
-        var Filter = ChildModel.extend({
+        var Filter = Backbone.Model.extend({
 
             url : "/backend/filter.php",
 
             type : "POST",
-
-            ownEvent : null,
 
             subFilters : null,
 
@@ -70,7 +66,7 @@ define([
 
                 this.subFilters = {}
 
-                // TODO: let the people know (model event > view listens > controller event)
+                this.trigger("filter:backend:updated");
 
                 return this;
             },
@@ -79,7 +75,7 @@ define([
 
                 if ( !this.get("years") ) {
 
-                    response.years = new Years(response.years,{ parent : this })
+                    response.years = new YearsModel(response.years,{ parent : this })
                 }
                 else {
                     response.years = this.get("years").set(response.years);
@@ -87,7 +83,7 @@ define([
 
                 if ( !this.get("tagsGroups") ) {
 
-                    response.tagsGroups = new TagsGroup(response.tagsGroups,{ parent : this, parse : true});
+                    response.tagsGroups = new AdvancedContentFilterTagsGroupCollection(response.tagsGroups,{ parent : this, parse : true});
                 }
                 else {
 
@@ -112,40 +108,6 @@ define([
                 if ( !model._lastXHR ) model._lastXHR = {};
 
                 return model._lastXHR[method] = Backbone.sync.apply(this, arguments);
-            },
-
-            resetFilter : function() {
-
-                // tags, years, flag
-                var tagsGroups = this.get("tagsGroups"),
-                    years = this.get("years"),
-                    trigger = false;
-
-                tagsGroups.each(function(model,index,collection){
-
-                    var tags = model.get("tags");
-
-                    if ( tags ) {
-
-                        tags.each(function(model,index,collection){
-
-                            if ( model.get("active") ) {
-
-                                model.set({
-                                    active : false
-                                },{
-                                    silent : true
-                                });
-                                trigger = true;
-                            }
-                        })
-                    }
-                })
-
-                years.resetYears({silent:true});
-
-                if ( !trigger ) trigger = years.hasChanged();
-                if ( trigger ) this.trigger("update:filter");
             }
         });
 

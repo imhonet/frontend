@@ -1,12 +1,12 @@
 define(
     [
         "app",
-        "layouts/filter",
-        "layouts/filter-current",
-        "models/filter.model"
+        "layouts/m-advancedcontentfilter.layout",
+        "layouts/m-advancedcontentfilter.current.layout",
+        "models/m-advancedcontentfilter.filter.model"
     ],
 
-    function(App, FilterLayout, FilterCurrentLayout, FilterModel){
+    function(App, FilterLayout, FilterCurrentLayout, AdvancedContentFilterModel){
 
         App.module('AdvancedContentFilter', function(AdvancedContentFilter){
 
@@ -17,7 +17,7 @@ define(
                 el : '[data-region="m-advancedcontentfilter-current"]'
             })
 
-            var filterModel = new FilterModel();
+            var filterModel = new AdvancedContentFilterModel();
 
             var Controller = Marionette.Controller.extend({
 
@@ -38,13 +38,17 @@ define(
                     filterModel
                         .addSubFilter(model)
                         .sendFilterToBackend();
+                },
 
-                    //filterModel.save();
+                emitUpdatedBusEvent : function() {
+
+                    App.vent.trigger("content:filter:updated");
                 },
 
                 showLayout : function() {
 
                     this.listenTo(filterModel,"update:filter",this.updateFilterModel);
+                    this.listenTo(filterModel,"filter:backend:updated",this.emitUpdatedBusEvent);
 
                     filterRegion.show(new FilterLayout({
                         model : filterModel

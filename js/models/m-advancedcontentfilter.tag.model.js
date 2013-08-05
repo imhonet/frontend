@@ -1,11 +1,10 @@
 define([
-    "jquery",
     "underscore",
     "backbone"
 ],
-    function($, _, Backbone) {
+    function(_, Backbone) {
 
-        var Tag = Backbone.Model.extend({
+        var TagModel = Backbone.Model.extend({
 
             defaults : {
 
@@ -16,5 +15,5 @@ define([
             }
         });
 
-        return Tag;
+        return TagModel;
     });

@@ -2,9 +2,9 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "text!templates/layouts/filter.html",
-    "views/m-advanced-content-filter.years",
-    "views/collections/m-advanced-content-filter.tags.groups.collection.view"
+    "text!templates/layouts/m-advancedcontentfilter.layout.html",
+    "views/m-advancedcontentfilter.years.view",
+    "views/collections/m-advancedcontentfilter.tags.groups.collection.view"
 ],
     function($, _, Marionette, Template, YearsView, TagsGroupsCollectionView) {
 

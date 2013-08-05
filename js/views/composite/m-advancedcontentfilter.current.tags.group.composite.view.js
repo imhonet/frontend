@@ -2,8 +2,8 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "views/m-advanced-content-filter.current.tag.view",
-    "text!templates/views/m-advanced-filter-current-tag-group.html"
+    "views/m-advancedcontentfilter.current.tag.view",
+    "text!templates/views/m-advancedcontentfilter.current.tags.group.view.html"
 ],
     function($, _, Marionette, CurrentTagView, Template) {
 

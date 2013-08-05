@@ -1,12 +1,11 @@
 define([
-    "jquery",
     "underscore",
     "backbone",
     "models/child.model"
 ],
-    function($, _, Backbone, ChildModel) {
+    function(_, Backbone, ChildModel) {
 
-        var Years = ChildModel.extend({
+        var YearsModel = ChildModel.extend({
 
             parentEvent : "update:filter",
             localData : {},
@@ -16,6 +15,7 @@ define([
                 name : "years"
             },
 
+            // API method for parent AdvancedContentFilter model
             getFilterData : function() {
 
                 return {
@@ -57,10 +57,9 @@ define([
                     from : this.get("defaultFrom"),
                     to : this.get("defaultTo")
                 },options);
-            },
-
+            }
 
         });
 
-        return Years;
+        return YearsModel;
     });

@@ -2,7 +2,7 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "views/m-advanced-content-filter.tag.view"
+    "views/m-advancedcontentfilter.tag.view"
 ],
     function($, _, Marionette, TagView) {
 

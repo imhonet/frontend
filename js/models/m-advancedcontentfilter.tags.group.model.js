@@ -1,13 +1,12 @@
 define([
-    "jquery",
     "underscore",
     "backbone",
-    "collections/tag.collection",
+    "collections/m-advancedcontentfilter.tag.collection",
     "models/child.model"
 ],
-    function($, _, Backbone, Tags, ChildModel) {
+    function(_, Backbone, AdvancedContentFilterTagsCollection, ChildModel) {
 
-        var TagsGroup = ChildModel.extend({
+        var TagsGroupModel = ChildModel.extend({
 
             ownEvent : "update:tags",
             parentEvent : "update:filter",
@@ -21,6 +20,7 @@ define([
                 logic : true
             },
 
+            // API method for parent AdvancedContentFilter model
             getFilterData : function() {
 
                 return {
@@ -40,8 +40,6 @@ define([
                 var tags = this.get("tags"),
                     tagProperty = "active";
 
-                    console.log(tags.filter(function(tag){ return tag.get(tagProperty) === active && tag.hasChanged(tagProperty); }));
-
                     return _.map(
                         tags.filter(function(tag){ return tag.get(tagProperty) === active && tag.hasChanged(tagProperty); }),
                         function(tag){ return tag.get("id"); }
@@ -58,12 +56,12 @@ define([
 
             parse : function(response, options) {
 
-                response.tags = new Tags(response.tags,{ parent : this });
+                response.tags = new AdvancedContentFilterTagsCollection(response.tags,{ parent : this });
 
                 return response;
             }
 
         });
 
-        return TagsGroup;
+        return TagsGroupModel;
     });

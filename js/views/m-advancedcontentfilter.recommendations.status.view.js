@@ -2,8 +2,8 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "views/m-advanced-content-filter.scale.view",
-    "text!templates/views/m-advanced-content-filter-recommendations-status-view.html"
+    "views/m-advancedcontentfilter.scale.view",
+    "text!templates/views/m-advancedcontentfilter.recommendations.status.view.html"
 ],
     function($, _, Marionette, ScaleView, RecommendationsStatusViewTemplate) {
 

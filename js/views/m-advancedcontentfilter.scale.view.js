@@ -2,18 +2,15 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "views/m-advanced-content-filter.tag.view",
-    "text!templates/views/m-advanced-content-filter-item.html"
+    "text!templates/views/m-advancedcontentfilter.scale.view.html"
 ],
-    function($, _, Marionette, TagView, TagsGroupTemplate) {
+    function($, _, Marionette, ScaleViewTemplate) {
 
-        var TagsGroupCompositeView = Marionette.CompositeView.extend({
+        var ScaleView = Marionette.ItemView.extend({
 
             tagName : "div",
             className : "m-advancedcontentfilter-item",
-            itemView : TagView,
-            template : TagsGroupTemplate,
-            itemViewContainer : "div[data-type='collection']",
+            template : ScaleViewTemplate,
 
             events : {
 
@@ -23,7 +20,6 @@ define([
             initialize : function() {
 
                 this.listenTo(App.vent,"advanced-content-filter:tag-group:status",this.reflectExpandedStatus);
-                this.collection = this.model.get("tags");
             },
 
             reflectExpandedStatus : function(eventData) {
@@ -60,5 +56,5 @@ define([
             }
         });
 
-        return TagsGroupCompositeView;
+        return ScaleView;
     });

@@ -3,9 +3,9 @@ define([
     "underscore",
     "marionette",
     "views/collections/mixed.collection.view",
-    "views/composite/m-advanced-content-filter.tags.group.composite.view",
-    "views/m-advanced-content-filter.scale.view",
-    "views/m-advanced-content-filter.recommendations.status.view"
+    "views/composite/m-advancedcontentfilter.tags.group.composite.view",
+    "views/m-advancedcontentfilter.scale.view",
+    "views/m-advancedcontentfilter.recommendations.status.view"
 ],
     function($, _, Marionette, MixedCollectionView, TagsGroupCompositeView, ScaleView, RecommendationsStatusView) {
 

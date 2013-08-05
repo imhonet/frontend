@@ -1,11 +1,10 @@
 define([
-    "jquery",
     "underscore",
     "backbone",
     "collections/custom.collection",
-    "models/tags.group.model"
+    "models/m-advancedcontentfilter.tags.group.model"
 ],
-    function($, _, Backbone, CustomCollection, TagsGroup) {
+    function(_, Backbone, CustomCollection, AdvancedContentFilterTagsGroupModel) {
 
         var CustomModel = Backbone.Model.extend({
 
@@ -20,7 +19,7 @@ define([
 
         var TagsGroups = CustomCollection.extend({
 
-            model : TagsGroup,
+            model : AdvancedContentFilterTagsGroupModel,
 
             modelTypes : {
                 scale : CustomModel,

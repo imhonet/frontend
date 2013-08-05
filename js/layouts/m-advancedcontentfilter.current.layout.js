@@ -2,10 +2,10 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "text!templates/layouts/filter-current.html",
-    "views/collections/m-advanced-content-filter.current.tags.groups.collection.view",
-    "views/m-advanced-content-filter.current.years.view",
-    "views/m-advanced-content-filter.current.filter.reset.view"
+    "text!templates/layouts/m-advancedcontentfilter.current.layout.html",
+    "views/collections/m-advancedcontentfilter.current.tags.groups.collection.view",
+    "views/m-advancedcontentfilter.current.years.view",
+    "views/m-advancedcontentfilter.reset.view"
 ],
     function($, _, Marionette, Template, CurrentTagsGroupsCollectionView, YearsView, FilterResetView) {
 

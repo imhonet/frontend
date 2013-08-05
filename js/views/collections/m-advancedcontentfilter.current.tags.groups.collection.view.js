@@ -2,7 +2,7 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "views/composite/m-advanced-content-filter.current.tags.group.composite.view"
+    "views/composite/m-advancedcontentfilter.current.tags.group.composite.view"
 ],
     function($, _, Marionette, CurrentTagsGroupCompositeView) {
 

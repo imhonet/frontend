@@ -2,7 +2,7 @@ define([
     "jquery",
     "underscore",
     "marionette",
-    "text!templates/views/m-advanced-filter-current-years.html"
+    "text!templates/views/m-advancedfilter.current.years.view.html"
 ],
     function($, _, Marionette, Template) {
 
