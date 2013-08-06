@@ -11,6 +11,7 @@ define([
             tagName : "div",
             className : "m-advancedcontentfilter-item",
             template : ScaleViewTemplate,
+            expandable : false,
 
             events : {
 
@@ -45,14 +46,22 @@ define([
                 }
             },
 
+            shouldExpand : function() {
+
+                return this.expendable;
+            },
+
             setExpandedStatus : function() {
 
                 var expanded = !this.model.get("expanded");
 
-                App.vent.trigger("advanced-content-filter:tag-group:status",{
-                    cid : this.cid,
-                    status : expanded
-                })
+                var eventData = {
+                    cid : this.cid
+                }
+
+                if ( this.shouldExpand() ) eventData.status = expanded;
+
+                App.vent.trigger("advanced-content-filter:tag-group:status",eventData)
             }
         });
 

@@ -72,7 +72,10 @@
 				height: 100%;
 				vertical-align: top;
 				position: relative;
-			}
+                -moz-transition: width .4s ease;
+                -webkit-transition: width .4s ease;
+                -webkit-transition: width .4s ease;
+            }
 
 			.m-advancedcontentfilter-item:after {
 				display: block;

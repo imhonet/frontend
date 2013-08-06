@@ -156,3 +156,7 @@ button.close {
 .position-center {
     text-align: center;
 }
+
+.ns {
+    user-select: none;
+}

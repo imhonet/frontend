@@ -1,6 +1,6 @@
 <?php
 
-    sleep(5);
+//    sleep(2);
 
     class Years {
 
@@ -121,9 +121,9 @@
     $years = new Years(1980,2000);
 
     addTagGroup($tagsGroups, new TagGroup(1,"Фильтр","consume",true),["Смотреть онлайн","Можно скачать","Можно купить"]);
-    addTagGroup($tagsGroups, new TagGroup(2,"Жанр","genre"),array_merge(["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"],["Боевик","Аниме","Артхаус","Образовательные программы"]));
-    addTagGroup($tagsGroups, new TagGroup(3,"Страна","country"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
-    addTagGroup($tagsGroups, new TagGroup(4,"Награды","awards"),["Боевик","Аниме","Артхаус","Образовательные программы"]);
+    addTagGroup($tagsGroups, new TagGroup(2,"Жанр","genre"),["Аниме","Артхаус","Биография","Боевики","Военный","Детективы","Документальные","Драмы","Исторический","Комедии","Короткометражный","Криминал","Мелодрамы","Мистика","Мультфильмы","Мюзиклы","Научные","Приключения","Прочее","Спорт","Триллеры","Ужасы","Фантастика"]);
+    addTagGroup($tagsGroups, new TagGroup(3,"Страна","country"),["США","Россия","Беларусь","Чехия","Англия"]);
+    addTagGroup($tagsGroups, new TagGroup(4,"Награды","awards"),["Оскар","Распберри","Берлинале"]);
 
     array_push($tagsGroups,new CustomModel("шкала бобрикова","scale"));
     array_push($tagsGroups,new CustomModel("Рекомендации","recommendationStatus"));

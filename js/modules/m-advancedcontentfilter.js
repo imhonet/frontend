@@ -35,6 +35,7 @@ define(
 
                 updateFilterModel : function(model) {
 
+                    return;
                     filterModel
                         .addSubFilter(model)
                         .sendFilterToBackend();

@@ -11,7 +11,18 @@ define([
 
             onRender : function(){
 
+            },
+
+            switchStatus : function() {
+
+                var status = !this.model.get("active");
+
+                this.model.set({
+                    active : status,
+                    ui : false
+                });
             }
+
         });
 
         return CurrentTagView;

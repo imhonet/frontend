@@ -30,7 +30,11 @@ define([
             switchStatus : function() {
 
                 var status = !this.model.get("active");
-                this.model.set("active",status);
+
+                this.model.set({
+                    active : status,
+                    ui : true
+                });
             }
         });
 
