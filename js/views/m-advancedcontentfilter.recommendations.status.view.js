@@ -9,7 +9,7 @@ define([
 
         var RecommendationsView = ScaleView.extend({
 
-            className : "m-advancedcontentfilter-item m-advancedcontentfilter-item-recomendation",
+            className : "m-advancedcontentfilter-item",
             template : RecommendationsStatusViewTemplate
         })
 

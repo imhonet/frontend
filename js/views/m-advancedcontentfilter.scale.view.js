@@ -11,44 +11,34 @@ define([
             tagName : "div",
             className : "m-advancedcontentfilter-item",
             template : ScaleViewTemplate,
-            expandable : false,
 
             events : {
 
                 "click .m-advancedcontentfilter-title" : "setExpandedStatus"
             },
 
-            initialize : function() {
+            onRender : function() {
 
-                this.listenTo(App.vent,"advanced-content-filter:tag-group:status",this.reflectExpandedStatus);
+                this.$el.addClass(this.model.get("uiType"));
             },
 
-            reflectExpandedStatus : function(eventData) {
+            isExpanded : function() {
 
-                this.$el.removeClass("hide show");
-
-                if ( eventData.cid === this.cid ) {
-
-                    if ( eventData.status ) {
-
-                        this.$el.addClass("show");
-                    }
-
-                    this.model.set("expanded",eventData.status);
-                }
-                else {
-
-                    if ( eventData.status ) {
-
-                        this.$el.addClass("hide");
-                        this.model.set("expanded",false);
-                    }
-                }
+                return this.model.get("expanded");
             },
 
-            shouldExpand : function() {
+            setWidth : function(value) {
 
-                return this.expendable;
+                this.$el.css({
+                    width : value
+                })
+
+                return this;
+            },
+
+            getWidth : function() {
+
+                return this.$el.find(".m-advancedcontentfilter-item-wrap").outerWidth();
             },
 
             setExpandedStatus : function() {
@@ -56,12 +46,11 @@ define([
                 var expanded = !this.model.get("expanded");
 
                 var eventData = {
-                    cid : this.cid
+                    view : this,
+                    status : expanded
                 }
 
-                if ( this.shouldExpand() ) eventData.status = expanded;
-
-                App.vent.trigger("advanced-content-filter:tag-group:status",eventData)
+                App.vent.trigger("m-advancedcontentfilter:tag-group:expanded",eventData);
             }
         });
 

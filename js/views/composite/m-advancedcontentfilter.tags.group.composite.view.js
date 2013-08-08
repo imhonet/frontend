@@ -14,7 +14,6 @@ define([
             itemView : TagView,
             template : TagsGroupTemplate,
             itemViewContainer : "div[data-type='collection']",
-            expendable : false,
 
             events : {
 
@@ -23,67 +22,32 @@ define([
 
             initialize : function() {
 
-                this.listenTo(App.vent,"advanced-content-filter:tag-group:status",this.reflectExpandedStatus);
                 this.collection = this.model.get("tags");
                 this.listenTo(this.collection,"change:active",this.expandGroup)
             },
 
-            shouldExpand : function() {
+            setWidth : function(value) {
 
-                return this.expendable;
+                this.$el.css({
+                    width : value
+                })
+
+                return this;
+            },
+
+            getWidth : function() {
+
+                return this.$el.find(".m-advancedcontentfilter-item-wrap").outerWidth();
+            },
+
+            isExpanded : function() {
+
+                return this.model.get("expanded");
             },
 
             onRender : function() {
 
-                this.$contents = this.$el.find(this.itemViewContainer);
-            },
-
-            onShow : function() {
-
-                this.getSize();
-            },
-
-            getSize : function() {
-
-                var rootWidth = this.$el.outerWidth();
-
-                this.expendable = false;
-
-                var tags = this.$contents.find("div.m-advancedcontentfilter-tags:not(.m-advancedcontentfilter-tags-block)"),
-                    width = 0;
-
-                for ( var i = 0, len = tags.length; i < len; i++ ) {
-
-                    var tag = $(tags[i]);
-                    width += tag.outerWidth();
-
-                    this.expendable = width > rootWidth;
-
-                    if ( this.expendable ) break;
-                }
-            },
-
-            reflectExpandedStatus : function(eventData) {
-
-                this.$el.removeClass("hide show");
-
-                if ( eventData.cid === this.cid ) {
-
-                    if ( eventData.status ) {
-
-                        this.$el.addClass("show");
-                    }
-
-                    this.model.set("expanded",eventData.status);
-                }
-                else {
-
-                    if ( eventData.status ) {
-
-                        this.$el.addClass("hide");
-                        this.model.set("expanded",false);
-                    }
-                }
+                this.$el.addClass(this.model.get("uiType"));
             },
 
             expandGroup : function(model) {
@@ -96,12 +60,11 @@ define([
                 var expanded = !this.model.get("expanded");
 
                 var eventData = {
-                    cid : this.cid
+                    view : this,
+                    status : expanded
                 }
 
-                if ( this.shouldExpand() ) eventData.status = expanded;
-
-                App.vent.trigger("advanced-content-filter:tag-group:status",eventData)
+                App.vent.trigger("m-advancedcontentfilter:tag-group:expanded",eventData);
             }
         });
 

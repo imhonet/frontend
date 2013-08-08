@@ -35,7 +35,6 @@ define(
 
                 updateFilterModel : function(model) {
 
-                    return;
                     filterModel
                         .addSubFilter(model)
                         .sendFilterToBackend();
@@ -48,8 +47,8 @@ define(
 
                 showLayout : function() {
 
-                    this.listenTo(filterModel,"update:filter",this.updateFilterModel);
-                    this.listenTo(filterModel,"filter:backend:updated",this.emitUpdatedBusEvent);
+                    this.listenTo(filterModel,"filter:update",this.updateFilterModel);
+                    this.listenTo(filterModel,"filter:updated",this.emitUpdatedBusEvent);
 
                     filterRegion.show(new FilterLayout({
                         model : filterModel

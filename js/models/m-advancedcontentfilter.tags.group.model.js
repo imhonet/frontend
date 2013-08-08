@@ -9,7 +9,7 @@ define([
         var TagsGroupModel = ChildModel.extend({
 
             ownEvent : "update:tags",
-            parentEvent : "update:filter",
+            parentEvent : "filter:update",
 
             defaults : {
 

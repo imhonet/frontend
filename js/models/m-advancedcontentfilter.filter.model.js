@@ -66,7 +66,7 @@ define([
 
                 this.subFilters = {}
 
-                this.trigger("filter:backend:updated");
+                this.trigger("filter:updated");
 
                 return this;
             },

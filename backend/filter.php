@@ -1,6 +1,6 @@
 <?php
 
-//    sleep(2);
+    sleep(3);
 
     class Years {
 
@@ -44,10 +44,11 @@
 
         public $name, $expanded = false, $model, $itemView;
 
-        function __construct($name, $model) {
+        function __construct($name, $model, $type) {
 
             $this->name = $name;
             $this->model = $this->itemView = $model;
+            $this->uiType = $type;
         }
 
     }
@@ -57,15 +58,21 @@
         public $id, $name, $internalName, $tags = array('');
         private $_isBlock;
 
-        function __construct($id, $name, $internalName, $isBlock = false) {
+        function __construct($id, $name, $internalName, $uiType, $isBlock = false) {
 
             $this->id = $id;
             $this->name = $name;
+            $this->uiType = $uiType;
 //            $this->expanded = false;
             $this->_isBlock = $isBlock;
             $this->internalName = $internalName;
 
             return this;
+        }
+
+        public function setExpanded($value) {
+
+            $this->expanded = $value;
         }
 
         public function getTags() {
@@ -120,13 +127,15 @@
 
     $years = new Years(1980,2000);
 
-    addTagGroup($tagsGroups, new TagGroup(1,"Фильтр","consume",true),["Смотреть онлайн","Можно скачать","Можно купить"]);
-    addTagGroup($tagsGroups, new TagGroup(2,"Жанр","genre"),["Аниме","Артхаус","Биография","Боевики","Военный","Детективы","Документальные","Драмы","Исторический","Комедии","Короткометражный","Криминал","Мелодрамы","Мистика","Мультфильмы","Мюзиклы","Научные","Приключения","Прочее","Спорт","Триллеры","Ужасы","Фантастика"]);
-    addTagGroup($tagsGroups, new TagGroup(3,"Страна","country"),["США","Россия","Беларусь","Чехия","Англия"]);
-    addTagGroup($tagsGroups, new TagGroup(4,"Награды","awards"),["Оскар","Распберри","Берлинале"]);
+    addTagGroup($tagsGroups, new TagGroup(1,"Фильтр","consume","static",true),["Смотреть онлайн","Можно скачать","Можно купить"]);
+    addTagGroup($tagsGroups, new TagGroup(2,"Жанр","genre","wide"),["Аниме","Артхаус","Биография","Боевики","Военный","Детективы","Документальные","Драмы","Исторический","Комедии","Короткометражный","Криминал","Мелодрамы","Мистика","Мультфильмы","Мюзиклы","Научные","Приключения","Прочее","Спорт","Триллеры","Ужасы","Фантастика"]);
+    addTagGroup($tagsGroups, new TagGroup(3,"Страна","country","wide"),["США","Россия","Беларусь","Чехия","Англия"]);
+    addTagGroup($tagsGroups, new TagGroup(4,"Награды","awards","mid"),["Оскар","Распберри","Берлинале"]);
 
-    array_push($tagsGroups,new CustomModel("шкала бобрикова","scale"));
-    array_push($tagsGroups,new CustomModel("Рекомендации","recommendationStatus"));
+    $tagsGroups[3]->setExpanded(true);
+
+    array_push($tagsGroups,new CustomModel("шкала бобрикова","scale","static"));
+    array_push($tagsGroups,new CustomModel("Рекомендации","recommendationStatus","static"));
 
     if ( ($request = getRequest()) !== null ) {
 

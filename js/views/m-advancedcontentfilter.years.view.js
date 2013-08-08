@@ -13,7 +13,7 @@ define([
 
             initialize : function() {
 
-                this.listenTo(this.model.parent,"update:filter",this.setRange);
+                this.listenTo(this.model.parent,"filter:update",this.setRange);
             },
 
             compareValues : function() {

@@ -24,7 +24,7 @@ define([
 
             initialize : function() {
 
-                this.listenTo(this.model.parent,"update:filter",this.render);
+                this.listenTo(this.model.parent,"filter:update",this.render);
             },
 
             onBeforeRender : function() {

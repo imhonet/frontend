@@ -7,7 +7,7 @@ define([
 
         var YearsModel = ChildModel.extend({
 
-            parentEvent : "update:filter",
+            parentEvent : "filter:update",
             localData : {},
 
             defaults : {
