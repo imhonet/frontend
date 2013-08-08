@@ -9,20 +9,27 @@ define([
 
         var CurrentTagView = TagView.extend({
 
-            onRender : function(){
+            states : ["","","excluded"],
 
+            events : {
+
+                "click" : "setTagStateDefault"
             },
 
-            switchStatus : function() {
+            onRender : function() {
 
-                var status = !this.model.get("active");
+                this.$el.removeClass(this.states.join(" ")).addClass(this.states[this.model.get("state")]);
+            },
+
+            setTagStateDefault : function(e) {
+
+                e.stopPropagation();
 
                 this.model.set({
-                    active : status,
+                    state : 0,
                     ui : false
                 });
             }
-
         });
 
         return CurrentTagView;

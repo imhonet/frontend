@@ -27,21 +27,19 @@ define([
                     id : this.get("id"),
                     name : this.get("internalName"),
                     expanded : this.get("expanded"),
-                    include : this.getChangedTags(),
-                    exclude : this.getChangedTags(false),
+                    include : this.getChangedTags(1),
+                    exclude : this.getChangedTags(2),
+                    "default" : this.getChangedTags(0),
                     logic : this.get("logic")
                 }
             },
 
-            getChangedTags : function(active) {
+            getChangedTags : function(stateValue) {
 
-                active = ( active !== false ) ? true : active;
-
-                var tags = this.get("tags"),
-                    tagProperty = "active";
+                var tags = this.get("tags");
 
                     return _.map(
-                        tags.filter(function(tag){ return tag.get(tagProperty) === active && tag.hasChanged(tagProperty); }),
+                        tags.filter(function(tag){ return tag.get("state") === stateValue && tag.hasChanged("state"); }),
                         function(tag){ return tag.get("id"); }
                     );
             },

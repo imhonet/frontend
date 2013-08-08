@@ -11,6 +11,8 @@ define([
 
             className : "m-advancedcontentfilter-tags",
 
+            states : ["","active","excluded"],
+
             modelEvents : {
 
               "change"  : "render"
@@ -18,21 +20,41 @@ define([
 
             events : {
 
-                "click" : "switchStatus"
+                "click .m-advancedcontentfilter-close" : "setTagStateExcluded",
+                "click" : "switchTagState"
             },
 
             onRender : function() {
 
                 if ( this.model.get("isBlock") ) this.$el.addClass("m-advancedcontentfilter-tags-block");
-                this.model.get("active") && this.$el.addClass("active") || this.$el.removeClass("active");
+                this.$el.removeClass(this.states.join(" ")).addClass(this.states[this.model.get("state")]);
             },
 
-            switchStatus : function() {
+            setTagStateExcluded : function(e) {
 
-                var status = !this.model.get("active");
+                e.stopPropagation();
 
                 this.model.set({
-                    active : status,
+                    state : 2,
+                    ui : true
+                });
+            },
+
+            switchTagState : function(e) {
+
+                var state = this.model.get("state");
+
+                if ( state === 2 ) {
+
+                    state = 0;
+                }
+                else {
+
+                    state = ( state === 1 ) ? 0 : 1;
+                }
+
+                this.model.set({
+                    state : state,
                     ui : true
                 });
             }

@@ -24,7 +24,7 @@ define([
                 this.collection.each(function(item,index){
 
                     var tags = item.get("tags");
-                    if ( tags && tags.find(function(tag){ return tag.get("active") === true;}) ) activeGroups.push(item);
+                    if ( tags && tags.find(function(tag){ return tag.get("state") !== 0;}) ) activeGroups.push(item);
 
                 }, this);
 

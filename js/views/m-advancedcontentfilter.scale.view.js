@@ -11,6 +11,7 @@ define([
             tagName : "div",
             className : "m-advancedcontentfilter-item",
             template : ScaleViewTemplate,
+            elWidth : null,
 
             events : {
 
@@ -36,9 +37,14 @@ define([
                 return this;
             },
 
+            onShow : function() {
+
+                this.elWidth = this.$el.find(".m-advancedcontentfilter-item-wrap").outerWidth();
+            },
+
             getWidth : function() {
 
-                return this.$el.find(".m-advancedcontentfilter-item-wrap").outerWidth();
+                return this.elWidth;
             },
 
             setExpandedStatus : function() {

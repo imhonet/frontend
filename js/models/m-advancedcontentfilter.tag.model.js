@@ -10,7 +10,7 @@ define([
 
                 id : null,
                 name : null,
-                active : false,
+                state : 0,
                 isBlock : false
             }
         });

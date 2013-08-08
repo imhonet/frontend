@@ -14,6 +14,7 @@ define([
             itemView : TagView,
             template : TagsGroupTemplate,
             itemViewContainer : "div[data-type='collection']",
+            elWidth : null,
 
             events : {
 
@@ -23,7 +24,7 @@ define([
             initialize : function() {
 
                 this.collection = this.model.get("tags");
-                this.listenTo(this.collection,"change:active",this.expandGroup)
+                this.listenTo(this.collection,"change:state",this.expandGroup)
             },
 
             setWidth : function(value) {
@@ -37,7 +38,7 @@ define([
 
             getWidth : function() {
 
-                return this.$el.find(".m-advancedcontentfilter-item-wrap").outerWidth();
+                return this.elWidth;
             },
 
             isExpanded : function() {
@@ -48,6 +49,11 @@ define([
             onRender : function() {
 
                 this.$el.addClass(this.model.get("uiType"));
+            },
+
+            onShow : function() {
+
+                this.elWidth = this.$el.find(".m-advancedcontentfilter-item-wrap").outerWidth();
             },
 
             expandGroup : function(model) {

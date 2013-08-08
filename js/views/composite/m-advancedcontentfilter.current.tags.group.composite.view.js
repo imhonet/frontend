@@ -25,7 +25,7 @@ define([
                     activeTags = [];
 
                 this.collection.each(function(item,index){
-                    if ( item.get("active") === true ) activeTags.push(item);
+                    if ( item.get("state") !== 0 ) activeTags.push(item);
                 }, this);
 
                 _.each(activeTags,function(item,index){

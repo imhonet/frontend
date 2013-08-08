@@ -19,19 +19,19 @@
 
         public $id, $name, $isBlock, $active;
 
-        function __construct($id, $name, $isBlock = false, $active = false) {
+        function __construct($id, $name, $isBlock = false, $state = 0) {
 
             $this->id = $id;
             $this->name = $name;
-            $this->active = $active;
+            $this->state = $state;
             $this->isBlock = $isBlock;
 
             return this;
         }
 
-        public function setActive($value) {
+        public function setState($value) {
 
-            $this->active = $value;
+            $this->state = $value;
         }
 
         public function setName($value) {
@@ -85,7 +85,7 @@
             $this->tags = array();
 
             for ( $i = 0, $len = count($tags); $i < $len; $i++ ) {
-                array_push($this->tags, new Tag($i, $tags[$i], $this->_isBlock));
+                array_push($this->tags, new Tag($i, $tags[$i], $this->_isBlock, $tags[i]["state"]));
             }
 
             return $this;
@@ -164,7 +164,7 @@
     if ( !getRequest() ) {
 
 //        $payload->tagsGroups[4]->expanded = true;
-        $payload->tagsGroups[1]->tags[0]->setActive(true);
+        $payload->tagsGroups[1]->tags[0]->setState(1);
     }
 
     echo json_encode($payload);

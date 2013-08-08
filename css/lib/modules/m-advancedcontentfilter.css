@@ -181,9 +181,22 @@
 							display: block;
 							clear: both;
 							float: left;
+
 						}
 
-						.m-advancedcontentfilter-tags.active {
+                        .m-advancedcontentfilter-tags.excluded {
+                            background-color: #ba3602;
+                            text-decoration: line-through;
+                            border: 1px solid #ba3602;
+                        }
+
+                        .m-advancedcontentfilter-bottom-item .m-advancedcontentfilter-tags.excluded {
+                            background-color: transparent;
+                            border-color: transparent;
+                        }
+
+
+                        .m-advancedcontentfilter-tags.active {
 							background: #00ba8d;
 							border: 1px solid #00ba8d;
 						}
